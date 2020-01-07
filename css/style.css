@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Lato|Sacramento&display=swap");
 *, *::before, *::after {
   margin: 0;
   padding: 0;
@@ -16,7 +17,7 @@ body {
 nav {
   background: -webkit-gradient(linear, right top, left top, from(#2f97c1), to(#46aad2));
   background: linear-gradient(-90deg, #2f97c1, #46aad2);
-  height: 7rem;
+  height: 7em;
   width: 100%;
 }
 
