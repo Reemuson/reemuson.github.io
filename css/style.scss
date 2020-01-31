@@ -52,7 +52,7 @@ nav {
                 font-size: 1.25em;
                 text-transform: uppercase;
                 padding: .5em 1em;
-                border-radius: 3px;
+                border-radius: 0px 10px 0px 10px;
 
                 &.active, &:hover {
                     background: #1ccad8;
@@ -181,47 +181,36 @@ nav {
     flex-direction: column;
 
     .card {
-        width: 32rem;
-        background: linear-gradient(109deg, rgba(75, 75, 75, 0.03) 0%, rgba(75, 75, 75, 0.03) 36%,rgba(5, 5, 5, 0.03) 36%, rgba(5, 5, 5, 0.03) 60%,rgba(230, 230, 230, 0.03) 60%, rgba(230, 230, 230, 0.03) 76%,rgba(204, 204, 204, 0.03) 76%, rgba(204, 204, 204, 0.03) 83%,rgba(30, 30, 30, 0.03) 83%, rgba(30, 30, 30, 0.03) 91%,rgba(119, 119, 119, 0.03) 91%, rgba(119, 119, 119, 0.03) 96%,rgba(27, 27, 27, 0.03) 96%, rgba(27, 27, 27, 0.03) 100%),linear-gradient(357deg, rgba(159, 159, 159, 0.03) 0%, rgba(159, 159, 159, 0.03) 7%,rgba(227, 227, 227, 0.03) 7%, rgba(227, 227, 227, 0.03) 26%,rgba(204, 204, 204, 0.03) 26%, rgba(204, 204, 204, 0.03) 28%,rgba(181, 181, 181, 0.03) 28%, rgba(181, 181, 181, 0.03) 34%,rgba(138, 138, 138, 0.03) 34%, rgba(138, 138, 138, 0.03) 36%,rgba(44, 44, 44, 0.03) 36%, rgba(44, 44, 44, 0.03) 74%,rgba(130, 130, 130, 0.03) 74%, rgba(130, 130, 130, 0.03) 100%),linear-gradient(132deg, rgba(191, 191, 191, 0.03) 0%, rgba(191, 191, 191, 0.03) 24%,rgba(174, 174, 174, 0.03) 24%, rgba(174, 174, 174, 0.03) 31%,rgba(19, 19, 19, 0.03) 31%, rgba(19, 19, 19, 0.03) 42%,rgba(242, 242, 242, 0.03) 42%, rgba(242, 242, 242, 0.03) 70%,rgba(131, 131, 131, 0.03) 70%, rgba(131, 131, 131, 0.03) 75%,rgba(167, 167, 167, 0.03) 75%, rgba(167, 167, 167, 0.03) 77%,rgba(64, 64, 64, 0.03) 77%, rgba(64, 64, 64, 0.03) 100%),linear-gradient(90deg, rgb(245, 198, 84),rgb(209, 69, 18));
+        background: linear-gradient(90deg, rgba(6, 6, 6, 0.01) 0%, rgba(6, 6, 6, 0.01) 1%,rgba(131, 131, 131, 0.01) 1%, rgba(131, 131, 131, 0.01) 14%,rgba(250, 250, 250, 0.01) 14%, rgba(250, 250, 250, 0.01) 26%,rgba(30, 30, 30, 0.01) 26%, rgba(30, 30, 30, 0.01) 62%,rgba(117, 117, 117, 0.01) 62%, rgba(117, 117, 117, 0.01) 66%,rgba(248, 248, 248, 0.01) 66%, rgba(248, 248, 248, 0.01) 76%,rgba(39, 39, 39, 0.01) 76%, rgba(39, 39, 39, 0.01) 100%),linear-gradient(90deg, rgba(57, 57, 57, 0.06) 0%, rgba(57, 57, 57, 0.06) 4%,rgba(227, 227, 227, 0.06) 4%, rgba(227, 227, 227, 0.06) 26%,rgba(67, 67, 67, 0.06) 26%, rgba(67, 67, 67, 0.06) 27%,rgba(126, 126, 126, 0.06) 27%, rgba(126, 126, 126, 0.06) 39%,rgba(103, 103, 103, 0.06) 39%, rgba(103, 103, 103, 0.06) 72%,rgba(16, 16, 16, 0.06) 72%, rgba(16, 16, 16, 0.06) 76%,rgba(21, 21, 21, 0.06) 76%, rgba(21, 21, 21, 0.06) 88%,rgba(69, 69, 69, 0.06) 88%, rgba(69, 69, 69, 0.06) 100%),linear-gradient(90deg, rgba(156, 156, 156, 0.05) 0%, rgba(156, 156, 156, 0.05) 12%,rgba(54, 54, 54, 0.05) 12%, rgba(54, 54, 54, 0.05) 48%,rgba(169, 169, 169, 0.05) 48%, rgba(169, 169, 169, 0.05) 59%,rgba(104, 104, 104, 0.05) 59%, rgba(104, 104, 104, 0.05) 62%,rgba(165, 165, 165, 0.05) 62%, rgba(165, 165, 165, 0.05) 68%,rgba(124, 124, 124, 0.05) 68%, rgba(124, 124, 124, 0.05) 77%,rgba(189, 189, 189, 0.05) 77%, rgba(189, 189, 189, 0.05) 85%,rgba(173, 173, 173, 0.05) 85%, rgba(173, 173, 173, 0.05) 100%),linear-gradient(90deg, rgba(182, 182, 182, 0.07) 0%, rgba(182, 182, 182, 0.07) 22%,rgba(122, 122, 122, 0.07) 22%, rgba(122, 122, 122, 0.07) 28%,rgba(62, 62, 62, 0.07) 28%, rgba(62, 62, 62, 0.07) 44%,rgba(89, 89, 89, 0.07) 44%, rgba(89, 89, 89, 0.07) 61%,rgba(110, 110, 110, 0.07) 61%, rgba(110, 110, 110, 0.07) 83%,rgba(185, 185, 185, 0.07) 83%, rgba(185, 185, 185, 0.07) 86%,rgba(192, 192, 192, 0.07) 86%, rgba(192, 192, 192, 0.07) 100%),linear-gradient(90deg, rgba(8, 8, 8, 0.06) 0%, rgba(8, 8, 8, 0.06) 54%,rgba(48, 48, 48, 0.06) 54%, rgba(48, 48, 48, 0.06) 57%,rgba(245, 245, 245, 0.06) 57%, rgba(245, 245, 245, 0.06) 86%,rgba(12, 12, 12, 0.06) 86%, rgba(12, 12, 12, 0.06) 94%,rgba(225, 225, 225, 0.06) 94%, rgba(225, 225, 225, 0.06) 100%),linear-gradient(90deg, rgb(53, 169, 225) 0%,rgb(1, 145, 219) 80%,rgb(26, 221, 247) 100%);
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        margin: 2rem 0;
         box-shadow: .5rem .5rem 3rem rgba(0, 0, 0, 0.2);
+        border-radius: 0px 30px 0px 30px;
+        width: 20rem;
+        height: 26rem;
+        margin: 1rem;
 
-        & {
-            width: 20rem;
-            height: 26rem;
-        }
-
-        & .btn {
+        .btn {
             padding: 1rem 2rem;
-            background-color: #e35744;
-            border-radius: 3px;
+            border-radius: 0px 10px 0px 10px;
             margin: .5rem 0;
             text-transform: uppercase;
             color: #eee;
             font-size: 1rem;
             text-decoration: none;
-        }
-        .source {
-            background-color: rgb(255, 153, 0);
-        }
+            background: rgba(28, 208, 216, .5);
 
-        & .btn:hover {
-            box-shadow: .5rem .5rem 2rem rgba(0, 0, 0, 0.2);
-            transition: .5s;
-        }
-
-        & .btn:active {
-            transform: translateY(0);
-            box-shadow: none;
+            &:hover {
+                background: rgba(28, 208, 216, 1);
+                transition: .5s;
+            }
         }
 
         h3 {
             font-size: 2.5rem;
-            color: #333;
+            color: #eee;
             margin: 1.5rem 0;
         }
         p {
@@ -229,7 +218,7 @@ nav {
             margin: 1.5rem 0;
             font-style: italic;
             text-align: center;
-            color: #333;
+            color: #eee;
             padding: 1rem;
         }
     }
