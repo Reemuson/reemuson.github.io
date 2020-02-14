@@ -38,7 +38,7 @@ nav #projects-btn {
   font-size: 1em;
   text-transform: uppercase;
   float: right;
-  margin: 1.495em 1.5em;
+  margin: 1.49em 1.5em;
   padding: .5em 1em;
   border-radius: 5px;
   background-color: #0570fc;
@@ -95,24 +95,32 @@ nav #check {
 
 .container h1 {
   font-size: 3em;
-  padding: .2em;
 }
 
-.container h2 {
+.container h3 {
   font-size: 1.5em;
-  padding: .2em;
 }
 
-#home-banner {
+.hero {
+  padding: 5em;
+  color: #fff;
+}
+
+.hero h1 {
+  font-size: 2em;
+  padding: .3em;
+}
+
+.hero#home-hero {
   position: relative;
-  height: 500px;
+  height: 250px;
   overflow: hidden;
   background: url("/src/bg-2.jpg") no-repeat center;
   background-size: cover;
   z-index: -1;
 }
 
-.home-banner-container {
+.hero-container {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -126,7 +134,7 @@ nav #check {
   border: .15em solid #fff;
 }
 
-.home-banner-container .scroll-indicator {
+.hero-container .scroll-indicator {
   position: absolute;
   bottom: -175px;
   left: 50%;
@@ -136,7 +144,7 @@ nav #check {
           transform: translateY(-80px) translateX(-50%) rotate(45deg);
 }
 
-.home-banner-container .scroll-indicator span {
+.hero-container .scroll-indicator span {
   position: absolute;
   top: 0;
   left: 0;
@@ -149,21 +157,21 @@ nav #check {
           animation: scroll-indicator-animate 1.5s linear infinite;
 }
 
-.home-banner-container .scroll-indicator span:nth-child(1) {
+.hero-container .scroll-indicator span:nth-child(1) {
   -webkit-transform: translate(-15px, -15px);
           transform: translate(-15px, -15px);
   -webkit-animation-delay: -0.4s;
           animation-delay: -0.4s;
 }
 
-.home-banner-container .scroll-indicator span:nth-child(2) {
+.hero-container .scroll-indicator span:nth-child(2) {
   -webkit-transform: translate(0px, 0px);
           transform: translate(0px, 0px);
   -webkit-animation-delay: -0.2s;
           animation-delay: -0.2s;
 }
 
-.home-banner-container .scroll-indicator span:nth-child(3) {
+.hero-container .scroll-indicator span:nth-child(3) {
   -webkit-transform: translate(15px, 15px);
           transform: translate(15px, 15px);
   -webkit-animation-delay: 0s;
