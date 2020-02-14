@@ -9,7 +9,7 @@ html {
 }
 
 body {
-  font-family: lato;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   width: 100%;
   background: #222;
 }
@@ -20,12 +20,13 @@ nav {
   width: 100%;
 }
 
-nav label.logo {
+nav a.logo {
+  text-decoration: none;
   color: #fff;
   font-family: sacramento, cursive;
   font-size: 2em;
   line-height: 2.5em;
-  padding-left: 2.5em;
+  padding-left: 5em;
   font-weight: bold;
   cursor: pointer;
 }
@@ -37,11 +38,17 @@ nav #projects-btn {
   font-size: 1em;
   text-transform: uppercase;
   float: right;
-  margin: 1.5em 1.5em;
+  margin: 1.49em 1.5em;
   padding: .5em 1em;
   border-radius: 5px;
-  background-color: #0570fc;
+  background: #0570fc;
   cursor: pointer;
+}
+
+nav #projects-btn:hover {
+  background: #2d87fc;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 
 nav ul {
@@ -49,7 +56,7 @@ nav ul {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   float: right;
-  margin-right: 1.5em;
+  margin-right: 10em;
 }
 
 nav ul li {
@@ -88,30 +95,69 @@ nav #check {
 }
 
 .container {
-  padding: 5em;
+  padding: 10em;
   color: #fff;
 }
 
 .container h1 {
-  font-size: 3em;
-  padding: .2em;
+  font-size: 4em;
 }
 
-.container h2 {
+.container h3 {
   font-size: 1.5em;
-  padding: .2em;
+  padding-top: .5em;
 }
 
-#home-banner {
+.container p {
+  font-size: 1em;
+  padding-top: 1em;
+}
+
+.container .highlight {
+  color: #0570fc;
+}
+
+#home-container #hireme {
+  padding: 1.25rem 3rem;
+  margin-top: 2.875rem;
+  position: absolute;
+  border-radius: 10px;
+  text-transform: uppercase;
+  color: #eee;
+  background: #0570fc;
+  cursor: pointer;
+  font-size: 1rem;
+  text-decoration: none;
+  text-align: center;
+  z-index: -1;
+}
+
+#home-container #hireme:hover {
+  background: #2d87fc;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.hero {
+  padding: 10em 5em;
+  color: #fff;
+}
+
+.hero h1 {
+  font-size: 2em;
+  padding: .3em;
+}
+
+.hero#home-hero {
   position: relative;
-  height: 500px;
+  height: 250px;
   overflow: hidden;
   background: url("/src/bg-2.jpg") no-repeat center;
   background-size: cover;
   z-index: -1;
 }
 
-.home-banner-container {
+.hero-container {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -125,7 +171,7 @@ nav #check {
   border: .15em solid #fff;
 }
 
-.home-banner-container .scroll-indicator {
+.hero-container .scroll-indicator {
   position: absolute;
   bottom: -175px;
   left: 50%;
@@ -135,7 +181,7 @@ nav #check {
           transform: translateY(-80px) translateX(-50%) rotate(45deg);
 }
 
-.home-banner-container .scroll-indicator span {
+.hero-container .scroll-indicator span {
   position: absolute;
   top: 0;
   left: 0;
@@ -148,21 +194,21 @@ nav #check {
           animation: scroll-indicator-animate 1.5s linear infinite;
 }
 
-.home-banner-container .scroll-indicator span:nth-child(1) {
+.hero-container .scroll-indicator span:nth-child(1) {
   -webkit-transform: translate(-15px, -15px);
           transform: translate(-15px, -15px);
   -webkit-animation-delay: -0.4s;
           animation-delay: -0.4s;
 }
 
-.home-banner-container .scroll-indicator span:nth-child(2) {
+.hero-container .scroll-indicator span:nth-child(2) {
   -webkit-transform: translate(0px, 0px);
           transform: translate(0px, 0px);
   -webkit-animation-delay: -0.2s;
           animation-delay: -0.2s;
 }
 
-.home-banner-container .scroll-indicator span:nth-child(3) {
+.hero-container .scroll-indicator span:nth-child(3) {
   -webkit-transform: translate(15px, 15px);
           transform: translate(15px, 15px);
   -webkit-animation-delay: 0s;
@@ -225,7 +271,7 @@ nav #check {
 }
 
 .card-wrapper .card {
-  background-color: #0a0a0a;
+  background: #0a0a0a;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -241,7 +287,7 @@ nav #check {
           justify-content: center;
   -webkit-box-shadow: 0.5rem 0.5rem 3rem rgba(0, 0, 0, 0.2);
           box-shadow: 0.5rem 0.5rem 3rem rgba(0, 0, 0, 0.2);
-  border-radius: 0px 30px 0px 30px;
+  border-radius: 30px;
   width: 20rem;
   height: 26rem;
   margin: 1rem;
@@ -249,16 +295,17 @@ nav #check {
 
 .card-wrapper .card .btn {
   padding: 1rem 2rem;
-  border-radius: 0px 10px 0px 10px;
+  border-radius: 10px;
   margin: .5rem 0;
   text-transform: uppercase;
   color: #eee;
+  background: #0570fc;
   font-size: 1rem;
   text-decoration: none;
 }
 
 .card-wrapper .card .btn:hover {
-  background: #0570fc;
+  background: #2d87fc;
   -webkit-transition: .5s;
   transition: .5s;
 }
@@ -285,6 +332,7 @@ footer {
   right: 0;
   height: 3em;
   background: #0a0a0a;
+  z-index: -1;
   color: white;
   font-size: 1em;
   text-align: center;
@@ -292,7 +340,7 @@ footer {
 }
 
 @media screen and (max-width: 952px) {
-  nav label.logo {
+  nav a.logo {
     font-size: 2em;
     line-height: 2.5em;
     padding-left: 1.5em;
@@ -300,8 +348,14 @@ footer {
   nav ul li a {
     font-size: 1em;
   }
-  .container {
-    padding: 3em;
+  #home-container {
+    padding: 7em 3em 9em 3em;
+  }
+  #home-container #hireme {
+    margin-top: 3rem;
+  }
+  .hero {
+    padding: 5em 5em;
   }
 }
 
@@ -327,7 +381,21 @@ footer {
     position: fixed;
   }
   .container {
-    padding: 8em 3em 3em 3em;
+    font-size: .8rem;
+  }
+  #home-container {
+    padding: 8rem 3rem 5rem 3rem;
+  }
+  #home-container p {
+    display: none;
+  }
+  #home-container #hireme {
+    padding: .7rem 1.5rem;
+    margin-top: 1rem;
+  }
+  .hero {
+    padding: 5rem 3rem;
+    font-size: .8rem;
   }
   nav ul li {
     display: block;

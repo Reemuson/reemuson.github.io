@@ -16,7 +16,7 @@ html {
 }
 
 body {
-    font-family: lato;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     width: 100%;
     background: #222;
 }
@@ -28,12 +28,13 @@ nav {
     height: 5em;
     width: 100%;
 
-    label.logo {
+    a.logo {
+        text-decoration: none;
         color: #fff;
         font-family: sacramento, cursive;
         font-size: 2em;
         line-height: 2.5em;
-        padding-left: 2.5em;
+        padding-left: 5em;
         font-weight: bold;
         cursor: pointer;
     }
@@ -44,18 +45,23 @@ nav {
         font-size: 1em;
         text-transform: uppercase;
         float: right;
-        margin: 1.5em 1.5em;
+        margin: 1.49em 1.5em;
         padding: .5em 1em;
         border-radius: 5px;
-        background-color: $accent-color;
+        background: $accent-color;
         cursor: pointer;
+
+        &:hover {
+            background: $active-accent-color;
+            transition: .5s;
+        }
     }
 
     ul {
         list-style: none;
         box-sizing: border-box;
         float: right;
-        margin-right: 1.5em;
+        margin-right: 10em;
 
         li {
             display: inline-block;
@@ -94,28 +100,66 @@ nav {
 
 // Home content
 .container {
-    padding: 5em;
+    padding: 10em;
     color: #fff;
 
     h1 {
-        font-size: 3em;
-        padding: .2em;
+        font-size: 4em;
     }
-    h2 {
+    h3 {
         font-size: 1.5em;
-        padding: .2em;
+        padding-top: .5em;
+    }
+    p {
+        font-size: 1em;
+        padding-top: 1em;
+    }
+    .highlight {
+        color: $accent-color;
+    }
+}
+#home-container { 
+    #hireme {
+        padding: 1.25rem 3rem;
+        margin-top: 2.875rem;
+        position: absolute;
+        border-radius: 10px;
+        text-transform: uppercase;
+        color: #eee;
+        background: $accent-color;
+        cursor: pointer;
+        font-size: 1rem;
+        text-decoration: none;
+        text-align: center;
+        z-index: -1;
+
+        &:hover {
+            background: $active-accent-color;
+            transition: .5s;
+        }
+    }
+}    
+
+.hero {
+    padding: 10em 5em;
+    color: #fff;
+
+    h1 {
+        font-size: 2em;
+        padding: .3em;
+    }
+
+    &#home-hero {
+        position: relative;
+        height: 250px;
+        overflow: hidden;
+        background: url('/src/bg-2.jpg') no-repeat center;
+        background-size: cover;
+        z-index: -1;
     }
 }
 
-#home-banner {
-    position: relative;
-    height: 500px;
-    overflow: hidden;
-    background: url('/src/bg-2.jpg') no-repeat center;
-    background-size: cover;
-    z-index: -1;
-}
-.home-banner-container {
+.hero-container {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -192,28 +236,29 @@ nav {
     flex-direction: column;
 
     .card {
-        background-color: $body-color;
+        background: $body-color;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         box-shadow: .5rem .5rem 3rem rgba(0, 0, 0, 0.2);
-        border-radius: 0px 30px 0px 30px;
+        border-radius: 30px;
         width: 20rem;
         height: 26rem;
         margin: 1rem;
 
         .btn {
             padding: 1rem 2rem;
-            border-radius: 0px 10px 0px 10px;
+            border-radius: 10px;
             margin: .5rem 0;
             text-transform: uppercase;
             color: #eee;
+            background: $accent-color;
             font-size: 1rem;
             text-decoration: none;
 
             &:hover {
-                background: $accent-color;
+                background: $active-accent-color;
                 transition: .5s;
             }
         }
@@ -243,6 +288,7 @@ footer {
     right: 0;
     height: 3em;    
     background: $body-color;
+    z-index: -1;
     
     color: white;
     font-size: 1em;
@@ -252,7 +298,7 @@ footer {
 
 // Scaling
 @media screen and (max-width: 952px) {
-    nav label.logo {
+    nav a.logo {
         font-size: 2em;
         line-height: 2.5em;
         padding-left: 1.5em;
@@ -260,8 +306,15 @@ footer {
     nav ul li a {
         font-size: 1em;
     }
-    .container {
-        padding: 3em;
+    #home-container {
+        padding: 7em 3em 9em 3em;
+        
+        #hireme {
+            margin-top: 3rem;
+        }
+    }
+    .hero {
+        padding: 5em 5em;
     }
 }
 
@@ -286,7 +339,22 @@ footer {
         position: fixed;
     }
     .container {
-        padding: 8em 3em 3em 3em;
+        font-size: .8rem;
+    }
+    #home-container {
+        padding: 8rem 3rem 5rem 3rem;
+        p {
+            display: none;
+        }
+        
+        #hireme {
+            padding: .7rem 1.5rem;
+            margin-top: 1rem;
+        }
+    }
+    .hero {
+        padding: 5rem 3rem;
+        font-size: .8rem;
     }
     nav ul li {
         display: block;
