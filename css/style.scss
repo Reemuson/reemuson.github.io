@@ -28,7 +28,8 @@ nav {
     height: 5em;
     width: 100%;
 
-    label.logo {
+    a.logo {
+        text-decoration: none;
         color: #fff;
         font-family: sacramento, cursive;
         font-size: 2em;
@@ -44,7 +45,7 @@ nav {
         font-size: 1em;
         text-transform: uppercase;
         float: right;
-        margin: 1.5em 1.5em;
+        margin: 1.495em 1.5em;
         padding: .5em 1em;
         border-radius: 5px;
         background-color: $accent-color;
@@ -252,7 +253,7 @@ footer {
 
 // Scaling
 @media screen and (max-width: 952px) {
-    nav label.logo {
+    nav a.logo {
         font-size: 2em;
         line-height: 2.5em;
         padding-left: 1.5em;
@@ -266,7 +267,7 @@ footer {
 }
 
 @media screen and (max-width: 858px) {
-    label.check-btn {
+    a.check-btn {
         display: block;
     }
     a#projects-btn {
