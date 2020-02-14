@@ -2,7 +2,8 @@
 
 // Variables
 $body-color: #0a0a0a;
-$accent-color: #333;
+$accent-color: #0570fc;
+$active-accent-color: #2d87fc;
 
 
 *, *::before, *::after {
@@ -17,8 +18,7 @@ html {
 body {
     font-family: lato;
     width: 100%;
-    background: #222222;
-    overflow-x: hidden;
+    background: #222;
 }
 
 // Responsive navbar
@@ -29,12 +29,26 @@ nav {
     width: 100%;
 
     label.logo {
+        color: #fff;
         font-family: sacramento, cursive;
         font-size: 2em;
         line-height: 2.5em;
         padding-left: 2.5em;
         font-weight: bold;
+        cursor: pointer;
+    }
+    #projects-btn {
+        opacity: 0;
+        text-decoration: none;
         color: #fff;
+        font-size: 1em;
+        text-transform: uppercase;
+        float: right;
+        margin: 1.5em 1.5em;
+        padding: .5em 1em;
+        border-radius: 5px;
+        background-color: $accent-color;
+        cursor: pointer;
     }
 
     ul {
@@ -64,7 +78,7 @@ nav {
         }
     }
 
-    .check-button {
+    .check-btn {
         font-size: 2em;
         color: #fff;
         float: right;
@@ -80,20 +94,16 @@ nav {
 
 // Home content
 .container {
-    padding: 200px;
+    padding: 5em;
     color: #fff;
 
     h1 {
         font-size: 3em;
-        padding: 10px;
+        padding: .2em;
     }
     h2 {
         font-size: 1.5em;
-        padding: 0px 10px;
-    }
-    p {
-        font-size: 1em;
-        padding: 10px;
+        padding: .2em;
     }
 }
 
@@ -208,14 +218,14 @@ nav {
             }
         }
 
-        h3 {
+        h1 {
             font-size: 2.5rem;
             color: #eee;
-            margin: 1.5rem 0;
+            margin: 1.5rem;
         }
         p {
             font-size: 1rem;
-            margin: 1.5rem 0;
+            margin: 1.5rem;
             font-style: italic;
             text-align: center;
             color: #eee;
@@ -241,7 +251,7 @@ footer {
 }
 
 // Scaling
-@media (max-width: 952px) {
+@media screen and (max-width: 952px) {
     nav label.logo {
         font-size: 2em;
         line-height: 2.5em;
@@ -250,15 +260,17 @@ footer {
     nav ul li a {
         font-size: 1em;
     }
-
     .container {
-        padding: 1.5em;
+        padding: 3em;
     }
 }
 
-@media (max-width: 858px) {
-    label.check-button {
+@media screen and (max-width: 858px) {
+    label.check-btn {
         display: block;
+    }
+    a#projects-btn {
+        opacity: 1;
     }
     ul {
         position: fixed;
@@ -274,7 +286,7 @@ footer {
         position: fixed;
     }
     .container {
-        padding-top: 5em;
+        padding: 8em 3em 3em 3em;
     }
     nav ul li {
         display: block;
