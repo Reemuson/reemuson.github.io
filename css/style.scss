@@ -56,7 +56,7 @@ nav {
         list-style: none;
         box-sizing: border-box;
         float: right;
-        margin-right: 1.5em;
+        margin-right: 5em;
 
         li {
             display: inline-block;
@@ -95,7 +95,7 @@ nav {
 
 // Home content
 .container {
-    padding: 5em;
+    padding: 10em 5em;
     color: #fff;
 
     h1 {
@@ -103,10 +103,15 @@ nav {
     }
     h3 {
         font-size: 1.5em;
+        padding-top: .5em;
+    }
+    p {
+        font-size: 1em;
+        padding-top: 1em;
     }
 }
 .hero {
-    padding: 5em;
+    padding: 10em 5em;
     color: #fff;
 
     h1 {
@@ -270,7 +275,10 @@ footer {
         font-size: 1em;
     }
     .container {
-        padding: 3em;
+        padding: 5em 3em;
+    }
+    .hero {
+        padding: 5em 5em;
     }
 }
 
@@ -295,7 +303,12 @@ footer {
         position: fixed;
     }
     .container {
-        padding: 8em 3em 3em 3em;
+        padding: 8rem 3rem 3rem 3rem;
+        font-size: .8rem;
+    }
+    .hero {
+        padding: 5rem 3rem;
+        font-size: .8rem;
     }
     nav ul li {
         display: block;
