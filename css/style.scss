@@ -79,8 +79,7 @@ nav {
 }
 
 // Home content
-
-#home-container { 
+.container {
     padding: 200px;
     color: #fff;
 
@@ -252,7 +251,7 @@ footer {
         font-size: 1em;
     }
 
-    #home-container {
+    .container {
         padding: 1.5em;
     }
 }
@@ -262,14 +261,20 @@ footer {
         display: block;
     }
     ul {
-        position: absolute;
+        position: fixed;
         width: 100%;
         height: 100vh;
         background: $body-color;
         top: 5em;
-        left: -100%;
+        left: 100%;
         text-align: center;
         transition: all .5s;
+    }
+    nav {
+        position: fixed;
+    }
+    .container {
+        padding-top: 5em;
     }
     nav ul li {
         display: block;
