@@ -4,10 +4,6 @@
   padding: 0;
 }
 
-html {
-  min-height: 100%;
-}
-
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   width: 100%;
