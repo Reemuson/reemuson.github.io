@@ -7,11 +7,11 @@
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   width: 100%;
-  background: #eee;
+  background: #fff;
 }
 
 nav {
-  background: #2c3e51;
+  background: #eee;
   height: 5em;
   width: 100%;
   z-index: 10;
@@ -19,12 +19,13 @@ nav {
 
 nav a.logo {
   text-decoration: none;
-  color: #e8d69c;
-  font-family: sacramento, cursive;
+  color: #FF860D;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 2em;
   line-height: 2.5em;
   padding-left: 5em;
   font-weight: bold;
+  text-transform: uppercase;
   cursor: pointer;
 }
 
@@ -38,12 +39,12 @@ nav #projects-btn {
   margin: 1.49em 1.5em;
   padding: .5em 1em;
   border-radius: 5px;
-  background: #e8d69c;
+  background: #3A606E;
   cursor: pointer;
 }
 
 nav #projects-btn:hover {
-  background: #f1e5c1;
+  background: #6F9AAA;
   -webkit-transition: .5s;
   transition: .5s;
 }
@@ -64,7 +65,7 @@ nav ul li {
 
 nav ul li a {
   text-decoration: none;
-  color: #fff;
+  color: #3A3434;
   font-size: 1em;
   text-transform: uppercase;
   padding: .5em 1em;
@@ -72,15 +73,15 @@ nav ul li a {
 }
 
 nav ul li a.active, nav ul li a:hover {
-  background: #e8d69c;
-  color: #2c3e51;
+  background: #3A606E;
+  color: #fff;
   -webkit-transition: .5s;
   transition: .5s;
 }
 
 nav .check-btn {
   font-size: 2em;
-  color: #fff;
+  color: #3A3434;
   float: right;
   line-height: 2.5em;
   margin-right: 1.5em;
@@ -110,6 +111,49 @@ nav #check {
   font-size: 4em;
 }
 
+.hero-inner h1 span:before {
+  content: '';
+  color: #FF860D;
+  -webkit-animation: animation 10s linear infinite;
+          animation: animation 10s linear infinite;
+}
+
+@-webkit-keyframes animation {
+  0%, 100% {
+    content: "robust";
+  }
+  20% {
+    content: "secure";
+  }
+  40% {
+    content: "quick";
+  }
+  60% {
+    content: "advanced";
+  }
+  80% {
+    content: "efficient";
+  }
+}
+
+@keyframes animation {
+  0%, 100% {
+    content: "robust";
+  }
+  20% {
+    content: "secure";
+  }
+  40% {
+    content: "quick";
+  }
+  60% {
+    content: "advanced";
+  }
+  80% {
+    content: "efficient";
+  }
+}
+
 .hero-inner h3 {
   font-size: 1.5em;
   padding-top: .5em;
@@ -120,11 +164,6 @@ nav #check {
   padding-top: 1em;
 }
 
-.hero-inner mark {
-  background: none;
-  color: #e8d69c;
-}
-
 .hero-inner .btn {
   padding: 1.25rem 3rem;
   margin-top: 2.875rem;
@@ -132,7 +171,7 @@ nav #check {
   border-radius: 10px;
   text-transform: uppercase;
   color: #fff;
-  background: #2c3e51;
+  background: #3A606E;
   cursor: pointer;
   font-size: 1rem;
   text-decoration: none;
@@ -140,13 +179,14 @@ nav #check {
 }
 
 .hero-inner .btn:hover {
-  background: #3f5974;
+  background: #6F9AAA;
   -webkit-transition: .5s;
   transition: .5s;
 }
 
 .benefits {
   padding: 8em 10em 5em 10em;
+  color: #3A3434;
 }
 
 .benefits ul {
@@ -198,7 +238,7 @@ nav #check {
 }
 
 .card-wrapper .card {
-  background: #2c3e51;
+  background: #eee;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -223,21 +263,21 @@ nav #check {
   border-radius: 10px;
   margin: .5rem 0;
   text-transform: uppercase;
-  color: #2c3e51;
-  background: #e8d69c;
+  color: #eee;
+  background: #3A606E;
   font-size: 1rem;
   text-decoration: none;
 }
 
 .card-wrapper .card .btn:hover {
-  background: #f1e5c1;
+  background: #6F9AAA;
   -webkit-transition: .5s;
   transition: .5s;
 }
 
 .card-wrapper .card h1 {
   font-size: 2em;
-  color: #fff;
+  color: #3A3434;
 }
 
 .card-wrapper .card p {
@@ -245,7 +285,7 @@ nav #check {
   margin: 1rem;
   font-style: italic;
   text-align: center;
-  color: #fff;
+  color: #3A3434;
 }
 
 footer {
@@ -254,8 +294,8 @@ footer {
   left: 0;
   right: 0;
   height: 3em;
-  background: #2c3e51;
-  color: #fff;
+  background: #eee;
+  color: #3A3434;
   font-size: 1em;
   text-align: center;
   line-height: 3em;
@@ -295,7 +335,7 @@ footer {
     position: fixed;
     width: 100%;
     height: 100vh;
-    background: #2c3e51;
+    background: #eee;
     top: 5em;
     left: 100%;
     text-align: center;
@@ -311,7 +351,7 @@ footer {
     font-size: 1.5em;
   }
   nav ul li a.active, nav ul li a:hover {
-    background: #e8d69c;
+    background: #FF860D;
     -webkit-transition: .5s;
     transition: .5s;
   }
