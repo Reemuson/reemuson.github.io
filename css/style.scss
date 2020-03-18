@@ -1,17 +1,25 @@
 @import url('https://fonts.googleapis.com/css?family=Lato|Sacramento&display=swap');
 
 // Variables
-$body-color: #eee;
-$main-color: #2c3e51;
-$accent-color: #e8d69c;
+$body-color: #fff;
 
-$button1-color: #e8d69c;
-$button1-color-active: #f1e5c1;
+$color-1: #3A3434;
+$color-2: #FF860D;
+$color-3: #FF7F00;
+$color-4: #EDDED0;
+$color-5: #6F9AAA;
+$color-6: #3A606E;
+
+$main-color: #eee;
+$accent-color: $color-2;
+
+$button1-color: $color-6;
+$button1-color-active: $color-5;
 
 $button2-color: #2c3e51;
 $button2-color-active: #3f5974;
 
-$light-text-color: #0a0a0a;
+$light-text-color: $color-1;
 $dark-text-color: #fff;
 
 $h1: 4em;
@@ -40,11 +48,12 @@ nav {
     a.logo {
         text-decoration: none;
         color: $accent-color;
-        font-family: sacramento, cursive;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         font-size: 2em;
         line-height: 2.5em;
         padding-left: 5em;
         font-weight: bold;
+        text-transform: uppercase;
         cursor: pointer;
     }
     #projects-btn {
@@ -79,7 +88,7 @@ nav {
 
             a {
                 text-decoration: none;
-                color: $dark-text-color;
+                color: $light-text-color;
                 font-size: 1em;
                 text-transform: uppercase;
                 padding: .5em 1em;
@@ -87,7 +96,7 @@ nav {
 
                 &.active, &:hover {
                     background: $button1-color;
-                    color: $main-color;
+                    color: $dark-text-color;
                     transition: .5s;
                 }
             }
@@ -96,7 +105,7 @@ nav {
 
     .check-btn {
         font-size: 2em;
-        color: $dark-text-color;
+        color: $light-text-color;
         float: right;
         line-height: 2.5em;
         margin-right: 1.5em;
@@ -124,6 +133,19 @@ nav {
 
     h1 {
         font-size: $h1;
+
+        & span:before {
+            content: '';
+            color: $accent-color;
+            animation: animation 10s linear infinite;
+        }
+        @keyframes animation {
+            0%, 100%{ content: "robust"; }
+            20%{ content: "secure"; }
+            40%{ content: "quick"; }
+            60%{ content: "advanced"; }
+            80%{ content: "efficient"; }
+        }
     }
     h3 {
         font-size: $h3;
@@ -133,10 +155,6 @@ nav {
         font-size: $p;
         padding-top: 1em;
     }
-    mark {
-        background: none;
-        color: $accent-color;
-    }
     .btn {
         padding: 1.25rem 3rem;
         margin-top: 2.875rem;
@@ -144,14 +162,14 @@ nav {
         border-radius: 10px;
         text-transform: uppercase;
         color: $dark-text-color;
-        background: $button2-color;
+        background: $button1-color;
         cursor: pointer;
         font-size: 1rem;
         text-decoration: none;
         text-align: center;
 
         &:hover {
-            background: $button2-color-active;
+            background: $button1-color-active;
             transition: .5s;
         }
     }
@@ -159,6 +177,7 @@ nav {
 
 .benefits {
     padding: 8em 10em 5em 10em;
+    color: $light-text-color;
 
     ul {
         list-style: none;
@@ -223,14 +242,14 @@ nav {
 
         h1 {
             font-size: 2em;
-            color: $dark-text-color;
+            color: $light-text-color;
         }
         p {
             font-size: 1rem;
             margin: 1rem;
             font-style: italic;
             text-align: center;
-            color: $dark-text-color;
+            color: $light-text-color;
         }
     }
 }
@@ -245,7 +264,7 @@ footer {
     height: 3em;    
     background: $main-color;
     
-    color: $dark-text-color;
+    color: $light-text-color;
     font-size: 1em;
     text-align: center;
     line-height: 3em;
