@@ -108,49 +108,92 @@ nav #check {
 }
 
 .hero-inner h1 {
-  font-size: 4em;
+  font-size: 3.5em;
 }
 
-.hero-inner h1 span:before {
+.hero-inner h1 span#carousel-1::before {
   content: '';
   color: #FF860D;
-  -webkit-animation: animation 10s linear infinite;
-          animation: animation 10s linear infinite;
+  -webkit-animation: animation-1 10s linear infinite;
+          animation: animation-1 10s linear infinite;
 }
 
-@-webkit-keyframes animation {
+@-webkit-keyframes animation-1 {
   0%, 100% {
-    content: "robust";
+    content: "robust ";
   }
   20% {
-    content: "secure";
+    content: "secure ";
   }
   40% {
-    content: "quick";
+    content: "quick ";
   }
   60% {
-    content: "advanced";
+    content: "advanced ";
   }
   80% {
-    content: "efficient";
+    content: "efficient ";
   }
 }
 
-@keyframes animation {
+@keyframes animation-1 {
   0%, 100% {
-    content: "robust";
+    content: "robust ";
   }
   20% {
-    content: "secure";
+    content: "secure ";
   }
   40% {
-    content: "quick";
+    content: "quick ";
   }
   60% {
-    content: "advanced";
+    content: "advanced ";
   }
   80% {
-    content: "efficient";
+    content: "efficient ";
+  }
+}
+
+.hero-inner h1 span#carousel-2::before {
+  content: '';
+  color: #fff;
+  -webkit-animation: animation-2 10s linear infinite;
+          animation: animation-2 10s linear infinite;
+}
+
+@-webkit-keyframes animation-2 {
+  0%, 100% {
+    content: "platforms.";
+  }
+  20% {
+    content: "systems.";
+  }
+  40% {
+    content: "codebases.";
+  }
+  60% {
+    content: "software.";
+  }
+  80% {
+    content: "code.";
+  }
+}
+
+@keyframes animation-2 {
+  0%, 100% {
+    content: "platforms.";
+  }
+  20% {
+    content: "systems.";
+  }
+  40% {
+    content: "codebases.";
+  }
+  60% {
+    content: "software.";
+  }
+  80% {
+    content: "code.";
   }
 }
 
@@ -205,9 +248,21 @@ nav #check {
   padding: 0 1em 0 1em;
 }
 
-.benefits ul li img {
-  width: 8em;
-  padding-top: 1em;
+.benefits ul li i {
+  font-size: 5em;
+  padding: 1rem 0 1rem 0;
+}
+
+.benefits ul li i#benefit-1 {
+  color: #FF860D;
+}
+
+.benefits ul li i#benefit-2 {
+  color: #3A606E;
+}
+
+.benefits ul li i#benefit-3 {
+  color: #6F9AAA;
 }
 
 .benefits ul li h1 {
@@ -362,6 +417,16 @@ footer {
     padding: 8rem 3rem 5rem 3rem;
     font-size: .8rem;
   }
+  .hero-inner h1 span#carousel-1::before {
+    content: 'robust ';
+    -webkit-animation: none;
+            animation: none;
+  }
+  .hero-inner h1 span#carousel-2::before {
+    content: 'platforms.';
+    -webkit-animation: none;
+            animation: none;
+  }
   .hero-inner p {
     display: none;
   }
@@ -382,6 +447,9 @@ footer {
   }
   .benefits ul li {
     font-size: .8rem;
+  }
+  .benefits ul li i {
+    font-size: 4em;
   }
 }
 

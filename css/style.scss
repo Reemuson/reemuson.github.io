@@ -22,7 +22,7 @@ $button2-color-active: #3f5974;
 $light-text-color: $color-1;
 $dark-text-color: #fff;
 
-$h1: 4em;
+$h1: 3.5em;
 $h3: 1.5em;
 $p: 1em;
 
@@ -134,17 +134,29 @@ nav {
     h1 {
         font-size: $h1;
 
-        & span:before {
+        & span#carousel-1::before {
             content: '';
             color: $accent-color;
-            animation: animation 10s linear infinite;
+            animation: animation-1 10s linear infinite;
         }
-        @keyframes animation {
-            0%, 100%{ content: "robust"; }
-            20%{ content: "secure"; }
-            40%{ content: "quick"; }
-            60%{ content: "advanced"; }
-            80%{ content: "efficient"; }
+        @keyframes animation-1 {
+            0%, 100%{ content: "robust "; }
+            20%{ content: "secure "; }
+            40%{ content: "quick "; }
+            60%{ content: "advanced "; }
+            80%{ content: "efficient "; }
+        }
+        & span#carousel-2::before {
+            content: '';
+            color: $dark-text-color;
+            animation: animation-2 10s linear infinite;
+        }
+        @keyframes animation-2 {
+            0%, 100%{ content: "platforms."; }
+            20%{ content: "systems."; }
+            40%{ content: "codebases."; }
+            60%{ content: "software."; }
+            80%{ content: "code."; }
         }
     }
     h3 {
@@ -188,9 +200,19 @@ nav {
             text-align: center;
             padding: 0 1em 0 1em;
 
-            img {
-                width: 8em;
-                padding-top: 1em;
+            i {
+                font-size: 5em;
+                padding: 1rem 0 1rem 0;
+
+                &#benefit-1 {
+                    color: $color-2;
+                }
+                &#benefit-2 {
+                    color: $color-6;
+                }
+                &#benefit-3 {
+                    color: $color-5;
+                }
             }
 
             h1 {
@@ -336,6 +358,17 @@ footer {
     .hero-inner {
         padding: 8rem 3rem 5rem 3rem;
         font-size: .8rem;
+        
+        h1 {
+            & span#carousel-1::before {
+                content: 'robust ';
+                animation: none;
+            }
+            & span#carousel-2::before {
+                content: 'platforms.';
+                animation: none;
+            }
+        }
 
         p {
             display: none;
@@ -354,6 +387,10 @@ footer {
             
             li {
                 font-size: .8rem;
+
+                i {
+                    font-size: 4em;
+                }
             }
         }  
     } 
