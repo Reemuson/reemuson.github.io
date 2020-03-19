@@ -37,8 +37,8 @@ nav #projects-btn {
   font-size: 1em;
   text-transform: uppercase;
   float: right;
-  margin: 1.49em 1.5em;
-  padding: .5em 1em;
+  margin: 1.49em 1em;
+  padding: .5em .3em .5em .3em;
   border-radius: 5px;
   background: #3A606E;
   cursor: pointer;
@@ -463,7 +463,7 @@ footer {
     font-size: 1em;
   }
   .hero-inner {
-    padding: 7em 3em 9em 3em;
+    padding: 7em 3em 10em 3em;
   }
   .hero-inner .btn {
     margin-top: 3rem;
@@ -481,7 +481,7 @@ footer {
     display: block;
   }
   nav a#projects-btn {
-    opacity: 1;
+    opacity: 0;
   }
   nav ul {
     position: fixed;
