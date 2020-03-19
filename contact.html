@@ -20,30 +20,36 @@
             <li><a href="/index.html">Home</a></li>
             <li><a href="/projects.html">Projects</a></li>
             <li><a href="/contact.html" class="active">Contact</a></li>
-            <li><a href="#">Resume</a></li>
+            <!-- <li><a href="#">Resume</a></li> -->
         </ul>
         <a id="projects-btn" href="/projects.html">Projects</a>
     </nav>
 
     <div class="contact-me">
-        <ul>
-            <li>
+        <div class="form-area">
+            <div class="contact-text">
+                <li><i class="fas fa-comments-dollar"></i></li>
                 <h1>Let's Talk</h1>
                 <p>I'd love to talk with you about your next big project. Drop me a line and I'll get to you within a couple business days.</p>
-                <!-- Use formspree.io for a form
-
-                    [Name]
-                    [Email]
-                    [Message]
-
-                    Let's Talk
-                
-                -->
-            </li>
-            <li>
-                <p>Form Stuff</p>
-            </li>
-        </ul>
+            </div>
+            <div class="form-text">
+                <form 
+                    action="https://formspree.io/xknzzvvz"
+                    method="POST"
+                >
+                    <label>
+                        <input type="text" name="name" placeholder="Name" required>
+                    </label>
+                    <label>
+                        <input type="email" name="_replyto" placeholder="E-Mail" required>
+                    </label>
+                    <label>
+                        <textarea name="message"></textarea>
+                    </label>
+                    <button class="btn" type="submit">Send</button>
+                </form>
+            </div>
+        </div>
     </div>
 
     <footer>
