@@ -45,7 +45,8 @@ nav #projects-btn {
 }
 
 nav #projects-btn:hover {
-  background: #6F9AAA;
+  -webkit-filter: brightness(1.2);
+          filter: brightness(1.2);
   -webkit-transition: .5s;
   transition: .5s;
 }
@@ -223,7 +224,8 @@ nav #check {
 }
 
 .hero-inner .btn:hover {
-  background: #6F9AAA;
+  -webkit-filter: brightness(1.2);
+          filter: brightness(1.2);
   -webkit-transition: .5s;
   transition: .5s;
 }
@@ -333,7 +335,8 @@ nav #check {
 }
 
 .card-wrapper .card .btn:hover {
-  background: #6F9AAA;
+  -webkit-filter: brightness(1.2);
+          filter: brightness(1.2);
   -webkit-transition: .5s;
   transition: .5s;
 }
@@ -399,9 +402,13 @@ nav #check {
       flex-basis: 60%;
 }
 
+.contact-me .form-area .form-text form label h3 {
+  margin: .5em 0 .5em 0;
+  color: #3A606E;
+}
+
 .contact-me .form-area .form-text form input {
   width: 100%;
-  margin-top: 2em;
   padding: 1em 0 1em 1em;
   border: none;
   border-bottom: 2px solid #3A606E;
@@ -410,9 +417,9 @@ nav #check {
 }
 
 .contact-me .form-area .form-text form textarea {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   width: 100%;
   height: 10em;
-  margin-top: 2rem;
   padding: 1em 0 1em 1em;
   border: none;
   border-bottom: 2px solid #3A606E;
@@ -421,9 +428,10 @@ nav #check {
 }
 
 .contact-me .form-area .form-text form .btn {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   padding: 1.25rem 3rem;
   margin-top: 2em;
-  position: absolute;
+  position: relative;
   border-radius: 10px;
   text-transform: uppercase;
   color: #fff;
@@ -432,10 +440,12 @@ nav #check {
   font-size: 1rem;
   text-decoration: none;
   text-align: center;
+  width: 100%;
 }
 
 .contact-me .form-area .form-text form .btn:hover {
-  background: #6F9AAA;
+  -webkit-filter: brightness(1.2);
+          filter: brightness(1.2);
   -webkit-transition: .5s;
   transition: .5s;
 }
