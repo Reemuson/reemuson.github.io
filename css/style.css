@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css?family=Lato|Sacramento&display=swap");
 *, *::before, *::after {
   margin: 0;
   padding: 0;
@@ -7,12 +6,12 @@
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   width: 100%;
-  background: #fff;
+  background: #FCF6F3;
   overflow-y: scroll;
 }
 
 nav {
-  background: #eee;
+  background: #1D3A55;
   height: 5em;
   width: 100%;
   z-index: 10;
@@ -20,7 +19,7 @@ nav {
 
 nav a.logo {
   text-decoration: none;
-  color: #FF860D;
+  color: #EE6352;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 2em;
   line-height: 2.5em;
@@ -33,20 +32,19 @@ nav a.logo {
 nav #projects-btn {
   opacity: 0;
   text-decoration: none;
-  color: #fff;
+  color: #071013;
   font-size: 1em;
-  text-transform: uppercase;
   float: right;
   margin: 1.49em 1em;
   padding: .5em .3em .5em .3em;
   border-radius: 5px;
-  background: #3A606E;
+  background: #EE6352;
   cursor: pointer;
 }
 
 nav #projects-btn:hover {
-  -webkit-filter: brightness(1.2);
-          filter: brightness(1.2);
+  -webkit-filter: brightness(1.1);
+          filter: brightness(1.1);
   -webkit-transition: .5s;
   transition: .5s;
 }
@@ -67,23 +65,22 @@ nav ul li {
 
 nav ul li a {
   text-decoration: none;
-  color: #3A3434;
+  color: #FCF6F3;
   font-size: 1em;
-  text-transform: uppercase;
+  font-weight: bold;
   padding: .5em 1em;
   border-radius: 5px;
 }
 
 nav ul li a.active, nav ul li a:hover {
-  background: #3A606E;
-  color: #fff;
+  background: #EE6352;
   -webkit-transition: .5s;
   transition: .5s;
 }
 
 nav .check-btn {
   font-size: 2em;
-  color: #3A3434;
+  color: #FCF6F3;
   float: right;
   line-height: 2.5em;
   margin-right: 1.5em;
@@ -96,143 +93,51 @@ nav #check {
 }
 
 .hero {
-  position: relative;
-  background-image: url("/src/laptop-coder-splash.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 50%;
+  padding: 5em 10em 5em 10em;
+  color: #071013;
 }
 
-.hero-inner {
-  color: #fff;
-  padding: 10em 10em 10em 10em;
-}
-
-.hero-inner h1 {
+.hero h1 {
   font-size: 3.5em;
 }
 
-.hero-inner h1 span#carousel-1::before {
-  content: '';
-  color: #FF860D;
-  -webkit-animation: animation-1 10s linear infinite;
-          animation: animation-1 10s linear infinite;
-}
-
-@-webkit-keyframes animation-1 {
-  0%, 100% {
-    content: "robust ";
-  }
-  20% {
-    content: "secure ";
-  }
-  40% {
-    content: "quick ";
-  }
-  60% {
-    content: "advanced ";
-  }
-  80% {
-    content: "efficient ";
-  }
-}
-
-@keyframes animation-1 {
-  0%, 100% {
-    content: "robust ";
-  }
-  20% {
-    content: "secure ";
-  }
-  40% {
-    content: "quick ";
-  }
-  60% {
-    content: "advanced ";
-  }
-  80% {
-    content: "efficient ";
-  }
-}
-
-.hero-inner h1 span#carousel-2::before {
-  content: '';
-  color: #fff;
-  -webkit-animation: animation-2 10s linear infinite;
-          animation: animation-2 10s linear infinite;
-}
-
-@-webkit-keyframes animation-2 {
-  0%, 100% {
-    content: "platforms.";
-  }
-  20% {
-    content: "systems.";
-  }
-  40% {
-    content: "codebases.";
-  }
-  60% {
-    content: "software.";
-  }
-  80% {
-    content: "code.";
-  }
-}
-
-@keyframes animation-2 {
-  0%, 100% {
-    content: "platforms.";
-  }
-  20% {
-    content: "systems.";
-  }
-  40% {
-    content: "codebases.";
-  }
-  60% {
-    content: "software.";
-  }
-  80% {
-    content: "code.";
-  }
-}
-
-.hero-inner h3 {
+.hero h3 {
   font-size: 1.5em;
   padding-top: .5em;
 }
 
-.hero-inner p {
+.hero p {
   font-size: 1em;
   padding-top: 1em;
 }
 
-.hero-inner .btn {
-  padding: 1.25rem 3rem;
-  margin-top: 2.875rem;
-  position: absolute;
+.hero .btn {
+  display: block;
+  margin-top: 2em;
+  height: 3.5em;
+  width: 10em;
+  line-height: 3.5em;
   border-radius: 10px;
-  text-transform: uppercase;
-  color: #fff;
-  background: #3A606E;
+  color: #FCF6F3;
+  background: #EE6352;
   cursor: pointer;
-  font-size: 1rem;
+  font-size: 1.25em;
+  font-weight: bold;
   text-decoration: none;
   text-align: center;
 }
 
-.hero-inner .btn:hover {
-  -webkit-filter: brightness(1.2);
-          filter: brightness(1.2);
+.hero .btn:hover {
+  -webkit-filter: brightness(1.1);
+          filter: brightness(1.1);
   -webkit-transition: .5s;
   transition: .5s;
 }
 
 .benefits {
-  padding: 8em 10em 5em 10em;
-  color: #3A3434;
+  padding: 5em 10em 5em 10em;
+  color: #FCF6F3;
+  background: #071013;
 }
 
 .benefits ul {
@@ -247,15 +152,16 @@ nav #check {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
 }
 
 .benefits ul li {
   text-align: center;
   padding: 0 1em 0 1em;
   max-width: 30%;
+  max-height: 100%;
 }
 
 .benefits ul li i {
@@ -264,15 +170,15 @@ nav #check {
 }
 
 .benefits ul li i#benefit-1 {
-  color: #FF860D;
+  color: #EE6352;
 }
 
 .benefits ul li i#benefit-2 {
-  color: #3A606E;
+  color: #1D3A55;
 }
 
 .benefits ul li i#benefit-3 {
-  color: #6F9AAA;
+  color: #89D2DC;
 }
 
 .benefits ul li h1 {
@@ -303,7 +209,7 @@ nav #check {
 }
 
 .card-wrapper .card {
-  background: #eee;
+  background: #F9ECE6;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -327,23 +233,23 @@ nav #check {
   padding: 1rem 2rem;
   border-radius: 10px;
   margin: .5rem 0;
-  text-transform: uppercase;
-  color: #eee;
-  background: #3A606E;
-  font-size: 1rem;
+  color: #FCF6F3;
+  background: #EE6352;
+  font-size: 1em;
+  font-weight: bold;
   text-decoration: none;
 }
 
 .card-wrapper .card .btn:hover {
-  -webkit-filter: brightness(1.2);
-          filter: brightness(1.2);
+  -webkit-filter: brightness(1.1);
+          filter: brightness(1.1);
   -webkit-transition: .5s;
   transition: .5s;
 }
 
 .card-wrapper .card h1 {
   font-size: 2em;
-  color: #3A3434;
+  color: #071013;
 }
 
 .card-wrapper .card p {
@@ -351,7 +257,7 @@ nav #check {
   margin: 1rem;
   font-style: italic;
   text-align: center;
-  color: #3A3434;
+  color: #071013;
 }
 
 .contact-me {
@@ -375,25 +281,18 @@ nav #check {
 .contact-me .form-area .contact-text {
   -ms-flex-preferred-size: 30%;
       flex-basis: 30%;
-}
-
-.contact-me .form-area .contact-text li {
-  list-style: none;
-  text-align: center;
-}
-
-.contact-me .form-area .contact-text li i {
-  font-size: 8em;
-  color: #6F9AAA;
-  padding: 2rem;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 .contact-me .form-area .contact-text h1 {
-  font-size: 2em;
+  font-size: 3.5em;
+  color: #89D2DC;
 }
 
-.contact-me .form-area .contact-text p {
-  font-size: 1em;
+.contact-me .form-area .contact-text h2 {
+  font-size: 2em;
   padding-top: 1em;
 }
 
@@ -404,16 +303,18 @@ nav #check {
 
 .contact-me .form-area .form-text form label h3 {
   margin: .5em 0 .5em 0;
-  color: #3A606E;
+  color: #EE6352;
 }
 
 .contact-me .form-area .form-text form input {
   width: 100%;
   padding: 1em 0 1em 1em;
   border: none;
-  border-bottom: 2px solid #3A606E;
-  background-color: #eee;
+  border-bottom: 2px solid #EE6352;
+  background-color: #F9ECE6;
+  color: #071013;
   font-size: 1em;
+  font-weight: normal;
 }
 
 .contact-me .form-area .form-text form textarea {
@@ -422,9 +323,11 @@ nav #check {
   height: 10em;
   padding: 1em 0 1em 1em;
   border: none;
-  border-bottom: 2px solid #3A606E;
-  background-color: #eee;
+  border-bottom: 2px solid #EE6352;
+  background-color: #F9ECE6;
+  color: #071013;
   font-size: 1em;
+  font-weight: normal;
 }
 
 .contact-me .form-area .form-text form .btn {
@@ -433,19 +336,19 @@ nav #check {
   margin-top: 2em;
   position: relative;
   border-radius: 10px;
-  text-transform: uppercase;
-  color: #fff;
-  background: #3A606E;
+  color: #FCF6F3;
+  background: #EE6352;
   cursor: pointer;
-  font-size: 1rem;
+  font-size: 1.25em;
+  font-weight: bold;
   text-decoration: none;
   text-align: center;
   width: 100%;
 }
 
 .contact-me .form-area .form-text form .btn:hover {
-  -webkit-filter: brightness(1.2);
-          filter: brightness(1.2);
+  -webkit-filter: brightness(1.1);
+          filter: brightness(1.1);
   -webkit-transition: .5s;
   transition: .5s;
 }
@@ -456,8 +359,8 @@ footer {
   left: 0;
   right: 0;
   height: 3em;
-  background: #eee;
-  color: #3A3434;
+  background: #FCF6F3;
+  color: #071013;
   font-size: 1em;
   text-align: center;
   line-height: 3em;
@@ -472,11 +375,13 @@ footer {
   nav ul li a {
     font-size: 1em;
   }
-  .hero-inner {
-    padding: 7em 3em 10em 3em;
+  .hero {
+    padding: 5em 3em 5em 3em;
   }
-  .hero-inner .btn {
-    margin-top: 3rem;
+  .hero .btn {
+    height: 2.5em;
+    width: 8em;
+    line-height: 2.5em;
   }
   .benefits {
     padding: 3em;
@@ -497,7 +402,7 @@ footer {
     position: fixed;
     width: 100%;
     height: 100vh;
-    background: #eee;
+    background: #1D3A55;
     top: 5em;
     left: 100%;
     text-align: center;
@@ -513,33 +418,35 @@ footer {
     font-size: 1.5em;
   }
   nav ul li a.active, nav ul li a:hover {
-    background: #FF860D;
+    background: #EE6352;
     -webkit-transition: .5s;
     transition: .5s;
   }
   nav #check:checked ~ ul {
     left: 0;
   }
-  .hero-inner {
+  .hero {
     padding: 8rem 3rem 5rem 3rem;
     font-size: .8rem;
   }
-  .hero-inner h1 span#carousel-1::before {
+  .hero h1 span#carousel-1::before {
     content: 'robust ';
     -webkit-animation: none;
             animation: none;
   }
-  .hero-inner h1 span#carousel-2::before {
+  .hero h1 span#carousel-2::before {
     content: 'platforms.';
     -webkit-animation: none;
             animation: none;
   }
-  .hero-inner p {
+  .hero p {
     display: none;
   }
-  .hero-inner .btn {
-    padding: .7rem 1.5rem;
-    margin-top: 1rem;
+  .hero .btn {
+    height: 2em;
+    width: 6em;
+    line-height: 2em;
+    margin-top: 2rem;
   }
   .benefits ul {
     -webkit-box-orient: vertical;
@@ -560,7 +467,7 @@ footer {
     font-size: 4em;
   }
   .contact-me {
-    padding: 8rem 3rem 8rem 3rem;
+    padding: 8rem 3rem 5rem 3rem;
   }
   .contact-me .form-area {
     -webkit-box-orient: vertical;
@@ -569,7 +476,10 @@ footer {
             flex-direction: column;
   }
   .contact-me .form-area .contact-text, .contact-me .form-area .form-text {
-    padding: 0;
+    font-size: .8rem;
+  }
+  .contact-me .form-area .form-text {
+    padding-top: 3em;
   }
 }
 
