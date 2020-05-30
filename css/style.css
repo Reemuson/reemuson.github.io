@@ -32,11 +32,12 @@ nav a.logo {
 nav #projects-btn {
   opacity: 0;
   text-decoration: none;
-  color: #071013;
+  color: #FCF6F3;
   font-size: 1em;
+  font-weight: bold;
   float: right;
-  margin: 1.49em 1em;
-  padding: .5em .3em .5em .3em;
+  margin: 1.45em 1em;
+  padding: .5em;
   border-radius: 5px;
   background: #EE6352;
   cursor: pointer;
@@ -396,7 +397,7 @@ footer {
     display: block;
   }
   nav a#projects-btn {
-    opacity: 0;
+    opacity: 1;
   }
   nav ul {
     position: fixed;
