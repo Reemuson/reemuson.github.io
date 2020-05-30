@@ -57,11 +57,12 @@ nav {
     #projects-btn {
         opacity: 0;
         text-decoration: none;
-        color: $colour-text-light;
+        color: $colour-text-dark;
         font-size: $p;
+        font-weight: bold;
         float: right;
-        margin: 1.49em 1em;
-        padding: .5em .3em .5em .3em;
+        margin: 1.45em 1em;
+        padding: .5em;
         border-radius: 5px;
         background: $colour-button-1;
         cursor: pointer;
@@ -388,7 +389,7 @@ footer {
             display: block;
         }
         a#projects-btn {
-            opacity: 0;
+            opacity: 1;
         }
         ul {
             position: fixed;
