@@ -28,18 +28,20 @@ $p: 1em;
     padding: 0;
 }
 
-body {
+body, html {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    width: 100%;
-    background: $colour-bg;
-    overflow-y: scroll;
+    height: 100%;
+}
+
+main {
+    background: $colour-2;
 }
 
 // Responsive navbar
 
 nav {
     background: $colour-nav;
-    height: 5em;
+    height: 8vh;
     width: 100%;
     z-index: 10;
 
@@ -48,7 +50,7 @@ nav {
         color: $colour-accent-1;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         font-size: 2em;
-        line-height: 2.5em;
+        line-height: 8vh;
         padding-left: 5em;
         font-weight: bold;
         text-transform: uppercase;
@@ -61,7 +63,7 @@ nav {
         font-size: $p;
         font-weight: bold;
         float: right;
-        margin: 1.45em 1em;
+        margin: 1.2em 1em;
         padding: .5em;
         border-radius: 5px;
         background: $colour-button-1;
@@ -81,7 +83,7 @@ nav {
 
         li {
             display: inline-block;
-            line-height: 5em;
+            line-height: 8vh;
             margin: 0 .5em;
 
             a {
@@ -104,7 +106,7 @@ nav {
         font-size: 2em;
         color: $colour-text-dark;
         float: right;
-        line-height: 2.5em;
+        line-height: 8vh;
         margin-right: 1.5em;
         cursor: pointer;
         display: none;
@@ -114,10 +116,11 @@ nav {
     }
 }
 
-// Home content
-
+.about {
+    background: $colour-1;
+    min-height: 92vh;
+}
 .hero {
-    padding: 5em 10em 5em 10em;
     color: $colour-text-light;
 
     h1 {
@@ -131,9 +134,14 @@ nav {
         font-size: $p;
         padding-top: 1em;
     }
+    mark {
+        background: none;
+        color: $colour-5;
+        font-style: italic;
+    }
     .btn {
         display: block;
-        margin-top: 2em;
+        margin: 2em 0 0 0;
         height: 3.5em;
         width: 10em;
         line-height: 3.5em;
@@ -145,6 +153,7 @@ nav {
         font-weight: bold;
         text-decoration: none;
         text-align: center;
+        text-justify: center;
 
         &:hover {
             filter: brightness(1.1);
@@ -152,11 +161,9 @@ nav {
         }
     }
 }
-
 .benefits {
-    padding: 5em 10em 5em 10em;
-    color: $colour-text-dark;
-    background: $colour-3;
+    margin-top: 7em;
+    color: $colour-text-light;
 
     ul {
         list-style: none;
@@ -202,8 +209,17 @@ nav {
     }
 }
 
+.projects {
+    background: $colour-3;
+    min-height: 100vh;
+
+    h1 {
+        font-size: $h1;
+        color: $colour-text-dark;
+        padding-bottom: 1em;
+    }
+}
 .card-wrapper {
-    padding-bottom: 5em;
     width: 100%;
     display: -webkit-box;
     display: -moz-box;
@@ -259,9 +275,11 @@ nav {
     }
 }
 
+.contact {
+    background: $colour-1;
+    min-height: 94vh;
+}
 .contact-me {
-    padding: 10em;
-    
     .form-area {
         width: 100%;
         display: -webkit-box;
@@ -341,6 +359,10 @@ nav {
     }
 }
 
+.page .details {
+        padding: 5em 10em 5em 10em;
+}
+
 // Footer
 
 footer {
@@ -348,40 +370,40 @@ footer {
     bottom: 0;
     left: 0;
     right: 0;
-    height: 3em;    
-    background: $colour-bg;
+    height: 6vh;    
+    background: $colour-nav;
     
-    color: $colour-text-light;
+    color: $colour-text-dark;
     font-size: 1em;
     text-align: center;
-    line-height: 3em;
+    line-height: 6vh;
 }
 
 // Scaling
 @media screen and (max-width: 952px) {
+    body{
+        font-size: 0.8em;
+    }
     nav a.logo {
         font-size: 2em;
-        line-height: 2.5em;
+        line-height: 8vh;
         padding-left: 1.5em;
+    }
+    nav ul {
+        margin-right: 3em;
     }
     nav ul li a {
         font-size: 1em;
     }
-    .hero {
+    .page .details {
         padding: 5em 3em 5em 3em;
-        
-        .btn {
-            height: 2.5em;
-            width: 8em;
-            line-height: 2.5em;
-        }
-    }
-    .benefits {
-        padding: 3em;
     }
 }
 
 @media screen and (max-width: 858px) {
+    body{
+        font-size: 0.8em;
+    }
     nav {
         position: fixed;
 
@@ -396,7 +418,6 @@ footer {
             width: 100%;
             height: 100vh;
             background: $colour-4;
-            top: 5em;
             left: 100%;
             text-align: center;
             transition: all .5s;
@@ -422,33 +443,23 @@ footer {
         }
     }
 
-    .hero {
-        padding: 8rem 3rem 5rem 3rem;
-        font-size: .8rem;
-        
-        h1 {
-            & span#carousel-1::before {
-                content: 'robust ';
-                animation: none;
-            }
-            & span#carousel-2::before {
-                content: 'platforms.';
-                animation: none;
-            }
-        }
+    .page .details {
+        padding: 5em 3em 5em 3em;
+    }
 
+    .about .details {
+        padding-top: 8em;
+    }
+
+    .hero {
         p {
             display: none;
         }
-        
-        .btn {
-            height: 2em;
-            width: 6em;
-            line-height: 2em;
-            margin-top: 2rem;
-        }
     }
+
     .benefits {
+        margin-top: 2em;
+
         ul {
             flex-direction: column;
             flex-wrap: wrap;
@@ -463,10 +474,9 @@ footer {
                 }
             }
         }  
-    } 
-    .contact-me {
-        padding: 8rem 3rem 5rem 3rem;
+    }
 
+    .contact-me {
         .form-area {
             flex-direction: column;
 

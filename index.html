@@ -17,70 +17,109 @@
         </label>
         <a class="logo" href="/index.html">Ryan.</a>
         <ul>
-            <li><a href="/index.html" class="active">Home</a></li>
-            <li><a href="/projects.html">Projects</a></li>
-            <li><a href="/contact.html">Contact</a></li>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="index.html#projects">Projects</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
             <!-- <li><a href="#">Resume</a></li> -->
         </ul>
-        <a id="projects-btn" href="/projects.html">Projects</a>
+        <a id="projects-btn" href="index.html#projects">Projects</a>
     </nav>
-
-    <div class="hero">
-        <h1>I make.</h1>
-        <h3>C/C++ developer, 3D artist, UI/UX designer.</h3>
-        <p>A creative, quick working problem solver ready to execute your groundbreaking ideas.</p>
-        <a href="/contact.html" class="btn">Hire me!</a>
-    </div>
-
-    <div class="benefits">
-        <ul>
-            <li>
-                <i class="fas fa-code" id="benefit-1"></i>
-                <h1>Coding Skills</h1>
-                <p>
-                    Extensive knowledge in OOL languages such as C/C++. Knowledge of web-development and responsive web UI/UX design.
-                </p>
-            </li>
-            <li>
-                <i class="fas fa-cogs" id="benefit-2"></i>
-                <h1>Holistic Process</h1>
-                <p>
-                    From start to finish, every project is approached with a holistic process to cater to every need known or unknown.
-                </p>
-            </li>
-            <li>
-                <i class="fas fa-drafting-compass" id="benefit-3"></i>
-                <h1>Design Aware</h1>
-                <p>
-                    Modern design principles and careful consideration are used to ensure the product exceeds requirements and expectations.
-                </p>
-            </li>
-        </ul>
-    </div>
-
-    <div class="card-wrapper">
-        <div class="card">
-            <h1>Stocker</h1>
-            <p>An inventory management system with jobkeeping, timekeeping and invoicing written in C++.</p>
-            <a href="#" class="btn live">Live Demonstration</a>
-            <a href="#" class="btn source">Source</a>
-        </div>
-
-        <div class="card">
-            <h1>Molecuview</h1>
-            <p>Software for drawing molecule structures based on IUPAC nomencature written in C++.</p>
-            <a href="#" class="btn live">Live Demonstration</a>
-            <a href="#" class="btn source">Source</a>
-        </div>
-
-        <div class="card">
-            <h1>Flgn</h1>
-            <p>A webapp for a ride-hailing service to taxi inebriated individuals to home.</p>
-            <a href="#" class="btn live">Live Demonstration</a>
-            <a href="#" class="btn source">Source</a>
-        </div>
-    </div>
-    
+    <main>
+        <section class="page about" id="about">
+            <div class="details">
+                <div class="hero">
+                    <h1>I make your ideas a <mark>reality</mark>.</h1>
+                    <h3>C/C++ developer, 3D artist, UI/UX designer.</h3>
+                    <p>A creative, quick working problem solver ready to execute your groundbreaking ideas.</p>
+                    <a href="index.html#contact" class="btn">Hire me!</a>
+                </div>
+                <div class="benefits">
+                    <ul>
+                        <li>
+                            <i class="fas fa-code" id="benefit-1"></i>
+                            <h1>Coding Skills</h1>
+                            <p>
+                                Extensive knowledge in OOL languages such as C/C++. Knowledge of web-development and responsive web UI/UX design.
+                            </p>
+                        </li>
+                        <li>
+                            <i class="fas fa-paint-brush" id="benefit-2"></i>
+                            <h1>Holistic Process</h1>
+                            <p>
+                                From start to finish, every project is approached with a holistic process to cater to every need known or unknown.
+                            </p>
+                        </li>
+                        <li>
+                            <i class="fas fa-drafting-compass" id="benefit-3"></i>
+                            <h1>Design Aware</h1>
+                            <p>
+                                Modern design principles and careful consideration are used to ensure the product exceeds requirements and expectations.
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="page projects" id="projects">
+            <div class="details">
+                <h1>My Projects</h1>
+                <div class="card-wrapper">
+                    <div class="card">
+                        <h1>Stocker</h1>
+                        <p>An inventory management system with jobkeeping, timekeeping and invoicing written in C++.</p>
+                        <a href="#" class="btn live">Live Demonstration</a>
+                        <a href="#" class="btn source">Source</a>
+                    </div>
+            
+                    <div class="card">
+                        <h1>Molecuview</h1>
+                        <p>Software for drawing molecule structures based on IUPAC nomencature written in C++.</p>
+                        <a href="#" class="btn live">Live Demonstration</a>
+                        <a href="#" class="btn source">Source</a>
+                    </div>
+            
+                    <div class="card">
+                        <h1>Flgn</h1>
+                        <p>A webapp for a ride-hailing service to taxi inebriated individuals to home.</p>
+                        <a href="#" class="btn live">Live Demonstration</a>
+                        <a href="#" class="btn source">Source</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="page contact" id="contact">
+            <div class="details">
+                <div class="contact-me">
+                    <div class="form-area">
+                        <div class="contact-text">
+                            <h1>Let's Talk!</h1>
+                            <h2>I'd love to talk with you about your next big project. Drop me a line and I'll get to you within a couple business days.</h2>
+                        </div>
+                        <div class="form-text">
+                            <form 
+                                action="https://formspree.io/xknzzvvz"
+                                method="POST"
+                            >
+                                <label>
+                                    <h3>Name:</h3>
+                                    <input type="text" name="name" required>
+                                </label>
+                                <label>
+                                    <h3>E-Mail:</h3>
+                                    <input type="email" name="_replyto" required>
+                                </label>
+                                <label>
+                                    <h3>Message:</h3>
+                                    <textarea name="message"></textarea>
+                                </label>
+                                <button class="btn" type="submit">Get in touch!</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
     <footer>
         <p>Copyright © 2020 Ryan</p>
     </footer>
