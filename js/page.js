@@ -1,28 +1,26 @@
 function init() {
-    const dots = document.querySelectorAll(".slide");
-    const slides = document.querySelectorAll(".page");
+    const dots = document.querySelectorAll(".dot");
+    const btnHireMe = document.querySelector("#btn-hireme");
+    const btnProjects = document.querySelector("#btn-projects");
 
-    let currentSlide = 0;
-    let scrollSlide = 0;
-
+    btnHireMe.addEventListener("click", function() {
+        changeDot(dots[2]);
+    });
+    btnProjects.addEventListener("click", function() {
+        changeDot(dots[1]);
+    });
     dots.forEach((dot, index) => {
         dot.addEventListener("click", function() {
-            changeDots(this);
-            nextSlide(index);
-            scrollSlide = index;
+            changeDot(this);
         });
     });
 
-    function changeDots(dotElement) {
+    function changeDot(element) {
         dots.forEach(dot => {
             dot.classList.remove("active");
         });
-        dotElement.classlist.add("active");
-    }
-
-    function nextSlide(pageNum) {
-        const nextPage = pages[pageNum];
-        const currentPage = pages[current];
-        const nextText = nextPage.querySelector(".details");
+        element.classList.add("active");
     }
 }
+
+init();

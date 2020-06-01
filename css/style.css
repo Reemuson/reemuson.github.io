@@ -5,7 +5,6 @@
 
 body, html {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  height: 100%;
 }
 
 main {
@@ -25,27 +24,27 @@ nav a.logo {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 2em;
   line-height: 8vh;
-  padding-left: 5em;
+  margin-left: 10%;
   font-weight: bold;
   text-transform: uppercase;
   cursor: pointer;
 }
 
-nav #projects-btn {
+nav #btn-projects {
   opacity: 0;
   text-decoration: none;
   color: #FCF6F3;
   font-size: 1em;
   font-weight: bold;
   float: right;
-  margin: 1.2em 1em;
-  padding: .5em;
+  margin: 1.75em 1em;
+  padding: .5em 1em;
   border-radius: 5px;
   background: #EE6352;
   cursor: pointer;
 }
 
-nav #projects-btn:hover {
+nav #btn-projects:hover {
   -webkit-filter: brightness(1.1);
           filter: brightness(1.1);
   -webkit-transition: .5s;
@@ -57,7 +56,7 @@ nav ul {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   float: right;
-  margin-right: 10em;
+  margin-right: 10%;
 }
 
 nav ul li {
@@ -69,14 +68,16 @@ nav ul li {
 nav ul li a {
   text-decoration: none;
   color: #FCF6F3;
+  background: #EE6352;
   font-size: 1em;
   font-weight: bold;
   padding: .5em 1em;
   border-radius: 5px;
 }
 
-nav ul li a.active, nav ul li a:hover {
-  background: #EE6352;
+nav ul li a:hover {
+  -webkit-filter: brightness(1.1);
+          filter: brightness(1.1);
   -webkit-transition: .5s;
   transition: .5s;
 }
@@ -86,7 +87,7 @@ nav .check-btn {
   color: #FCF6F3;
   float: right;
   line-height: 8vh;
-  margin-right: 1.5em;
+  margin-right: 10%;
   cursor: pointer;
   display: none;
 }
@@ -378,7 +379,67 @@ nav #check {
 }
 
 .page .details {
-  padding: 5em 10em 5em 10em;
+  padding: 5em 10% 5em 10%;
+}
+
+.page-dots {
+  display: none;
+  position: fixed;
+  right: 5%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.page-dots > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.page-dots svg {
+  cursor: pointer;
+  opacity: 0.5;
+  -webkit-transform: scale(2);
+          transform: scale(2);
+  margin: 2em 0 2em 0;
+}
+
+.page-dots svg:hover {
+  -webkit-animation: dot 0.5s ease-in-out infinite alternate;
+          animation: dot 0.5s ease-in-out infinite alternate;
+}
+
+.page-dots svg.active {
+  opacity: 1;
+}
+
+@-webkit-keyframes dot {
+  0% {
+    -webkit-transform: scale(2);
+            transform: scale(2);
+  }
+  100% {
+    -webkit-transform: scale(4);
+            transform: scale(4);
+  }
+}
+
+@keyframes dot {
+  0% {
+    -webkit-transform: scale(2);
+            transform: scale(2);
+  }
+  100% {
+    -webkit-transform: scale(4);
+            transform: scale(4);
+  }
 }
 
 footer {
@@ -401,30 +462,30 @@ footer {
   nav a.logo {
     font-size: 2em;
     line-height: 8vh;
-    padding-left: 1.5em;
+    margin-left: 5%;
   }
   nav ul {
-    margin-right: 3em;
+    margin-right: 5%;
   }
   nav ul li a {
     font-size: 1em;
   }
+  nav .check-btn {
+    margin-right: 5%;
+  }
   .page .details {
-    padding: 5em 3em 5em 3em;
+    padding: 5em 5% 5em 5%;
   }
 }
 
 @media screen and (max-width: 858px) {
-  body {
-    font-size: 0.8em;
-  }
   nav {
     position: fixed;
   }
   nav label.check-btn {
     display: block;
   }
-  nav a#projects-btn {
+  nav a#btn-projects {
     opacity: 1;
   }
   nav ul {
@@ -452,9 +513,6 @@ footer {
   }
   nav #check:checked ~ ul {
     left: 0;
-  }
-  .page .details {
-    padding: 5em 3em 5em 3em;
   }
   .about .details {
     padding-top: 8em;

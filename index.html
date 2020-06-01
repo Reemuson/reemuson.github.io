@@ -4,34 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Ryan | Home</title>
+    <title>Ryan.</title>
 
     <link rel="stylesheet" href="/css/style.css">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
 <body>
-    <nav>
+    <nav id="about">
         <input type="checkbox" id="check">
         <label for="check" class="check-btn">
             <i class="fas fa-bars"></i>
         </label>
         <a class="logo" href="/index.html">Ryan.</a>
         <ul>
-            <li><a href="index.html" class="active">Home</a></li>
             <li><a href="index.html#projects">Projects</a></li>
             <li><a href="index.html#contact">Contact</a></li>
             <!-- <li><a href="#">Resume</a></li> -->
         </ul>
-        <a id="projects-btn" href="index.html#projects">Projects</a>
+        <a href="index.html#projects" id="btn-projects" >Projects</a>
     </nav>
     <main>
-        <section class="page about" id="about">
+        <section class="page about">
             <div class="details">
                 <div class="hero">
                     <h1>I make your ideas a <mark>reality</mark>.</h1>
                     <h3>C/C++ developer, 3D artist, UI/UX designer.</h3>
                     <p>A creative, quick working problem solver ready to execute your groundbreaking ideas.</p>
-                    <a href="index.html#contact" class="btn">Hire me!</a>
+                    <a href="index.html#contact" class="btn" id="btn-hireme">Hire me!</a>
                 </div>
                 <div class="benefits">
                     <ul>
@@ -119,9 +118,55 @@
                 </div>
             </div>
         </section>
+        <div class="page-dots">
+            <div class="dot-1">
+                <svg
+                    class="dot active"
+                    width="12"
+                    height="12"
+                    viewBox="0 0 12 12"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <a href="index.html#about">
+                        <circle cx="6" cy="6" r="6" fill="#EE6352" />
+                    </a>
+                </svg>
+            </div>
+            <div class="dot-2">
+                <svg
+                    class="dot"
+                    width="12"
+                    height="12"
+                    viewBox="0 0 12 12"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <a href="index.html#projects">
+                        <circle cx="6" cy="6" r="6" fill="#EE6352" />
+                    </a>
+                </svg>
+            </div>
+            <div class="dot-3">
+                <svg
+                    class="dot"
+                    width="12"
+                    height="12"
+                    viewBox="0 0 12 12"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <a href="index.html#contact">
+                        <circle cx="6" cy="6" r="6" fill="#EE6352" />
+                    </a>
+                </svg>
+            </div>
+          </div>
     </main>
     <footer>
         <p>Copyright © 2020 Ryan</p>
     </footer>
+
+    <script src="/js/page.js"></script>
 </body>
 </html>
