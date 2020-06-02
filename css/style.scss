@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap');
+
 // Variables
 $colour-1: #FCF6F3;
 $colour-2: #F9ECE6;
@@ -17,81 +19,66 @@ $colour-button-2: $colour-6;
 $colour-text-light: $colour-3;
 $colour-text-dark: $colour-1;
 
-$h1: 3.5em;
-$h2: 2em;
-$h3: 1.5em;
-$h4: 1.25em;
+$h1: 2em;
+$h2: 1.5em;
+$h3: 1.25em;
+$h4: 1.125em;
 $p: 1em;
 
 *, *::before, *::after {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-body, html {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-main {
-    background: $colour-2;
+body {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    background-color: $colour-1;
 }
 
 // Responsive navbar
 nav {
     background: $colour-nav;
-    height: 8vh;
+    height: 10vh;
     width: 100%;
     z-index: 10;
+    position: fixed;
 
-    a.logo {
-        text-decoration: none;
-        color: $colour-accent-1;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        font-size: 2em;
-        line-height: 8vh;
+    .logo {
         margin-left: 10%;
-        font-weight: bold;
-        text-transform: uppercase;
         cursor: pointer;
-    }
-    #btn-projects {
-        opacity: 0;
+        font-size: 2em;
+        font-weight: 700;
+        line-height: 10vh;
+        color: $colour-accent-1;
         text-decoration: none;
-        color: $colour-text-dark;
-        font-size: $p;
-        font-weight: bold;
-        float: right;
-        margin: 1.75em 1em;
-        padding: .5em 1em;
-        border-radius: 5px;
-        background: $colour-button-1;
-        cursor: pointer;
-
-        &:hover {
-            filter: brightness(1.1);
-            transition: .5s;
-        }
     }
 
-    ul {
+    .nav-links {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        left: 100%;
+        background-color: $colour-nav;
+        text-align: center;
         list-style: none;
-        box-sizing: border-box;
-        float: right;
-        margin-right: 10%;
+        transition: all .5s ease-out;
 
         li {
-            display: inline-block;
-            line-height: 8vh;
-            margin: 0 .5em;
+            display: block;
 
             a {
-                text-decoration: none;
+                display: block;
                 color: $colour-text-dark;
-                background: $colour-5;
+                background: $colour-accent-1;
                 font-size: $p;
-                font-weight: bold;
-                padding: .5em 1em;
-                border-radius: 5px;
+                font-weight: 700;
+                margin: 3em 20%;
+                line-height: 3em;
+                text-decoration: none;
+                border-radius: .25em;
 
                 &:hover {
                     filter: brightness(1.1);
@@ -101,464 +88,319 @@ nav {
         }
     }
 
-    .check-btn {
+    #btn-hamburger {
         font-size: 2em;
         color: $colour-text-dark;
         float: right;
-        line-height: 8vh;
+        line-height: 10vh;
         margin-right: 10%;
         cursor: pointer;
+    }
+    label#btn-hamburger {
+        display: block;
+    }
+    #hamburger {
         display: none;
     }
-    #check {
-        display: none;
+    #hamburger:checked ~ .nav-links {
+        left: 0;
     }
 }
 
-.about {
-    background: $colour-1;
-    min-height: 92vh;
+main {
+    padding-top: 10vh;
 }
-.hero {
-    color: $colour-text-light;
 
-    h1 {
-        font-size: $h1
+.page-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.page {
+    min-height: 90vh;
+    padding: 10%;
+
+    ul {
+        list-style: none;
     }
-    h3 {
-        font-size: $h3;
-        padding-top: .5em;
-    }
-    p {
-        font-size: $p;
-        padding-top: 1em;
+    a {
+        text-decoration: none;
     }
     mark {
         background: none;
-        color: $colour-5;
-        font-style: italic;
+        color: $colour-accent-1;
     }
     .btn {
         display: block;
-        margin: 2em 0 0 0;
-        height: 3.5em;
-        width: 10em;
-        line-height: 3.5em;
-        border-radius: 10px;
-        color: $colour-text-dark;
-        background: $colour-button-1;
         cursor: pointer;
-        font-size: $h4;
-        font-weight: bold;
+        font-weight: 700;
+        font-size: $p;
         text-decoration: none;
         text-align: center;
-        text-justify: center;
+        border-radius: .5em;
 
         &:hover {
-            filter: brightness(1.1);
+            filter: brightness(1.2);
             transition: .5s;
         }
     }
 }
-.benefits {
-    margin-top: 7em;
+
+.about {
     color: $colour-text-light;
-
-    ul {
-        list-style: none;
-        display: -webkit-box;
-        display: -moz-box;
-        display: -ms-flexbox;
-        display: -webkit-flex;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: baseline;
-
-        li {
-            text-align: center;
-            padding: 0 1em 0 1em;
-            max-width: 30%;
-            max-height: 100%;
-
-            i {
-                font-size: 5em;
-                padding: 1rem 0 1rem 0;
-
-                &#benefit-1 {
-                    color: $colour-5;
-                }
-                &#benefit-2 {
-                    color: $colour-4;
-                }
-                &#benefit-3 {
-                    color: $colour-6;
-                }
-            }
-
-            h1 {
-                font-size: $h3;
-                padding-top: .5em;
-            }
-            p {
-                font-size: $p;
-                padding-top: 1em;
-            }
-        }
-    }
-}
-
-.projects {
-    background: $colour-3;
-    min-height: 100vh;
-
+    
     h1 {
         font-size: $h1;
-        color: $colour-text-dark;
-        padding-bottom: 1em;
     }
-}
-.card-wrapper {
-    width: 100%;
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    align-items: center;
-    align-content: center;
-    flex-direction: column;
 
-    .card {
-        background: $colour-2;
-        display: -webkit-box;
-        display: -moz-box;
-        display: -ms-flexbox;
-        display: -webkit-flex;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        border-radius: 30px;
-        width: 20rem;
-        height: 26rem;
-        margin: 1rem;
+    h2 {
+        padding-top: 1em;
+        font-size: $p;
+    }
 
-        .btn {
-            padding: 1rem 2rem;
-            border-radius: 10px;
-            margin: .5rem 0;
-            color: $colour-text-dark;
-            background: $colour-button-1;
-            font-size: $p;
-            font-weight: bold;
-            text-decoration: none;
+    p {
+        display: none;
+    }
 
-            &:hover {
-                filter: brightness(1.1);
-                transition: .5s;
-            }
-        }
+    .btn-hireme {
+        background-color: $colour-button-1;
+        color: $colour-text-dark;
+        margin: 2em 0 0;
+        width: 10em;
+        height: 3.5em;
+        line-height: 3.5em;
+    }
+
+    .benefits-wrapper {
+        margin-top: 2em;
 
         h1 {
-            font-size: 2em;
-            color: $colour-text-light;
+            font-size: $h3;
         }
-        p {
-            font-size: 1rem;
-            margin: 1rem;
-            font-style: italic;
-            text-align: center;
-            color: $colour-text-light;
-        }
-    }
-}
+        
+        ul {
+            display: -webkit-box;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
 
-.contact {
-    background: $colour-1;
-    min-height: 94vh;
-}
-.contact-me {
-    .form-area {
-        width: 100%;
-        display: -webkit-box;
-        display: -moz-box;
-        display: -ms-flexbox;
-        display: -webkit-flex;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+            li {
+                text-align: center;
+                padding: 0 1em 0 1em;
+                max-width: 100%;
 
-        .contact-text {
-            flex-basis: 30%;
-            align-self: center;
-
-            h1 {
-                font-size: $h1;
-                color: $colour-6;
-            }
-            h2 {
-                font-size: $h2;
-                padding-top: 1em;
-            }
-        }
-
-        .form-text {
-            flex-basis: 60%;
-            
-            form {
-                label h3 {
-                    margin: .5em 0 .5em 0;
-                    color: $colour-5;
+                p {
+                    display: none;
                 }
-                input {
-                    width: 100%;
-                    padding: 1em 0 1em 1em;
-                    border: none;
-                    border-bottom: 2px solid $colour-5;
-                    background-color: $colour-2;
-                    color: $colour-text-light;
-                    font-size: $p;
-                    font-weight: normal;
-                }
-                textarea {
-                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-                    width: 100%;
-                    height: 10em;
-                    padding: 1em 0 1em 1em;
-                    border: none;
-                    border-bottom: 2px solid $colour-5;
-                    background-color: $colour-2;
-                    color: $colour-text-light;
-                    font-size: $p;
-                    font-weight: normal;
-                }
-                .btn {
-                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-                    padding: 1.25rem 3rem;
-                    margin-top: 2em;
-                    position: relative;
-                    border-radius: 10px;
-                    color: $colour-text-dark;
-                    background: $colour-button-1;
-                    cursor: pointer;
-                    font-size: $h4;
-                    font-weight: bold;
-                    text-decoration: none;
-                    text-align: center;
-                    width: 100%;
-            
-                    &:hover {
-                        filter: brightness(1.1);
-                        transition: .5s;
+
+                i {
+                    font-size: 3em;
+                    padding: .8em 0;
+
+                    &#benefit-1 {
+                        color: $colour-5;
+                    }
+                    &#benefit-2 {
+                        color: $colour-4;
+                    }
+                    &#benefit-3 {
+                        color: $colour-6;
                     }
                 }
             }
         }
     }
 }
+.projects {
+    background-color: $colour-3;
+    color: $colour-text-dark;
 
-.page .details {
-        padding: 5em 10% 5em 10%;
-}
+    h1 {
+        font-size: $h1;
+        padding: 0 0 1em;
+    }
 
-.page-dots {
-    display: none;
-    position: fixed;
-    right: 5%;
-    top: 50%;
-    transform: translateY(-50%);
-
-    & > div {
+    .card-wrapper {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
         display: flex;
         align-items: center;
-        justify-content: space-between;
-    }
+        align-content: center;
+        flex-direction: column;
     
-    svg {
-        cursor: pointer;
-        opacity: 0.5;
-        transform: scale(2);
-        margin: 2em 0 2em 0;
-
-        &:hover {
-            animation: dot 0.5s ease-in-out infinite alternate;
-        }
-
-        &.active {
-            opacity: 1;
-        }
-    }
-
-    @keyframes dot {
-    0% {
-        transform: scale(2);
-    }
-    100% {
-        transform: scale(4);
-    }
-    }
-}
-
-// Footer
-
-footer {
-    position: relative;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 6vh;    
-    background: $colour-nav;
+        .card {
+            background: $colour-2;
+            display: -webkit-box;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border-radius: 1em;
+            max-width: 300px;
+            min-width: 250px;
+            width: 80vw;
+            height: 25em;
+            padding: 0 2em;
+            margin: 2em 0;
     
-    color: $colour-text-dark;
-    font-size: 1em;
-    text-align: center;
-    line-height: 6vh;
-}
-
-// Scaling
-@media screen and (max-width: 952px) {
-    body{
-        font-size: 0.8em;
-    }
-    nav {
-        a.logo {
-            font-size: 2em;
-            line-height: 8vh;
-            margin-left: 5%;
-        }
-        ul {
-            margin-right: 5%;
-
-            li a {
-                font-size: 1em;
-            }
-        }
-
-        .check-btn {
-            margin-right: 5%;
-        }
-    }
-    .page .details {
-        padding: 5em 5% 5em 5%;
-    }
-}
-
-@media screen and (max-width: 858px) {
-    nav {
-        position: fixed;
-
-        label.check-btn {
-            display: block;
-        }
-        a#btn-projects {
-            opacity: 1;
-        }
-        ul {
-            position: fixed;
-            width: 100%;
-            height: 100vh;
-            background: $colour-4;
-            left: 100%;
-            text-align: center;
-            transition: all .5s;
-        }
-
-        & ul li {
-            display: block;
-            margin: 5em 0;
-            line-height: 2em;
-                
-            a {
-                font-size: 1.5em;
+            .btn {
+                padding: 1rem 2rem;
+                border-radius: .5em;
+                margin: .5rem 0;
+                width: 15em;
+                color: $colour-text-dark;
+                background: $colour-button-1;
+                font-size: $p;
+                font-weight: bold;
+                text-decoration: none;
     
-                &.active, &:hover {
-                    background: $colour-accent-1;
+                &:hover {
+                    filter: brightness(1.1);
                     transition: .5s;
                 }
             }
+    
+            h1 {
+                font-size: 2em;
+                color: $colour-text-light;
+            }
+            p {
+                font-size: 1em;
+                margin: 1em 0;
+                width: 15em;
+                font-style: italic;
+                text-align: center;
+                color: $colour-text-light;
+            }
         }
+    }    
+}
+.contact {
+    color: $colour-text-light;
 
-        #check:checked ~ ul{
-            left: 0;
-        }
-    }
-
-    .about .details {
-        padding-top: 8em;
-    }
-
-    .hero {
-        p {
-            display: none;
-        }
-    }
-
-    .benefits {
-        margin-top: 2em;
-
-        ul {
+    .contact-wrapper {
+        .form-area {
+            width: 100%;
+            display: -webkit-box;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
             flex-direction: column;
-            flex-wrap: wrap;
-            align-items: center;
-            
-            li {
-                font-size: .8rem;
-                max-width: 100%;
 
-                i {
-                    font-size: 4em;
+            .contact-text {
+                flex-basis: 30%;
+                align-self: center;
+
+                h1 {
+                    font-size: $h1;
+                    color: $colour-5;
+                }
+                h2 {
+                    font-size: $p;
+                    padding-top: 1em;
                 }
             }
-        }  
-    }
-
-    .contact-me {
-        .form-area {
-            flex-direction: column;
-
-            .contact-text, .form-text {
-                font-size: .8rem;
-            }
             .form-text {
-                padding-top: 3em;
+                .field {
+                    width: 100%;
+                    position: relative;
+                    margin: 2em auto 1em;
+                    background-color: $colour-2;
+                }
+                .fieldtext .label {
+                    position: absolute;
+                    transform: scale(0.8) translateY(0rem);
+                }
+                .label {
+                    font-size: $h4;
+                    color: $colour-accent-2;
+                    z-index: 1;
+                    display: block;
+                    position: absolute;
+                    transform: translateY(-1.9rem);
+                    transform-origin: 0%;
+                    transition: transform .4s;
+                }
+                .field:focus-within .label, .input:not(:placeholder-shown) + .label {
+                    transform: scale(0.8) translateY(-4em);
+                }
+                .input {
+                    outline: none;
+                    border: none;
+                    border-bottom: 2px solid $colour-5;
+                    overflow: hidden;
+                    margin: 0;
+                    width: 100%;
+                    padding: .25em 0;
+                    background: none;
+                    font-family: 'Manrope', sans-serif;
+                    color: $colour-text-light;
+                    font-size: $p;
+                    font-weight: 500;
+
+                    &:valid {
+                        border-bottom: 2px solid yellowgreen;
+                    }
+                    &:invalid {
+                        border-bottom: 2px solid red;
+                    }
+                    &:focus, &:valid, &:invalid {
+                        -webkit-box-shadow: none;
+                        box-shadow: none;
+                    }
+                }
+                textarea {
+                    border: none;
+                    border-bottom: 2px solid $colour-5;
+                    overflow: hidden;
+                    resize: none;
+                    margin: 2em auto 1em;
+                    width: 100%;
+                    height: 10em;
+                    background-color: $colour-2;
+                    font-family: 'Manrope', sans-serif;
+                    color: $colour-text-light;
+                    font-size: $p;
+                    font-weight: 500;
+
+                    &:focus {
+                        -webkit-box-shadow: none;
+                        box-shadow: none;
+                        outline: none;
+                    }
+                }
+                .btn-contact {
+                    padding: 1.25em 3em;
+                    margin-top: 2em;
+                    background-color: $colour-button-1;
+                    color: $colour-text-dark;
+                    width: 100%;
+                    border: none;
+                }
             }
         }
     }
 }
 
-@media screen and (min-width: 858px) {
-    .card-wrapper {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
+footer {
+    position: relative;
+    height: 5vh;
+    background-color: $colour-nav;
 
-        .card {
-            margin: 2rem;
-            transition: transform .5s;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
-
-        .card:nth-child(1) {
-            animation: fadeIn .5s .25s backwards;
-        }
-        .card:nth-child(2) {
-            animation: fadeIn .5s .5s backwards;
-        }
-        .card:nth-child(3) {
-            animation: fadeIn .5s .75s backwards;
-        }
-        .card:hover {
-            transform: scale(1.1);
-        }
-    }
+    color: $colour-text-dark;
+    font-size: $p;
+    font-weight: 500;
+    text-align: center;
+    line-height: 5vh;
 }
