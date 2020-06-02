@@ -302,7 +302,7 @@ main {
 
 .contact {
   color: #071013;
-  min-height: 100vh;
+  min-height: 95vh;
 }
 
 .contact .contact-wrapper .form-area {
@@ -481,7 +481,7 @@ footer {
     display: inline-block;
   }
   .about .benefits-wrapper {
-    margin-top: 10em;
+    margin-top: 4em;
   }
   .about .benefits-wrapper ul {
     -webkit-box-orient: horizontal;
