@@ -102,7 +102,6 @@ main {
 }
 
 .page {
-  min-height: 90vh;
   padding: 10%;
 }
 
@@ -129,7 +128,7 @@ main {
   border-radius: .5em;
 }
 
-.page .btn:hover {
+.page .btn:hover, .page .btn:focus {
   -webkit-filter: brightness(1.2);
           filter: brightness(1.2);
   -webkit-transition: .5s;
@@ -138,6 +137,7 @@ main {
 
 .about {
   color: #071013;
+  min-height: 90vh;
 }
 
 .about h1 {
@@ -150,6 +150,7 @@ main {
 }
 
 .about p {
+  padding-top: .5em;
   display: none;
 }
 
@@ -218,6 +219,7 @@ main {
 .projects {
   background-color: #071013;
   color: #FCF6F3;
+  min-height: 100vh;
 }
 
 .projects h1 {
@@ -249,6 +251,8 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -260,8 +264,7 @@ main {
   min-width: 250px;
   width: 80vw;
   height: 25em;
-  padding: 0 2em;
-  margin: 2em 0;
+  margin: 2em;
 }
 
 .projects .card-wrapper .card .btn {
@@ -299,6 +302,7 @@ main {
 
 .contact {
   color: #071013;
+  min-height: 100vh;
 }
 
 .contact .contact-wrapper .form-area {
@@ -313,8 +317,8 @@ main {
 }
 
 .contact .contact-wrapper .form-area .contact-text {
-  -ms-flex-preferred-size: 30%;
-      flex-basis: 30%;
+  -ms-flex-preferred-size: 40%;
+      flex-basis: 40%;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
@@ -328,6 +332,11 @@ main {
 .contact .contact-wrapper .form-area .contact-text h2 {
   font-size: 1em;
   padding-top: 1em;
+}
+
+.contact .contact-wrapper .form-area .form-text {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
 }
 
 .contact .contact-wrapper .form-area .form-text .field {
@@ -431,5 +440,127 @@ footer {
   font-weight: 500;
   text-align: center;
   line-height: 5vh;
+}
+
+@media screen and (min-width: 600px) {
+  body {
+    font-size: 1.1em;
+  }
+  nav {
+    position: static;
+  }
+  nav .nav-links {
+    position: static;
+    margin-right: 10%;
+    float: right;
+    background: none;
+    width: auto;
+    height: auto;
+    line-height: 10vh;
+  }
+  nav .nav-links li {
+    display: inline-block;
+    margin: 0 .5em;
+  }
+  nav .nav-links li a {
+    margin: 0;
+    padding: 0 1em;
+    height: auto;
+    width: auto;
+  }
+  nav #btn-hamburger {
+    display: none;
+  }
+  nav label#btn-hamburger {
+    display: none;
+  }
+  main {
+    padding: 0;
+  }
+  .about p {
+    display: inline-block;
+  }
+  .about .benefits-wrapper {
+    margin-top: 10em;
+  }
+  .about .benefits-wrapper ul {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+  }
+  .about .benefits-wrapper ul li p {
+    display: inline-block;
+  }
+  .about .benefits-wrapper ul li i {
+    font-size: 5em;
+  }
+  .projects .card-wrapper {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .projects .card-wrapper .card {
+    margin: 2em;
+    -webkit-transition: -webkit-transform .5s;
+    transition: -webkit-transform .5s;
+    transition: transform .5s;
+    transition: transform .5s, -webkit-transform .5s;
+  }
+  @-webkit-keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  .projects .card-wrapper .card:nth-child(1) {
+    -webkit-animation: fadeIn .5s .25s backwards;
+            animation: fadeIn .5s .25s backwards;
+  }
+  .projects .card-wrapper .card:nth-child(2) {
+    -webkit-animation: fadeIn .5s .5s backwards;
+            animation: fadeIn .5s .5s backwards;
+  }
+  .projects .card-wrapper .card:nth-child(3) {
+    -webkit-animation: fadeIn .5s .75s backwards;
+            animation: fadeIn .5s .75s backwards;
+  }
+  .projects .card-wrapper .card:hover {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  .contact .contact-wrapper .form-area {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
 }
 /*# sourceMappingURL=style.css.map */
