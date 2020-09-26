@@ -472,11 +472,10 @@ footer {
   }
   nav .nav-links {
     position: static;
-    margin-right: 10%;
+    margin-right: 0%;
     background: none;
     width: auto;
-    height: auto;
-    line-height: 8vh;
+    height: 4vh;
   }
   nav .nav-links li {
     display: inline-block;
@@ -485,7 +484,8 @@ footer {
   nav .nav-links li a {
     margin: 0;
     padding: 0 1em;
-    height: auto;
+    height: 4vh;
+    line-height: 4vh;
     width: auto;
   }
   nav #hamburger-icon {
