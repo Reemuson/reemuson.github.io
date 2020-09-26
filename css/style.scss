@@ -1,23 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap');
 
 // Variables
-$colour-1: #FCF6F3;
-$colour-2: #F9ECE6;
-$colour-3: #071013;
-$colour-4: #1D3A55;
-$colour-5: #EE6352;
-$colour-6: #89D2DC;
-
-$colour-bg: $colour-1;
-$colour-nav: $colour-4;
-$colour-accent-1: $colour-5;
-$colour-accent-2: $colour-6;
-
-$colour-button-1: $colour-5;
-$colour-button-2: $colour-6;
-
-$colour-text-light: $colour-3;
-$colour-text-dark: $colour-1;
+$colour-1: #FAFAFA;
+$colour-2: #E8E9EB;
+$colour-3: #E0DFD5;
+$colour-4: #313638;
+$colour-5: #F09D51;
+$colour-6: #F06543;
 
 $h1: 2em;
 $h2: 1.5em;
@@ -35,33 +24,29 @@ body {
     font-family: 'Manrope', sans-serif;
     font-weight: 500;
     font-size: 1rem;
-    background-color: $colour-1;
+    background-color: $colour-4;
 }
 
 // Responsive navbar
 nav {
-    background: $colour-nav;
-    height: 10vh;
-    width: 100%;
+    background: $colour-6;
+    top: 3vh;
+    height: 6vh;
+    width: 90%;
     z-index: 10;
     position: fixed;
-
-    .logo {
-        margin-left: 10%;
-        cursor: pointer;
-        font-size: 2em;
-        font-weight: 700;
-        line-height: 10vh;
-        color: $colour-accent-1;
-        text-decoration: none;
-    }
+    border-radius: 5px;
+    padding: 0 5%;
+    margin: 0 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
     .nav-links {
         position: fixed;
         width: 100%;
         height: 100vh;
         left: 100%;
-        background-color: $colour-nav;
         text-align: center;
         list-style: none;
         transition: all .5s ease-out;
@@ -71,11 +56,11 @@ nav {
 
             a {
                 display: block;
-                color: $colour-text-dark;
-                background: $colour-accent-1;
+                color: $colour-1;
+                background: $colour-6;
                 font-size: $p;
                 font-weight: 700;
-                margin: 3em 20%;
+                margin: 3em;
                 line-height: 3em;
                 text-decoration: none;
                 border-radius: .25em;
@@ -88,12 +73,14 @@ nav {
         }
     }
 
+    .logo {
+        height: 4vh;
+    }
+
     #btn-hamburger {
-        font-size: 2em;
-        color: $colour-text-dark;
-        float: right;
-        line-height: 10vh;
-        margin-right: 10%;
+        font-size: 4vh;
+        color: $colour-1;
+        order: 1;
         cursor: pointer;
     }
     label#btn-hamburger {
@@ -117,7 +104,7 @@ main {
 }
 
 .page {
-    padding: 10%;
+    padding: 5%;
 
     ul {
         list-style: none;
@@ -127,7 +114,7 @@ main {
     }
     mark {
         background: none;
-        color: $colour-accent-1;
+        color: $colour-6;
     }
     .btn {
         display: block;
@@ -136,7 +123,7 @@ main {
         font-size: $p;
         text-decoration: none;
         text-align: center;
-        border-radius: .5em;
+        border-radius: 5px;
 
         &:hover, &:focus {
             filter: brightness(1.2);
@@ -146,7 +133,7 @@ main {
 }
 
 .about {
-    color: $colour-text-light;
+    color: $colour-3;
     min-height: 90vh;
     
     h1 {
@@ -163,13 +150,21 @@ main {
         display: none;
     }
 
+    .btn-wrapper {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
     .btn-hireme {
-        background-color: $colour-button-1;
-        color: $colour-text-dark;
+        background-color: $colour-5;
+        color: $colour-1;
         margin: 2em 0 0;
         width: 10em;
-        height: 3.5em;
-        line-height: 3.5em;
+        height: 3em;
+        line-height: 3em;
+        justify-content: center;
     }
 
     .benefits-wrapper {
@@ -201,13 +196,13 @@ main {
 
                 i {
                     font-size: 3em;
-                    padding: .8em 0;
+                    padding: .6em 0;
 
                     &#benefit-1 {
                         color: $colour-5;
                     }
                     &#benefit-2 {
-                        color: $colour-4;
+                        color: $colour-3;
                     }
                     &#benefit-3 {
                         color: $colour-6;
@@ -219,7 +214,7 @@ main {
 }
 .projects {
     background-color: $colour-3;
-    color: $colour-text-dark;
+    color: $colour-4;
     min-height: 100vh;
 
     h1 {
@@ -238,7 +233,7 @@ main {
         flex-direction: column;
     
         .card {
-            background: $colour-2;
+            background: $colour-5;
             display: -webkit-box;
             display: -moz-box;
             display: -ms-flexbox;
@@ -251,7 +246,7 @@ main {
             border-radius: 1em;
             max-width: 300px;
             min-width: 250px;
-            width: 80vw;
+            width: 90vw;
             height: 25em;
             margin: 2em;
     
@@ -260,8 +255,8 @@ main {
                 border-radius: .5em;
                 margin: .5rem 0;
                 width: 15em;
-                color: $colour-text-dark;
-                background: $colour-button-1;
+                color: $colour-1;
+                background: $colour-4;
                 font-size: $p;
                 font-weight: bold;
                 text-decoration: none;
@@ -274,7 +269,7 @@ main {
     
             h1 {
                 font-size: 2em;
-                color: $colour-text-light;
+                color: $colour-1;
             }
             p {
                 font-size: 1em;
@@ -282,13 +277,13 @@ main {
                 width: 15em;
                 font-style: italic;
                 text-align: center;
-                color: $colour-text-light;
+                color: $colour-1;
             }
         }
     }    
 }
 .contact {
-    color: $colour-text-light;
+    color: $colour-1;
     min-height: 95vh;
 
     .contact-wrapper {
@@ -320,7 +315,7 @@ main {
                     width: 100%;
                     position: relative;
                     margin: 2em auto 1em;
-                    background-color: $colour-2;
+                    background-color: $colour-3;
                 }
                 .fieldtext .label {
                     position: absolute;
@@ -328,7 +323,7 @@ main {
                 }
                 .label {
                     font-size: $h4;
-                    color: $colour-accent-2;
+                    color: $colour-5;
                     z-index: 1;
                     display: block;
                     position: absolute;
@@ -349,7 +344,7 @@ main {
                     padding: .25em 0;
                     background: none;
                     font-family: 'Manrope', sans-serif;
-                    color: $colour-text-light;
+                    color: $colour-4;
                     font-size: $p;
                     font-weight: 500;
 
@@ -372,9 +367,9 @@ main {
                     margin: 2em auto 1em;
                     width: 100%;
                     height: 10em;
-                    background-color: $colour-2;
+                    background-color: $colour-3;
                     font-family: 'Manrope', sans-serif;
-                    color: $colour-text-light;
+                    color: $colour-4;
                     font-size: $p;
                     font-weight: 500;
 
@@ -387,8 +382,8 @@ main {
                 .btn-contact {
                     padding: 1.25em 3em;
                     margin-top: 2em;
-                    background-color: $colour-button-1;
-                    color: $colour-text-dark;
+                    background-color: $colour-5;
+                    color: $colour-1;
                     width: 100%;
                     border: none;
                 }
@@ -400,9 +395,9 @@ main {
 footer {
     position: relative;
     height: 5vh;
-    background-color: $colour-nav;
+    background-color: $colour-4;
 
-    color: $colour-text-dark;
+    color: $colour-1;
     font-size: $p;
     font-weight: 500;
     text-align: center;
@@ -415,15 +410,15 @@ footer {
     }
     nav {
         position: static;
+        margin-top: 3vh;
 
         .nav-links {
             position: static;
             margin-right: 10%;
-            float: right;
             background: none;
             width: auto;
             height: auto;
-            line-height: 10vh;
+            line-height: 8vh;
 
             li {
                 display: inline-block;
@@ -513,8 +508,11 @@ footer {
 
     .contact {
         .contact-wrapper {
+            margin-top: 7%;
+
             .form-area {
                 flex-direction: row;
+                align-items: center;
                 justify-content: space-between;
             }
         }
