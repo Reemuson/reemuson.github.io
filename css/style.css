@@ -304,38 +304,38 @@ main {
 .contact {
   color: #222222;
 }
-.contact .contact-wrapper .form-area {
+.contact .wrapper-contact .form-area {
   width: 100%;
   display: flex;
   flex-direction: column;
 }
-.contact .contact-wrapper .form-area .contact-text {
+.contact .wrapper-contact .form-area .contact-text {
   flex-basis: 40%;
   align-self: center;
 }
-.contact .contact-wrapper .form-area .contact-text h1 {
+.contact .wrapper-contact .form-area .contact-text h1 {
   padding-top: 3rem;
   font-size: 2.5rem;
   color: #222222;
 }
-.contact .contact-wrapper .form-area .contact-text h2 {
+.contact .wrapper-contact .form-area .contact-text h2 {
   font-size: 1rem;
   padding-top: 1em;
 }
-.contact .contact-wrapper .form-area .form-text {
+.contact .wrapper-contact .form-area .form-text {
   flex-basis: 50%;
 }
-.contact .contact-wrapper .form-area .form-text .field {
+.contact .wrapper-contact .form-area .form-text .field {
   width: 100%;
   position: relative;
   margin: 2em auto 1em;
   background-color: #DDDDDD;
 }
-.contact .contact-wrapper .form-area .form-text .fieldtext .label {
+.contact .wrapper-contact .form-area .form-text .fieldtext .label {
   position: absolute;
   transform: scale(0.8) translateY(0rem);
 }
-.contact .contact-wrapper .form-area .form-text .label {
+.contact .wrapper-contact .form-area .form-text .label {
   font-size: 1.125rem;
   color: #CE2231;
   z-index: 1;
@@ -345,16 +345,16 @@ main {
   transform-origin: 0%;
   transition: transform 0.4s;
 }
-.contact .contact-wrapper .form-area .form-text .input:not(:-moz-placeholder-shown) + .label {
+.contact .wrapper-contact .form-area .form-text .input:not(:-moz-placeholder-shown) + .label {
   transform: scale(0.8) translateY(-4em);
 }
-.contact .contact-wrapper .form-area .form-text .input:not(:-ms-input-placeholder) + .label {
+.contact .wrapper-contact .form-area .form-text .input:not(:-ms-input-placeholder) + .label {
   transform: scale(0.8) translateY(-4em);
 }
-.contact .contact-wrapper .form-area .form-text .field:focus-within .label, .contact .contact-wrapper .form-area .form-text .input:not(:placeholder-shown) + .label {
+.contact .wrapper-contact .form-area .form-text .field:focus-within .label, .contact .wrapper-contact .form-area .form-text .input:not(:placeholder-shown) + .label {
   transform: scale(0.8) translateY(-4em);
 }
-.contact .contact-wrapper .form-area .form-text .input {
+.contact .wrapper-contact .form-area .form-text .input {
   outline: none;
   border: none;
   border-bottom: 2px solid #CE2231;
@@ -368,16 +368,16 @@ main {
   font-size: 1rem;
   font-weight: 500;
 }
-.contact .contact-wrapper .form-area .form-text .input:valid {
+.contact .wrapper-contact .form-area .form-text .input:valid {
   border-bottom: 2px solid yellowgreen;
 }
-.contact .contact-wrapper .form-area .form-text .input:invalid {
+.contact .wrapper-contact .form-area .form-text .input:invalid {
   border-bottom: 2px solid red;
 }
-.contact .contact-wrapper .form-area .form-text .input:focus, .contact .contact-wrapper .form-area .form-text .input:valid, .contact .contact-wrapper .form-area .form-text .input:invalid {
+.contact .wrapper-contact .form-area .form-text .input:focus, .contact .wrapper-contact .form-area .form-text .input:valid, .contact .wrapper-contact .form-area .form-text .input:invalid {
   box-shadow: none;
 }
-.contact .contact-wrapper .form-area .form-text textarea {
+.contact .wrapper-contact .form-area .form-text textarea {
   border: none;
   border-bottom: 2px solid #CE2231;
   overflow: hidden;
@@ -391,16 +391,18 @@ main {
   font-size: 1rem;
   font-weight: 500;
 }
-.contact .contact-wrapper .form-area .form-text textarea:focus {
+.contact .wrapper-contact .form-area .form-text textarea:focus {
   box-shadow: none;
   outline: none;
 }
-.contact .contact-wrapper .form-area .form-text .form-button-contact {
+.contact .wrapper-contact .form-area .form-text .form-button-contact {
   background-color: #CE2231;
   color: #FAFAFA;
   border: none;
   margin-bottom: 2rem;
-  min-width: 90vw;
+  min-width: -webkit-fill-available;
+  min-width: -moz-available;
+  min-width: fill;
 }
 
 footer {
@@ -510,12 +512,20 @@ footer {
   .projects .wrapper-card .card:hover {
     transform: scale(1.1);
   }
-  .contact .contact-wrapper {
-    margin-top: 7%;
+  .contact .wrapper-contact {
+    padding: 10rem 0;
   }
-  .contact .contact-wrapper .form-area {
+  .contact .wrapper-contact .form-area {
     flex-direction: row;
-    align-items: center;
     justify-content: space-between;
+  }
+  .contact .wrapper-contact .form-area .contact-text {
+    align-self: normal;
+  }
+  .contact .wrapper-contact .form-area .contact-text h1 {
+    padding: 0;
+  }
+  .contact .wrapper-contact .form-area .form-text {
+    width: 50vw;
   }
 }/*# sourceMappingURL=style.css.map */
