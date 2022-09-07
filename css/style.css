@@ -5,6 +5,11 @@
   box-sizing: border-box;
 }
 
+html {
+  min-height: 100%;
+  position: relative;
+}
+
 body {
   font-family: "Manrope", sans-serif;
   font-weight: 500;
@@ -16,12 +21,12 @@ nav {
   background: #CE2231;
   top: 2.5vh;
   height: 2.5rem;
-  width: 95vw;
+  width: 90vw;
   z-index: 10;
   position: fixed;
   border-radius: 0.5rem;
-  padding: 0 2.5vw;
-  margin: 0 2.5vw;
+  padding: 0 5vw;
+  margin: 0 5vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -40,7 +45,7 @@ nav .nav-links {
   left: 100%;
   z-index: 11;
   position: fixed;
-  margin: 0 2.5vw;
+  margin: 0 5vw;
   text-align: center;
   list-style: none;
   transition: all 0.5s ease-out;
@@ -76,6 +81,7 @@ nav #hamburger:checked ~ .nav-links {
 
 main {
   padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
 }
 
 .wrapper-page {
@@ -84,7 +90,7 @@ main {
 }
 
 .page {
-  padding: 0 5% 0 5%;
+  padding: 0 10% 0 10%;
 }
 .page ul {
   list-style: none;
@@ -104,7 +110,6 @@ main {
   text-decoration: none;
   text-align: center;
   border-radius: 0.5rem;
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   max-width: 15rem;
@@ -135,11 +140,11 @@ main {
 .about .box-2 {
   display: grid;
   justify-items: center;
+  padding-top: 3rem;
 }
 .about .box-2 .photo-of-month {
   margin: 1rem 0 0 0;
-  width: 90vw;
-  max-width: 50rem;
+  width: 80vw;
   border: 0.5rem solid #222222;
   border-radius: 0.5rem;
 }
@@ -276,7 +281,7 @@ main {
   outline: none;
   display: block;
 }
-.photos .previous { /**styling the left arrow**/
+.photos .lightbox .previous { /**styling the left arrow**/
   font-size: 1.5rem;
   position: fixed;
   left: 5%;
@@ -284,7 +289,7 @@ main {
   width: 2.5rem;
   color: #FAFAFA;
 }
-.photos .exit { /**styling the exit button**/
+.photos .lightbox .exit { /**styling the exit button**/
   font-size: 1.5rem;
   position: fixed;
   top: 5%;
@@ -292,7 +297,7 @@ main {
   width: 2.5rem;
   color: #FAFAFA;
 }
-.photos .next { /**styling the right arrow**/
+.photos .lightbox .next { /**styling the right arrow**/
   font-size: 1.5rem;
   position: fixed;
   right: 5%;
@@ -319,8 +324,12 @@ main {
   color: #222222;
 }
 .contact .wrapper-contact .form-area .contact-text h2 {
-  font-size: 1rem;
+  font-size: 1.5rem;
   padding-top: 1em;
+}
+.contact .wrapper-contact .form-area .contact-text p {
+  padding-top: 1rem;
+  font-size: 1rem;
 }
 .contact .wrapper-contact .form-area .form-text {
   flex-basis: 50%;
@@ -346,9 +355,6 @@ main {
   transition: transform 0.4s;
 }
 .contact .wrapper-contact .form-area .form-text .input:not(:-moz-placeholder-shown) + .label {
-  transform: scale(0.8) translateY(-4em);
-}
-.contact .wrapper-contact .form-area .form-text .input:not(:-ms-input-placeholder) + .label {
   transform: scale(0.8) translateY(-4em);
 }
 .contact .wrapper-contact .form-area .form-text .field:focus-within .label, .contact .wrapper-contact .form-area .form-text .input:not(:placeholder-shown) + .label {
@@ -406,8 +412,12 @@ main {
 }
 
 footer {
-  position: relative;
+  position: absolute;
+  left: 0;
+  bottom: 0;
   height: 2.5rem;
+  width: 100%;
+  overflow: hidden;
   background-color: #222222;
   color: #FAFAFA;
   font-size: 1rem;
@@ -454,6 +464,10 @@ footer {
   .about .wrapper-hero .box-1 {
     padding: 0 2rem 0 0;
   }
+  .about .wrapper-hero .box-2 .photo-of-month {
+    width: 50vw;
+    max-width: 35vw;
+  }
   .about .wrapper-benefits {
     margin-top: 4em;
   }
@@ -481,14 +495,6 @@ footer {
     margin: 2em;
     transition: transform 0.5s;
   }
-  @-webkit-keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
   @keyframes fadeIn {
     from {
       opacity: 0;
@@ -498,16 +504,13 @@ footer {
     }
   }
   .projects .wrapper-card .card:nth-child(1) {
-    -webkit-animation: fadeIn 0.5s 0.25s backwards;
-            animation: fadeIn 0.5s 0.25s backwards;
+    animation: fadeIn 0.5s 0.25s backwards;
   }
   .projects .wrapper-card .card:nth-child(2) {
-    -webkit-animation: fadeIn 0.5s 0.5s backwards;
-            animation: fadeIn 0.5s 0.5s backwards;
+    animation: fadeIn 0.5s 0.5s backwards;
   }
   .projects .wrapper-card .card:nth-child(3) {
-    -webkit-animation: fadeIn 0.5s 0.75s backwards;
-            animation: fadeIn 0.5s 0.75s backwards;
+    animation: fadeIn 0.5s 0.75s backwards;
   }
   .projects .wrapper-card .card:hover {
     transform: scale(1.1);

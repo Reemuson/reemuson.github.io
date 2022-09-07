@@ -22,6 +22,11 @@ $nav: 2.5rem;
     box-sizing: border-box;
 }
 
+html {
+    min-height: 100%;
+    position: relative;
+}
+
 body {
     font-family: 'Manrope', sans-serif;
     font-weight: 500;
@@ -34,12 +39,12 @@ nav {
     background: $colour-5;
     top: 2.5vh;
     height: $nav;
-    width: 95vw;
+    width: 90vw;
     z-index: 10;
     position: fixed;
     border-radius: .5rem;
-    padding: 0 2.5vw;
-    margin: 0 2.5vw;
+    padding: 0 5vw;
+    margin: 0 5vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -63,7 +68,7 @@ nav {
         left: 100%;
         z-index: 11;
         position: fixed;
-        margin: 0 2.5vw;
+        margin: 0 5vw;
         text-align: center;
         list-style: none;
         transition: all .5s ease-out;
@@ -104,6 +109,7 @@ nav {
 
 main {
     padding-top: $nav; // remove height for navbar
+    padding-bottom: 2.5rem;
 }
 
 .wrapper-page {
@@ -112,7 +118,7 @@ main {
 }
 
 .page {
-    padding: 0 5% 0 5%;
+    padding: 0 10% 0 10%;
 
     ul {
         list-style: none;
@@ -167,11 +173,11 @@ main {
     .box-2 {
         display: grid;
         justify-items: center;
+        padding-top: 3rem;
         
         .photo-of-month {
             margin: 1rem 0 0 0;
-            width: 90vw;
-            max-width: 50rem;
+            width: 80vw;
             border: .5rem solid $colour-4;
             border-radius: .5rem;
         }
@@ -329,30 +335,30 @@ main {
             outline: none;
             display: block;
         }
-    }
-    .previous { /**styling the left arrow**/
-        font-size: $h2;
-        position: fixed;
-        left: 5%;
-        top: 49%;
-        width: $h1;
-        color: $colour-1;
-    }
-    .exit { /**styling the exit button**/
-        font-size: $h2;
-        position: fixed;
-        top: 5%;
-        right: 5%;
-        width: $h1;
-        color: $colour-1;
-    }
-    .next { /**styling the right arrow**/
-        font-size: $h2;
-        position: fixed;
-        right: 5%;
-        top: 49%;
-        width: $h1;
-        color: $colour-1;
+        .previous { /**styling the left arrow**/
+            font-size: $h2;
+            position: fixed;
+            left: 5%;
+            top: 49%;
+            width: $h1;
+            color: $colour-1;
+        }
+        .exit { /**styling the exit button**/
+            font-size: $h2;
+            position: fixed;
+            top: 5%;
+            right: 5%;
+            width: $h1;
+            color: $colour-1;
+        }
+        .next { /**styling the right arrow**/
+            font-size: $h2;
+            position: fixed;
+            right: 5%;
+            top: 49%;
+            width: $h1;
+            color: $colour-1;
+        }
     }
 }
 .contact {
@@ -374,8 +380,12 @@ main {
                     color: $colour-4;
                 }
                 h2 {
-                    font-size: $p;
+                    font-size: $h2;
                     padding-top: 1em;
+                }
+                p {
+                    padding-top: 1rem;
+                    font-size: $p;
                 }
             }
             .form-text {
@@ -461,8 +471,12 @@ main {
 }
 
 footer {
-    position: relative;
+    position: absolute;
+    left: 0;
+    bottom: 0;
     height: 2.5rem;
+    width: 100%;
+    overflow: hidden;
     background-color: $colour-4;
 
     color: $colour-1;
@@ -516,6 +530,10 @@ footer {
 
             .box-1 {
                 padding: 0 2rem 0 0;
+            }
+            .box-2 .photo-of-month {
+                width: 50vw;
+                max-width: 35vw;
             }
         }
 
