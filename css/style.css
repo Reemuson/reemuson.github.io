@@ -2,11 +2,17 @@
 *, *::before, *::after {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+  position: relative;
 }
 
 body {
-  font-family: "Manrope", sans-serif;
+  font-family: 'Manrope', sans-serif;
   font-weight: 500;
   font-size: 1rem;
   background-color: #DDDDDD;
@@ -16,38 +22,49 @@ nav {
   background: #CE2231;
   top: 2.5vh;
   height: 2.5rem;
-  width: 95vw;
+  width: 90vw;
   z-index: 10;
   position: fixed;
-  border-radius: 0.5rem;
-  padding: 0 2.5vw;
-  margin: 0 2.5vw;
+  border-radius: .5rem;
+  padding: 0 5vw;
+  margin: 0 5vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 nav .logo {
   height: 3rem;
   z-index: 11;
 }
+
 nav h1 a {
   color: #FAFAFA;
   text-decoration: none;
 }
+
 nav .nav-links {
   top: 12vh;
   width: 95vw;
   left: 100%;
   z-index: 11;
   position: fixed;
-  margin: 0 2.5vw;
+  margin: 0 5vw;
   text-align: center;
   list-style: none;
-  transition: all 0.5s ease-out;
+  -webkit-transition: all .5s ease-out;
+  transition: all .5s ease-out;
 }
+
 nav .nav-links li a {
   background-color: #1C5D99;
-  border-radius: 0.5rem;
+  border-radius: .5rem;
   display: block;
   color: #FAFAFA;
   font-size: 1.5rem;
@@ -57,45 +74,61 @@ nav .nav-links li a {
   text-decoration: none;
   margin: 2em 0 0 0;
 }
+
 nav #hamburger-icon {
   font-size: 4vh;
   color: #FAFAFA;
-  order: 1;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
   z-index: 11;
   cursor: pointer;
 }
+
 nav label#hamburger-icon {
   display: block;
 }
+
 nav #hamburger {
   display: none;
 }
+
 nav #hamburger:checked ~ .nav-links {
   left: 0%;
 }
 
 main {
   padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
 }
 
 .wrapper-page {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .page {
-  padding: 0 5% 0 5%;
+  padding: 0 10% 0 10%;
 }
+
 .page ul {
   list-style: none;
 }
+
 .page a {
   text-decoration: none;
 }
+
 .page mark {
   background: none;
   color: #1C5D99;
 }
+
 .page #button {
   display: block;
   cursor: pointer;
@@ -103,83 +136,109 @@ main {
   font-size: 1rem;
   text-decoration: none;
   text-align: center;
-  border-radius: 0.5rem;
+  border-radius: .5rem;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   max-width: 15rem;
   padding: 1rem;
 }
+
 .page #button:hover, .page #button:focus {
-  filter: brightness(1.2);
-  transition: 0.5s;
+  -webkit-filter: brightness(1.2);
+          filter: brightness(1.2);
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 
 .about {
   color: #222222;
 }
+
 .about h1 {
   padding-top: 3rem;
   font-size: 2.5rem;
 }
+
 .about h2 {
   padding-top: 1rem;
   font-size: 1rem;
 }
+
 .about .wrapper-hero-paragraph {
   padding-top: 3rem;
 }
+
 .about .wrapper-hero-paragraph p {
   padding-bottom: 1rem;
 }
+
 .about .box-2 {
+  display: -ms-grid;
   display: grid;
   justify-items: center;
 }
+
 .about .box-2 .photo-of-month {
   margin: 1rem 0 0 0;
   width: 90vw;
   max-width: 50rem;
   border: 0.5rem solid #222222;
-  border-radius: 0.5rem;
+  border-radius: .5rem;
 }
+
 .about .box-2 .link-photo-of-month {
-  padding: 0.5rem 0 1rem 0;
+  padding: .5rem 0 1rem 0;
 }
+
 .about .button-contact {
   color: #FAFAFA;
   background-color: #CE2231;
   margin: 2rem auto;
 }
+
 .about .button-projects {
   color: #FAFAFA;
   background-color: #1C5D99;
   margin: 0 auto;
 }
+
 .about .wrapper-benefits h1 {
   padding-top: 0;
   font-size: 1.25rem;
 }
+
 .about .wrapper-benefits ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
+
 .about .wrapper-benefits ul li {
   text-align: center;
 }
+
 .about .wrapper-benefits ul li p {
   display: none;
 }
+
 .about .wrapper-benefits ul li i {
   padding: 1rem 0;
   font-size: 1.5rem;
 }
+
 .about .wrapper-benefits ul li i .benefit-1 {
   color: #DDDDDD;
 }
+
 .about .wrapper-benefits ul li i .benefit-2 {
   color: #639FAB;
 }
+
 .about .wrapper-benefits ul li i .benefit-3 {
   color: #1C5D99;
 }
@@ -187,23 +246,44 @@ main {
 .projects {
   color: #222222;
 }
+
 .projects h1 {
   font-size: 2.5rem;
   padding-top: 3rem;
 }
+
 .projects .wrapper-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  align-content: center;
-  flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
+
 .projects .wrapper-card .card {
   background: #639FAB;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  flex-shrink: 0;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   border-radius: 1em;
   max-width: 300px;
   min-width: 250px;
@@ -211,24 +291,29 @@ main {
   height: 25em;
   margin: 2em;
 }
+
 .projects .wrapper-card .card h1 {
   padding-top: 0rem;
 }
+
 .projects .wrapper-card .card .button-live {
   color: #FAFAFA;
   background-color: #CE2231;
   min-width: 15rem;
 }
+
 .projects .wrapper-card .card .button-source {
   color: #FAFAFA;
   background-color: #1C5D99;
   min-width: 15rem;
   margin-top: 1rem;
 }
+
 .projects .wrapper-card .card h1 {
   font-size: 2em;
   color: #FAFAFA;
 }
+
 .projects .wrapper-card .card p {
   font-size: 1em;
   margin: 1em 0;
@@ -241,25 +326,32 @@ main {
 .photos {
   color: #222222;
 }
+
 .photos h1 {
   font-size: 2.5rem;
   padding-top: 6rem;
 }
+
 .photos .thumb {
   display: inline;
   max-height: 200px;
 }
+
 .photos .wrapper-photos {
   text-align: center;
 }
+
 .photos .wrapper-photos img {
-  border-radius: 0.5rem;
+  border-radius: .5rem;
   border: 0.5rem solid #222222;
-  margin: 0.5rem;
+  margin: .5rem;
 }
+
 .photos .lightbox {
-  display: none; /**sets the default display to hide the lightbox until it's the :target**/
-  position: fixed; /**the rest of this styling makes the lightbox full screen when selected**/
+  display: none;
+  /**sets the default display to hide the lightbox until it's the :target**/
+  position: fixed;
+  /**the rest of this styling makes the lightbox full screen when selected**/
   z-index: 999;
   width: 100%;
   height: 100%;
@@ -268,15 +360,21 @@ main {
   left: 0;
   background: rgba(34, 34, 34, 0.8);
 }
-.photos .lightbox img { /**sets the styling of the image in the lightbox**/
+
+.photos .lightbox img {
+  /**sets the styling of the image in the lightbox**/
   max-width: 80%;
   max-height: 90%;
 }
-.photos .lightbox:target { /**this is where the magic happens. makes the lightbox display when it's the target of a clickable link**/
+
+.photos .lightbox:target {
+  /**this is where the magic happens. makes the lightbox display when it's the target of a clickable link**/
   outline: none;
   display: block;
 }
-.photos .previous { /**styling the left arrow**/
+
+.photos .previous {
+  /**styling the left arrow**/
   font-size: 1.5rem;
   position: fixed;
   left: 5%;
@@ -284,7 +382,9 @@ main {
   width: 2.5rem;
   color: #FAFAFA;
 }
-.photos .exit { /**styling the exit button**/
+
+.photos .exit {
+  /**styling the exit button**/
   font-size: 1.5rem;
   position: fixed;
   top: 5%;
@@ -292,7 +392,9 @@ main {
   width: 2.5rem;
   color: #FAFAFA;
 }
-.photos .next { /**styling the right arrow**/
+
+.photos .next {
+  /**styling the right arrow**/
   font-size: 1.5rem;
   position: fixed;
   right: 5%;
@@ -304,56 +406,81 @@ main {
 .contact {
   color: #222222;
 }
+
 .contact .wrapper-contact .form-area {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
+
 .contact .wrapper-contact .form-area .contact-text {
-  flex-basis: 40%;
-  align-self: center;
+  -ms-flex-preferred-size: 40%;
+      flex-basis: 40%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
+
 .contact .wrapper-contact .form-area .contact-text h1 {
   padding-top: 3rem;
   font-size: 2.5rem;
   color: #222222;
 }
+
 .contact .wrapper-contact .form-area .contact-text h2 {
-  font-size: 1rem;
+  font-size: 1.5rem;
   padding-top: 1em;
 }
-.contact .wrapper-contact .form-area .form-text {
-  flex-basis: 50%;
+
+.contact .wrapper-contact .form-area .contact-text p {
+  padding-top: 1rem;
+  font-size: 1rem;
 }
+
+.contact .wrapper-contact .form-area .form-text {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+}
+
 .contact .wrapper-contact .form-area .form-text .field {
   width: 100%;
   position: relative;
   margin: 2em auto 1em;
   background-color: #DDDDDD;
 }
+
 .contact .wrapper-contact .form-area .form-text .fieldtext .label {
   position: absolute;
-  transform: scale(0.8) translateY(0rem);
+  -webkit-transform: scale(0.8) translateY(0rem);
+          transform: scale(0.8) translateY(0rem);
 }
+
 .contact .wrapper-contact .form-area .form-text .label {
   font-size: 1.125rem;
   color: #CE2231;
   z-index: 1;
   display: block;
   position: absolute;
-  transform: translateY(-1.9rem);
-  transform-origin: 0%;
-  transition: transform 0.4s;
+  -webkit-transform: translateY(-1.9rem);
+          transform: translateY(-1.9rem);
+  -webkit-transform-origin: 0%;
+          transform-origin: 0%;
+  -webkit-transition: -webkit-transform .4s;
+  transition: -webkit-transform .4s;
+  transition: transform .4s;
+  transition: transform .4s, -webkit-transform .4s;
 }
-.contact .wrapper-contact .form-area .form-text .input:not(:-moz-placeholder-shown) + .label {
-  transform: scale(0.8) translateY(-4em);
-}
-.contact .wrapper-contact .form-area .form-text .input:not(:-ms-input-placeholder) + .label {
-  transform: scale(0.8) translateY(-4em);
-}
+
 .contact .wrapper-contact .form-area .form-text .field:focus-within .label, .contact .wrapper-contact .form-area .form-text .input:not(:placeholder-shown) + .label {
-  transform: scale(0.8) translateY(-4em);
+  -webkit-transform: scale(0.8) translateY(-4em);
+          transform: scale(0.8) translateY(-4em);
 }
+
 .contact .wrapper-contact .form-area .form-text .input {
   outline: none;
   border: none;
@@ -361,22 +488,27 @@ main {
   overflow: hidden;
   margin: 0;
   width: 100%;
-  padding: 0.25em 0;
+  padding: .25em 0;
   background: none;
-  font-family: "Manrope", sans-serif;
+  font-family: 'Manrope', sans-serif;
   color: #222222;
   font-size: 1rem;
   font-weight: 500;
 }
+
 .contact .wrapper-contact .form-area .form-text .input:valid {
   border-bottom: 2px solid yellowgreen;
 }
+
 .contact .wrapper-contact .form-area .form-text .input:invalid {
   border-bottom: 2px solid red;
 }
+
 .contact .wrapper-contact .form-area .form-text .input:focus, .contact .wrapper-contact .form-area .form-text .input:valid, .contact .wrapper-contact .form-area .form-text .input:invalid {
+  -webkit-box-shadow: none;
   box-shadow: none;
 }
+
 .contact .wrapper-contact .form-area .form-text textarea {
   border: none;
   border-bottom: 2px solid #CE2231;
@@ -386,15 +518,18 @@ main {
   width: 100%;
   height: 10em;
   background-color: #DDDDDD;
-  font-family: "Manrope", sans-serif;
+  font-family: 'Manrope', sans-serif;
   color: #222222;
   font-size: 1rem;
   font-weight: 500;
 }
+
 .contact .wrapper-contact .form-area .form-text textarea:focus {
+  -webkit-box-shadow: none;
   box-shadow: none;
   outline: none;
 }
+
 .contact .wrapper-contact .form-area .form-text .form-button-contact {
   background-color: #CE2231;
   color: #FAFAFA;
@@ -406,8 +541,12 @@ main {
 }
 
 footer {
-  position: relative;
+  position: absolute;
+  left: 0;
+  bottom: 0;
   height: 2.5rem;
+  width: 100%;
+  overflow: hidden;
   background-color: #222222;
   color: #FAFAFA;
   font-size: 1rem;
@@ -429,7 +568,7 @@ footer {
   }
   nav .nav-links li {
     display: inline-block;
-    margin: 0 0.5em;
+    margin: 0 .5em;
   }
   nav .nav-links li a {
     margin: 0;
@@ -449,6 +588,8 @@ footer {
     display: inline-block;
   }
   .about .wrapper-hero {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
   }
   .about .wrapper-hero .box-1 {
@@ -458,12 +599,20 @@ footer {
     margin-top: 4em;
   }
   .about .wrapper-benefits ul {
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-items: baseline;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
   }
   .about .wrapper-benefits ul li {
-    flex: 1 1 0;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 0px;
+            flex: 1 1 0;
   }
   .about .wrapper-benefits ul li p {
     display: inline-block;
@@ -472,14 +621,25 @@ footer {
     font-size: 2.5rem;
   }
   .projects .wrapper-card {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .projects .wrapper-card .card {
     margin: 2em;
-    transition: transform 0.5s;
+    -webkit-transition: -webkit-transform .5s;
+    transition: -webkit-transform .5s;
+    transition: transform .5s;
+    transition: transform .5s, -webkit-transform .5s;
   }
   @-webkit-keyframes fadeIn {
     from {
@@ -498,29 +658,37 @@ footer {
     }
   }
   .projects .wrapper-card .card:nth-child(1) {
-    -webkit-animation: fadeIn 0.5s 0.25s backwards;
-            animation: fadeIn 0.5s 0.25s backwards;
+    -webkit-animation: fadeIn .5s .25s backwards;
+            animation: fadeIn .5s .25s backwards;
   }
   .projects .wrapper-card .card:nth-child(2) {
-    -webkit-animation: fadeIn 0.5s 0.5s backwards;
-            animation: fadeIn 0.5s 0.5s backwards;
+    -webkit-animation: fadeIn .5s .5s backwards;
+            animation: fadeIn .5s .5s backwards;
   }
   .projects .wrapper-card .card:nth-child(3) {
-    -webkit-animation: fadeIn 0.5s 0.75s backwards;
-            animation: fadeIn 0.5s 0.75s backwards;
+    -webkit-animation: fadeIn .5s .75s backwards;
+            animation: fadeIn .5s .75s backwards;
   }
   .projects .wrapper-card .card:hover {
-    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
   }
   .contact .wrapper-contact {
     padding: 10rem 0;
   }
   .contact .wrapper-contact .form-area {
-    flex-direction: row;
-    justify-content: space-between;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
   .contact .wrapper-contact .form-area .contact-text {
-    align-self: normal;
+    -ms-flex-item-align: normal;
+        -ms-grid-row-align: normal;
+        align-self: normal;
   }
   .contact .wrapper-contact .form-area .contact-text h1 {
     padding: 0;
@@ -528,4 +696,5 @@ footer {
   .contact .wrapper-contact .form-area .form-text {
     width: 50vw;
   }
-}/*# sourceMappingURL=style.css.map */
+}
+/*# sourceMappingURL=style.css.map */
