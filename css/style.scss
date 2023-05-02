@@ -173,11 +173,11 @@ main {
     .box-2 {
         display: grid;
         justify-items: center;
+        padding-top: 3rem;
         
         .photo-of-month {
             margin: 1rem 0 0 0;
-            width: 90vw;
-            max-width: 50rem;
+            width: 80vw;
             border: .5rem solid $colour-4;
             border-radius: .5rem;
         }
@@ -335,30 +335,30 @@ main {
             outline: none;
             display: block;
         }
-    }
-    .previous { /**styling the left arrow**/
-        font-size: $h2;
-        position: fixed;
-        left: 5%;
-        top: 49%;
-        width: $h1;
-        color: $colour-1;
-    }
-    .exit { /**styling the exit button**/
-        font-size: $h2;
-        position: fixed;
-        top: 5%;
-        right: 5%;
-        width: $h1;
-        color: $colour-1;
-    }
-    .next { /**styling the right arrow**/
-        font-size: $h2;
-        position: fixed;
-        right: 5%;
-        top: 49%;
-        width: $h1;
-        color: $colour-1;
+        .previous { /**styling the left arrow**/
+            font-size: $h2;
+            position: fixed;
+            left: 5%;
+            top: 49%;
+            width: $h1;
+            color: $colour-1;
+        }
+        .exit { /**styling the exit button**/
+            font-size: $h2;
+            position: fixed;
+            top: 5%;
+            right: 5%;
+            width: $h1;
+            color: $colour-1;
+        }
+        .next { /**styling the right arrow**/
+            font-size: $h2;
+            position: fixed;
+            right: 5%;
+            top: 49%;
+            width: $h1;
+            color: $colour-1;
+        }
     }
 }
 .contact {
@@ -530,6 +530,10 @@ footer {
 
             .box-1 {
                 padding: 0 2rem 0 0;
+            }
+            .box-2 .photo-of-month {
+                width: 50vw;
+                max-width: 35vw;
             }
         }
 
