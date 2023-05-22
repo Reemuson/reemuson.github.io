@@ -102,7 +102,7 @@ main {
   background: none;
   color: #1C5D99;
 }
-.page #button {
+.page .button {
   display: block;
   cursor: pointer;
   font-weight: 700;
@@ -115,7 +115,7 @@ main {
   max-width: 15rem;
   padding: 1rem;
 }
-.page #button:hover, .page #button:focus {
+.page .button:hover, .page .button:focus {
   filter: brightness(1.2);
   transition: 0.5s;
 }
@@ -163,6 +163,7 @@ main {
 }
 .about .wrapper-benefits h1 {
   padding-top: 0;
+  padding-bottom: 1rem;
   font-size: 1.25rem;
 }
 .about .wrapper-benefits ul {
@@ -186,6 +187,53 @@ main {
   color: #639FAB;
 }
 .about .wrapper-benefits ul li i .benefit-3 {
+  color: #1C5D99;
+}
+
+.services h1 {
+  padding-top: 1rem;
+  padding-bottom: 3rem;
+  font-size: 2.5rem;
+}
+.services p {
+  padding-bottom: 1rem;
+}
+.services .button-prints {
+  color: #FAFAFA;
+  background-color: #CE2231;
+  margin: 2rem auto;
+}
+.services .button-drawing {
+  color: #FAFAFA;
+  background-color: #1C5D99;
+  margin: 2rem auto;
+}
+.services .wrapper-benefits h1 {
+  padding-top: 0;
+  padding-bottom: 1rem;
+  font-size: 1.25rem;
+}
+.services .wrapper-benefits ul {
+  display: flex;
+  flex-direction: column;
+}
+.services .wrapper-benefits ul li {
+  text-align: center;
+}
+.services .wrapper-benefits ul li p {
+  display: none;
+}
+.services .wrapper-benefits ul li i {
+  padding: 1rem 0;
+  font-size: 1.5rem;
+}
+.services .wrapper-benefits ul li i .benefit-1 {
+  color: #DDDDDD;
+}
+.services .wrapper-benefits ul li i .benefit-2 {
+  color: #639FAB;
+}
+.services .wrapper-benefits ul li i .benefit-3 {
   color: #1C5D99;
 }
 
@@ -483,6 +531,23 @@ footer {
     display: inline-block;
   }
   .about .wrapper-benefits ul li i {
+    font-size: 2.5rem;
+  }
+  .services .wrapper-benefits {
+    margin-top: 4em;
+  }
+  .services .wrapper-benefits ul {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: baseline;
+  }
+  .services .wrapper-benefits ul li {
+    flex: 1 1 0;
+  }
+  .services .wrapper-benefits ul li p {
+    display: inline-block;
+  }
+  .services .wrapper-benefits ul li i {
     font-size: 2.5rem;
   }
   .projects .wrapper-card {

@@ -130,7 +130,7 @@ main {
         background: none;
         color: $colour-6;
     }
-    #button {
+    .button {
         display: block;
         cursor: pointer;
         font-weight: 700;
@@ -202,6 +202,65 @@ main {
     .wrapper-benefits {
         h1 {
             padding-top: 0;
+            padding-bottom: 1rem;
+            font-size: $h3;
+        }
+        
+        ul {
+            display: flex;
+            flex-direction: column;
+
+            li {
+                text-align: center;
+                
+                p {
+                    display: none;
+                }
+
+                i {
+                    padding: 1rem 0;
+                    font-size: $h2;
+
+                    .benefit-1 {
+                        color: $colour-2;
+                    }
+                    .benefit-2 {
+                        color: $colour-3;
+                    }
+                    .benefit-3 {
+                        color: $colour-6;
+                    }
+                }
+            }
+        }
+    }
+}
+.services {
+    h1 {
+        padding-top: 1rem;
+        padding-bottom: 3rem;
+        font-size: $h1;
+    }
+    p {
+        padding-bottom: 1rem;
+    }
+
+    .button-prints {
+        color: $colour-1;
+        background-color: $colour-5;
+        margin: 2rem auto;
+    }
+
+    .button-drawing {
+        color: $colour-1;
+        background-color: $colour-6;
+        margin: 2rem auto;
+    }
+
+    .wrapper-benefits {
+        h1 {
+            padding-top: 0;
+            padding-bottom: 1rem;
             font-size: $h3;
         }
         
@@ -537,6 +596,28 @@ footer {
             }
         }
 
+        .wrapper-benefits {
+            margin-top: 4em;
+            
+            ul {
+                flex-direction: row;
+                flex-wrap: nowrap;
+                align-items: baseline;
+
+                li {
+                    flex: 1 1 0;
+                    p {
+                        display: inline-block
+                    }
+                    i {
+                        font-size: $h1;
+                    }
+                }
+            }
+        }
+    }
+
+    .services {
         .wrapper-benefits {
             margin-top: 4em;
             
