@@ -14,7 +14,7 @@ body {
   font-family: "Manrope", sans-serif;
   font-weight: 500;
   font-size: 1rem;
-  background-color: #DDDDDD;
+  background-color: #F5F5F5;
 }
 
 nav {
@@ -126,9 +126,9 @@ main {
 
 .about {
   color: #222222;
+  padding-top: 3rem;
 }
 .about h1 {
-  padding-top: 3rem;
   font-size: 2.5rem;
 }
 .about h2 {
@@ -146,14 +146,15 @@ main {
   justify-items: center;
   padding-top: 3rem;
 }
-.about .box-2 .photo-of-month {
+.about .box-2 .project-of-month {
   margin: 1rem 0 0 0;
   width: 80vw;
   border: 0.5rem solid #222222;
   border-radius: 0.5rem;
 }
-.about .box-2 .link-photo-of-month {
+.about .box-2 .link-project-of-month {
   padding: 0.5rem 0 1rem 0;
+  color: #CE2231;
 }
 .about .button-contact {
   color: #FAFAFA;
@@ -185,10 +186,10 @@ main {
   font-size: 1.5rem;
 }
 .about .wrapper-benefits ul li i .benefit-1 {
-  color: #DDDDDD;
+  color: #F5F5F5;
 }
 .about .wrapper-benefits ul li i .benefit-2 {
-  color: #639FAB;
+  color: #63707E;
 }
 .about .wrapper-benefits ul li i .benefit-3 {
   color: #1C5D99;
@@ -232,10 +233,10 @@ main {
   font-size: 1.5rem;
 }
 .services .wrapper-benefits ul li i .benefit-1 {
-  color: #DDDDDD;
+  color: #F5F5F5;
 }
 .services .wrapper-benefits ul li i .benefit-2 {
-  color: #639FAB;
+  color: #63707E;
 }
 .services .wrapper-benefits ul li i .benefit-3 {
   color: #1C5D99;
@@ -255,7 +256,7 @@ main {
   flex-direction: column;
 }
 .projects .wrapper-card .card {
-  background: #639FAB;
+  background: #63707E;
   display: flex;
   flex-direction: column;
   flex-shrink: 0;
@@ -302,69 +303,52 @@ main {
   font-size: 2.5rem;
   padding-top: 6rem;
 }
-.photos .thumb {
-  display: inline;
-  max-height: 200px;
+
+.prints {
+  padding-top: 3rem;
 }
-.photos .wrapper-photos {
-  text-align: center;
+.prints .wrapper-photos .thumb {
+  max-height: 300px;
 }
-.photos .wrapper-photos img {
-  border-radius: 0.5rem;
+
+.drawings {
+  padding-top: 3rem;
+}
+.drawings .wrapper-photos .thumb {
+  max-height: 300px;
+}
+
+.aquilawire {
+  padding-top: 3rem;
+}
+.aquilawire a {
+  color: #CE2231;
+}
+.aquilawire h1 {
+  font-size: 2.5rem;
+}
+.aquilawire h2 {
+  font-size: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 3rem;
+}
+.aquilawire p {
+  font-size: 1rem;
+  padding-bottom: 1rem;
+}
+.aquilawire .box-3 {
+  padding-top: 3rem;
+}
+.aquilawire .photo-aquilawire {
+  margin: 1rem 0 0 0;
+  width: 80vw;
   border: 0.5rem solid #222222;
-  margin: 0.5rem;
-}
-.photos .lightbox {
-  display: none; /**sets the default display to hide the lightbox until it's the :target**/
-  position: fixed; /**the rest of this styling makes the lightbox full screen when selected**/
-  z-index: 999;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  top: 0;
-  left: 0;
-  background: rgba(34, 34, 34, 0.8);
-}
-.photos .lightbox img { /**sets the styling of the image in the lightbox**/
-  max-width: 80%;
-  max-height: 90%;
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-.photos .lightbox:target { /**this is where the magic happens. makes the lightbox display when it's the target of a clickable link**/
-  outline: none;
-  display: block;
-}
-.photos .lightbox .previous { /**styling the left arrow**/
-  font-size: 1.5rem;
-  position: fixed;
-  left: 5%;
-  top: 49%;
-  width: 2.5rem;
-  color: #FAFAFA;
-}
-.photos .lightbox .exit { /**styling the exit button**/
-  font-size: 1.5rem;
-  position: fixed;
-  top: 5%;
-  right: 5%;
-  width: 2.5rem;
-  color: #FAFAFA;
-}
-.photos .lightbox .next { /**styling the right arrow**/
-  font-size: 1.5rem;
-  position: fixed;
-  right: 5%;
-  top: 49%;
-  width: 2.5rem;
-  color: #FAFAFA;
+  border-radius: 0.5rem;
 }
 
 .contact {
   color: #222222;
+  padding-top: 3rem;
 }
 .contact .wrapper-contact .form-area {
   width: 100%;
@@ -376,12 +360,11 @@ main {
   align-self: center;
 }
 .contact .wrapper-contact .form-area .contact-text h1 {
-  padding-top: 3rem;
   font-size: 2.5rem;
   color: #222222;
 }
 .contact .wrapper-contact .form-area .contact-text h2 {
-  font-size: 1.5rem;
+  font-size: 1rem;
   padding-top: 1em;
 }
 .contact .wrapper-contact .form-area .contact-text p {
@@ -395,7 +378,7 @@ main {
   width: 100%;
   position: relative;
   margin: 2em auto 1em;
-  background-color: #DDDDDD;
+  background-color: #F5F5F5;
 }
 .contact .wrapper-contact .form-area .form-text .fieldtext .label {
   position: absolute;
@@ -424,7 +407,7 @@ main {
   overflow: hidden;
   margin: 0;
   width: 100%;
-  padding: 0.25em 0;
+  padding: 0.25em;
   background: none;
   font-family: "Manrope", sans-serif;
   color: #222222;
@@ -446,9 +429,10 @@ main {
   overflow: hidden;
   resize: none;
   margin: 2em auto 1em;
+  padding: 0.25rem;
   width: 100%;
   height: 10em;
-  background-color: #DDDDDD;
+  background-color: #F5F5F5;
   font-family: "Manrope", sans-serif;
   color: #222222;
   font-size: 1rem;
@@ -466,6 +450,68 @@ main {
   min-width: -webkit-fill-available;
   min-width: -moz-available;
   min-width: fill;
+}
+
+.wrapper-photos {
+  text-align: center;
+}
+.wrapper-photos img {
+  border-radius: 0.5rem;
+  border: 0.5rem solid #222222;
+  margin: 0.5rem;
+}
+.wrapper-photos .thumb {
+  display: inline;
+  max-height: 200px;
+  transition: transform 0.5s;
+}
+.wrapper-photos .lightbox {
+  display: none; /**sets the default display to hide the lightbox until it's the :target**/
+  position: fixed; /**the rest of this styling makes the lightbox full screen when selected**/
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  top: 0;
+  left: 0;
+  background: rgba(34, 34, 34, 0.8);
+}
+.wrapper-photos .lightbox img { /**sets the styling of the image in the lightbox**/
+  max-width: 80%;
+  max-height: 80%;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.wrapper-photos .lightbox:target { /**this is where the magic happens. makes the lightbox display when it's the target of a clickable link**/
+  outline: none;
+  display: block;
+}
+.wrapper-photos .lightbox .previous { /**styling the left arrow**/
+  font-size: 1.5rem;
+  position: fixed;
+  left: 5%;
+  top: 49%;
+  width: 2.5rem;
+  color: #FAFAFA;
+}
+.wrapper-photos .lightbox .exit { /**styling the exit button**/
+  font-size: 1.5rem;
+  position: fixed;
+  top: 5%;
+  right: 5%;
+  width: 2.5rem;
+  color: #FAFAFA;
+}
+.wrapper-photos .lightbox .next { /**styling the right arrow**/
+  font-size: 1.5rem;
+  position: fixed;
+  right: 5%;
+  top: 49%;
+  width: 2.5rem;
+  color: #FAFAFA;
 }
 
 footer {
@@ -513,6 +559,9 @@ footer {
   nav label#hamburger-icon {
     display: none;
   }
+  .wrapper-photos .thumb:hover {
+    transform: scale(1.1);
+  }
   .about p {
     display: inline-block;
   }
@@ -522,7 +571,7 @@ footer {
   .about .wrapper-hero .box-1 {
     padding: 0 2rem 0 0;
   }
-  .about .wrapper-hero .box-2 .photo-of-month {
+  .about .wrapper-hero .box-2 .project-of-month {
     width: 50vw;
     max-width: 35vw;
   }
@@ -590,8 +639,16 @@ footer {
   .projects .wrapper-card .card:hover {
     transform: scale(1.1);
   }
-  .contact .wrapper-contact {
-    padding: 10rem 0;
+  .aquilawire .wrapper-hero {
+    display: flex;
+    flex-direction: row;
+  }
+  .aquilawire .wrapper-hero .box-1 {
+    padding: 0 2rem 0 0;
+    flex-grow: 1;
+  }
+  .aquilawire .wrapper-hero .photo-aquilawire {
+    width: 20vw;
   }
   .contact .wrapper-contact .form-area {
     flex-direction: row;
