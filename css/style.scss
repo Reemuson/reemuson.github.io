@@ -39,12 +39,12 @@ nav {
     background: $colour-5;
     top: 2.5vh;
     height: $nav;
-    width: 90vw;
+    width: calc(100vw - 30px);
     z-index: 10;
     position: fixed;
     border-radius: .5rem;
-    padding: 0 5vw;
-    margin: 0 5vw;
+    padding: 0 15px;
+    margin: 0 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -112,8 +112,9 @@ nav {
 }
 
 main {
-    padding-top: $nav; // remove height for navbar
-    padding-bottom: 2.5rem;
+    padding: $nav 15px 2.5rem 15px;
+    max-width: 1200px;
+    margin: auto;
 }
 
 .wrapper-page {
@@ -122,8 +123,6 @@ main {
 }
 
 .page {
-    padding: 0 10% 0 10%;
-
     ul {
         list-style: none;
     }
@@ -664,8 +663,7 @@ footer {
                 padding: 0 2rem 0 0;
             }
             .box-2 .project-of-month {
-                width: 50vw;
-                max-width: 35vw;
+                width: 25vw;
             }
         }
 
