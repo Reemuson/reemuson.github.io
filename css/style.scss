@@ -39,12 +39,12 @@ nav {
     background: $colour-5;
     top: 2.5vh;
     height: $nav;
-    width: calc(100vw - 30px);
+    width: calc(100vw - 40px);
     z-index: 10;
     position: fixed;
     border-radius: .5rem;
-    padding: 0 15px;
-    margin: 0 15px;
+    padding: 0 20px;
+    margin: 0 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -539,7 +539,7 @@ main {
 
     .thumb {
         display: inline;
-        max-height: 200px;
+        max-width: calc(100vw - 80px);
         transition: transform .5s;
     }
 
