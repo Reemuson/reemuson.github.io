@@ -39,12 +39,12 @@ nav {
     background: $colour-5;
     top: 2.5vh;
     height: $nav;
-    width: 90vw;
+    width: calc(100vw - 40px);
     z-index: 10;
     position: fixed;
     border-radius: .5rem;
-    padding: 0 5vw;
-    margin: 0 5vw;
+    padding: 0 20px;
+    margin: 0 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -54,7 +54,7 @@ nav {
         z-index: 11;
     }
 
-    h1 { 
+    h1 {
         a {
             color: $colour-1;
             text-decoration: none;
@@ -112,8 +112,9 @@ nav {
 }
 
 main {
-    padding-top: $nav; // remove height for navbar
-    padding-bottom: 2.5rem;
+    padding: $nav 15px 2.5rem 15px;
+    max-width: 1200px;
+    margin: auto;
 }
 
 .wrapper-page {
@@ -122,8 +123,6 @@ main {
 }
 
 .page {
-    padding: 0 10% 0 10%;
-
     ul {
         list-style: none;
     }
@@ -156,7 +155,7 @@ main {
 .about {
     color: $colour-4;
     padding-top: 3rem;
-    
+
     h1 {
         font-size: $h1;
     }
@@ -173,19 +172,19 @@ main {
             padding-bottom: 1rem;
         }
     }
-    
+
     .box-2 {
         display: grid;
         justify-items: center;
         padding-top: 3rem;
-        
+
         .project-of-month {
             margin: 1rem 0 0 0;
             width: 80vw;
             border: .5rem solid $colour-4;
             border-radius: .5rem;
         }
-        
+
         .link-project-of-month {
             padding: .5rem 0 1rem 0;
             color: $colour-5;
@@ -210,14 +209,14 @@ main {
             padding-bottom: 1rem;
             font-size: $h3;
         }
-        
+
         ul {
             display: flex;
             flex-direction: column;
 
             li {
                 text-align: center;
-                
+
                 p {
                     display: none;
                 }
@@ -269,14 +268,14 @@ main {
             padding-bottom: 1rem;
             font-size: $h3;
         }
-        
+
         ul {
             display: flex;
             flex-direction: column;
 
             li {
                 text-align: center;
-                
+
                 p {
                     display: none;
                 }
@@ -313,7 +312,7 @@ main {
         align-items: center;
         align-content: center;
         flex-direction: column;
-    
+
         .card {
             h1 {
                 padding-top: 0rem;
@@ -343,7 +342,7 @@ main {
                 min-width: 15rem;
                 margin-top: 1rem;
             }
-    
+
             h1 {
                 font-size: 2em;
                 color: $colour-1;
@@ -357,7 +356,7 @@ main {
                 color: $colour-1;
             }
         }
-    }    
+    }
 }
 
 .photos {
@@ -370,7 +369,11 @@ main {
 }
 
 .prints {
-    padding-top: 3rem;
+    h1 {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+        font-size: $h1;
+    }
 
     .wrapper-photos .thumb {
         max-height: 300px;
@@ -378,7 +381,11 @@ main {
 }
 
 .drawings {
-    padding-top: 3rem;
+    h1 {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+        font-size: $h1;
+    }
 
     .wrapper-photos .thumb {
         max-height: 300px;
@@ -401,13 +408,13 @@ main {
         padding-top: 1rem;
         padding-bottom: 3rem;
     }
-    
+
     p {
         font-size: $p;
         padding-bottom: 1rem;
     }
 
-    .box-3 { 
+    .box-3 {
         padding-top: 3rem;
     }
 
@@ -540,7 +547,7 @@ main {
 
     .thumb {
         display: inline;
-        max-height: 200px;
+        max-width: calc(100vw - 80px);
         transition: transform .5s;
     }
 
@@ -554,11 +561,22 @@ main {
         top: 0;
         left: 0;
         background: rgba(34, 34, 34, .8);
-    
-        img { /**sets the styling of the image in the lightbox**/
-            max-width: 80%;
-            max-height: 80%;
-            margin: 0;
+
+        .slide { /**sets the styling of the image in the lightbox**/
+            p {
+                color: $colour-2;
+                font-size: $p;
+            }
+            a {
+                color: $colour-5;
+                font-size: $p;
+                text-decoration: underline;
+            }
+            img {
+                max-width: 80vw;
+                max-height: 80vh;
+                margin: 0;
+            }
             position: absolute;
             top: 50%;
             left: 50%;
@@ -571,7 +589,7 @@ main {
         .previous { /**styling the left arrow**/
             font-size: $h2;
             position: fixed;
-            left: 5%;
+            left: 2.5%;
             top: 49%;
             width: $h1;
             color: $colour-1;
@@ -580,14 +598,14 @@ main {
             font-size: $h2;
             position: fixed;
             top: 5%;
-            right: 5%;
+            right: 2.5%;
             width: $h1;
             color: $colour-1;
         }
         .next { /**styling the right arrow**/
             font-size: $h2;
             position: fixed;
-            right: 5%;
+            right: 2.5%;
             top: 49%;
             width: $h1;
             color: $colour-1;
@@ -656,7 +674,7 @@ footer {
         p {
             display: inline-block;
         }
-        
+
         .wrapper-hero {
             display: flex;
 
@@ -664,14 +682,13 @@ footer {
                 padding: 0 2rem 0 0;
             }
             .box-2 .project-of-month {
-                width: 50vw;
-                max-width: 35vw;
+                width: 25vw;
             }
         }
 
         .wrapper-benefits {
             margin-top: 4em;
-            
+
             ul {
                 flex-direction: row;
                 flex-wrap: nowrap;
@@ -693,7 +710,7 @@ footer {
     .services {
         .wrapper-benefits {
             margin-top: 4em;
-            
+
             ul {
                 flex-direction: row;
                 flex-wrap: nowrap;
@@ -718,12 +735,12 @@ footer {
             flex-wrap: wrap;
             justify-content: center;
             align-items: center;
-    
+
             .card {
                 margin: 2em;
                 transition: transform .5s;
             }
-    
+
             @keyframes fadeIn {
                 from {
                     opacity: 0;
@@ -732,7 +749,7 @@ footer {
                     opacity: 1;
                 }
             }
-    
+
             .card:nth-child(1) {
                 animation: fadeIn .5s .25s backwards;
             }

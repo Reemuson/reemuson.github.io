@@ -32,111 +32,49 @@
     <main>
         <div class="wrapper-page">
             <section class="page drawings" id="drawings">
-                <div class="wrapper-photos">  
-                    <a href="#image1"> 
-                      <img src="/img/photography/20220907_2312.jpg" class="thumb"/><!--you'll want to change the link in there, it's just a placeholder-->
+                <h1>CAD & Drafting</h1>
+                <div class="wrapper-photos">
+                    <!-- Begin slide -->
+                    <a href="#image1"> <!-- Thumbnail image -->
+                        <img src="/img/drawing/draft-1.png" class="thumb"/>
                     </a>
-                    <!--what the user sees before clicking anything-->
-                      
-                    <div id="image1" class="lightbox"> <!--what the user sees after clicking the first image-->
-                      <a href="#_"> <!--no need for a left arrow because there is no previous image to go to-->
-                        <img src="/img/photography/20220907_2312.jpg" />
-                          <!--this is the actual image that 'grows'. You'll want this link to match the one in #image1-->
-                      </a>
-                        
-                      <a href="#_"><!--this href takes out out of full screen. -->
-                        <i class="exit fa-solid fa-xmark"></i><!--exit button-->
-                      </a>
-                        
-                      <a href="#image2"><!--this href leads you to the next image in the slideshow-->
-                        <i class="next fa-solid fa-arrow-right"></i><!--next button-->
-                      </a> 
+                    <div id="image1" class="lightbox"> <!-- Slide fullscreen lightbox -->
+                        <!-- No left arrow for first image in series -->
+                        <div class="slide">
+                            <a href="#_"> <!-- Full screen image -->
+                                <img src="/img/drawing/draft-1.png" />
+                            </a>
+                            <p>Drawing of electrical wiring harness for an automotive application.</p>
+                        </div>    
+                        <a href="#_"> <!-- Close button -->
+                            <i class="exit fa-solid fa-xmark"></i>
+                        </a>
+                        <a href="#image2"> <!-- Next button (linking to next image in series) -->
+                            <i class="next fa-solid fa-arrow-right"></i>
+                        </a>
                     </div>
-                      
-                    <a href="#image2"><!--this href leads you to the previous image-->
-                      <img src="/img/photography/20220429_1092.jpeg" class="thumb"/>
+                    <!-- End slide -->
+                    <!-- Begin slide -->
+                    <a href="#image2"> <!-- Thumbnail image -->
+                        <img src="/img/drawing/draft-2.png" class="thumb"/>
                     </a>
-                      
-                    <div id="image2" class="lightbox"><!--from here on out, the same comments apply. Notice that the href for the previous selector is set to the id of the lightbox div for the previous image, opposite goes for the next selector. This is what makes the slider work. There are some that use CSS and huge margins, but I prefer to keep my markup and css simple enough to explain. Hope you can use this!-->
-                      <a href="#image1">
-                        <i class="previous fa-solid fa-arrow-left"></i>
-                      </a>
-
-                      <a href="#_">
-                        <img src="/img/photography/20220429_1092.jpeg">
-                      </a>
-                        
-                      <a href="#_">
-                        <i class="exit fa-solid fa-xmark"></i>
-                      </a>
-                        
-                      <a href="#image3">
-                        <i class="next fa-solid fa-arrow-right"></i>
-                      </a>
+                    <div id="image2" class="lightbox"> <!-- Slide fullscreen lightbox -->
+                        <a href="#image1"> <!-- Previous button (linking to previous image in series) -->
+                            <i class="previous fa-solid fa-arrow-left"></i>
+                        </a>
+                        <div class="slide">
+                            <a href="#_"> <!-- Full screen image -->
+                                <img src="/img/drawing/draft-2.png" />
+                            </a>
+                            <p>Draft of a M829A2 APFSDS round for the Australian M1A1 AIM tank used by the ADF.</p>
+                        </div>
+                        <a href="#_"> <!-- Close button -->
+                            <i class="exit fa-solid fa-xmark"></i>
+                        </a>
+                        <!-- No right arrow for last image in series -->
                     </div>
-
-                    <a href="#image3">
-                      <img src="/img/photography/20210323_1231.jpeg" class="thumb"/>
-                    </a>
-                      
-                    <div id="image3" class="lightbox">
-                      <a href="#image2">
-                        <i class="previous fa-solid fa-arrow-left"></i>
-                      </a>
-
-                      <a href="#_">
-                        <img src="/img/photography/20210323_1231.jpeg">
-                      </a>
-                        
-                      <a href="#_">
-                        <i class="exit fa-solid fa-xmark"></i>
-                      </a>
-                        
-                      <a href="#image4">
-                        <i class="next fa-solid fa-arrow-right"></i>
-                      </a>
-                    </div>
-                    
-                    <a href="#image4">
-                      <img src="/img/photography/20220429_2421.jpeg" class="thumb"/>
-                    </a>
-                      
-                    <div id="image4" class="lightbox">
-                      <a href="#image3">
-                        <i class="previous fa-solid fa-arrow-left"></i>
-                      </a>
-
-                      <a href="#_">
-                        <img src="/img/photography/20220429_2421.jpeg">
-                      </a>
-                        
-                      <a href="#_">
-                        <i class="exit fa-solid fa-xmark"></i>
-                      </a>
-                        
-                      <a href="#image5">
-                        <i class="next fa-solid fa-arrow-right"></i>
-                      </a>
-                    </div>
-                      
-                    <a href="#image5">
-                      <img src="/img/photography/20220115_0540.jpeg" class="thumb"/>
-                    </a>
-                      
-                    <div id="image5" class="lightbox">
-                      <a href="#image4">
-                        <i class="previous fa-solid fa-arrow-left"></i>
-                      </a>
-
-                      <a href="#_">
-                        <img src="/img/photography/20220115_0540.jpeg"/>
-                      </a>
-
-                      <a href="#_">
-                        <i class="exit fa-solid fa-xmark"></i>
-                      </a>
-                    </div>
-                  </div><!--/wrapper-photos-->
+                    <!-- End slide -->    
+                </div><!--/wrapper-photos-->
             </section>
         </div>
     </main>
