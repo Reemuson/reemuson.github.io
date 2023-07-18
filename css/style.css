@@ -302,15 +302,19 @@ main {
   padding-top: 6rem;
 }
 
-.prints {
+.prints h1 {
   padding-top: 3rem;
+  padding-bottom: 3rem;
+  font-size: 2.5rem;
 }
 .prints .wrapper-photos .thumb {
   max-height: 300px;
 }
 
-.drawings {
+.drawings h1 {
   padding-top: 3rem;
+  padding-bottom: 3rem;
+  font-size: 2.5rem;
 }
 .drawings .wrapper-photos .thumb {
   max-height: 300px;
@@ -474,14 +478,25 @@ main {
   left: 0;
   background: rgba(34, 34, 34, 0.8);
 }
-.wrapper-photos .lightbox img { /**sets the styling of the image in the lightbox**/
-  max-width: 80%;
-  max-height: 80%;
-  margin: 0;
+.wrapper-photos .lightbox .slide { /**sets the styling of the image in the lightbox**/
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+.wrapper-photos .lightbox .slide p {
+  color: #F5F5F5;
+  font-size: 1rem;
+}
+.wrapper-photos .lightbox .slide a {
+  color: #CE2231;
+  font-size: 1rem;
+  text-decoration: underline;
+}
+.wrapper-photos .lightbox .slide img {
+  max-width: 80vw;
+  max-height: 80vh;
+  margin: 0;
 }
 .wrapper-photos .lightbox:target { /**this is where the magic happens. makes the lightbox display when it's the target of a clickable link**/
   outline: none;
@@ -490,7 +505,7 @@ main {
 .wrapper-photos .lightbox .previous { /**styling the left arrow**/
   font-size: 1.5rem;
   position: fixed;
-  left: 5%;
+  left: 2.5%;
   top: 49%;
   width: 2.5rem;
   color: #FAFAFA;
@@ -499,14 +514,14 @@ main {
   font-size: 1.5rem;
   position: fixed;
   top: 5%;
-  right: 5%;
+  right: 2.5%;
   width: 2.5rem;
   color: #FAFAFA;
 }
 .wrapper-photos .lightbox .next { /**styling the right arrow**/
   font-size: 1.5rem;
   position: fixed;
-  right: 5%;
+  right: 2.5%;
   top: 49%;
   width: 2.5rem;
   color: #FAFAFA;
