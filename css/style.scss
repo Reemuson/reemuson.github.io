@@ -176,7 +176,6 @@ main {
     .box-2 {
         display: grid;
         justify-items: center;
-        padding-top: 3rem;
 
         .project-of-month {
             margin: 1rem 0 0 0;
@@ -206,7 +205,6 @@ main {
     .wrapper-benefits {
         h1 {
             padding-top: 0;
-            padding-bottom: 1rem;
             font-size: $h3;
         }
 
@@ -222,18 +220,8 @@ main {
                 }
 
                 i {
-                    padding: 1rem 0;
+                    padding-top: 2rem;
                     font-size: $h2;
-
-                    .benefit-1 {
-                        color: $colour-2;
-                    }
-                    .benefit-2 {
-                        color: $colour-3;
-                    }
-                    .benefit-3 {
-                        color: $colour-6;
-                    }
                 }
             }
         }
@@ -272,6 +260,7 @@ main {
         ul {
             display: flex;
             flex-direction: column;
+            justify-content: center;
 
             li {
                 text-align: center;
@@ -682,22 +671,31 @@ footer {
                 padding: 0 2rem 0 0;
             }
             .box-2 .project-of-month {
-                width: 25vw;
+                width: 20vw;
             }
         }
 
         .wrapper-benefits {
             margin-top: 4em;
 
+            h1 {
+                font-size: $h2;
+            }
+        
+            .center {
+                width: 50vw;
+                margin: auto;
+            }
+
             ul {
                 flex-direction: row;
-                flex-wrap: nowrap;
-                align-items: baseline;
+                flex-wrap: wrap;
+                justify-content: space-evenly;
 
                 li {
-                    flex: 1 1 0;
+                    flex: 0 0 30%;
                     p {
-                        display: inline-block
+                        display: inline-block;
                     }
                     i {
                         font-size: $h1;
@@ -714,10 +712,10 @@ footer {
             ul {
                 flex-direction: row;
                 flex-wrap: nowrap;
-                align-items: baseline;
+                justify-content: center;
 
                 li {
-                    flex: 1 1 0;
+                    flex: 1 0 0;
                     p {
                         display: inline-block
                     }

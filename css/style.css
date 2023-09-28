@@ -142,7 +142,6 @@ main {
 .about .box-2 {
   display: grid;
   justify-items: center;
-  padding-top: 3rem;
 }
 .about .box-2 .project-of-month {
   margin: 1rem 0 0 0;
@@ -166,7 +165,6 @@ main {
 }
 .about .wrapper-benefits h1 {
   padding-top: 0;
-  padding-bottom: 1rem;
   font-size: 1.25rem;
 }
 .about .wrapper-benefits ul {
@@ -180,17 +178,8 @@ main {
   display: none;
 }
 .about .wrapper-benefits ul li i {
-  padding: 1rem 0;
+  padding-top: 2rem;
   font-size: 1.5rem;
-}
-.about .wrapper-benefits ul li i .benefit-1 {
-  color: #F5F5F5;
-}
-.about .wrapper-benefits ul li i .benefit-2 {
-  color: #63707E;
-}
-.about .wrapper-benefits ul li i .benefit-3 {
-  color: #1C5D99;
 }
 
 .services h1 {
@@ -219,6 +208,7 @@ main {
 .services .wrapper-benefits ul {
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 .services .wrapper-benefits ul li {
   text-align: center;
@@ -585,18 +575,25 @@ footer {
     padding: 0 2rem 0 0;
   }
   .about .wrapper-hero .box-2 .project-of-month {
-    width: 25vw;
+    width: 20vw;
   }
   .about .wrapper-benefits {
     margin-top: 4em;
   }
+  .about .wrapper-benefits h1 {
+    font-size: 1.5rem;
+  }
+  .about .wrapper-benefits .center {
+    width: 50vw;
+    margin: auto;
+  }
   .about .wrapper-benefits ul {
     flex-direction: row;
-    flex-wrap: nowrap;
-    align-items: baseline;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
   }
   .about .wrapper-benefits ul li {
-    flex: 1 1 0;
+    flex: 0 0 30%;
   }
   .about .wrapper-benefits ul li p {
     display: inline-block;
@@ -610,10 +607,10 @@ footer {
   .services .wrapper-benefits ul {
     flex-direction: row;
     flex-wrap: nowrap;
-    align-items: baseline;
+    justify-content: center;
   }
   .services .wrapper-benefits ul li {
-    flex: 1 1 0;
+    flex: 1 0 0;
   }
   .services .wrapper-benefits ul li p {
     display: inline-block;
