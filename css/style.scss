@@ -113,7 +113,8 @@ nav {
 
 main {
     padding: $nav 15px 2.5rem 15px;
-    max-width: 1200px;
+    width: calc(100vw - 40px);
+    max-width: 1200px;  
     margin: auto;
 }
 
@@ -406,12 +407,18 @@ main {
     .box-3 {
         padding-top: 3rem;
     }
+    .box-2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
 
-    .photo-aquilawire {
-        margin: 1rem 0 0 0;
-        width: 80vw;
-        border: .5rem solid $colour-4;
-        border-radius: .5rem;
+        img {
+            margin: 10px;
+            width: 80vw;
+            border: .5rem solid $colour-4;
+            border-radius: .5rem;
+        }
     }
 }
 
@@ -761,14 +768,18 @@ footer {
     .aquilawire {
         .wrapper-hero {
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
 
             .box-1 {
                 padding: 0 2rem 0 0;
                 flex-grow: 1;
             }
-            .photo-aquilawire {
-                width: 20vw;
+            .box-2 {
+                flex-direction: row;
+
+                img {
+                    max-width: 500px;
+                }
             }
         }
     }

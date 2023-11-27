@@ -85,6 +85,7 @@ nav #hamburger:checked ~ .nav-links {
 
 main {
   padding: 2.5rem 15px 2.5rem 15px;
+  width: calc(100vw - 40px);
   max-width: 1200px;
   margin: auto;
 }
@@ -331,8 +332,14 @@ main {
 .aquilawire .box-3 {
   padding-top: 3rem;
 }
-.aquilawire .photo-aquilawire {
-  margin: 1rem 0 0 0;
+.aquilawire .box-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.aquilawire .box-2 img {
+  margin: 10px;
   width: 80vw;
   border: 0.5rem solid #222222;
   border-radius: 0.5rem;
@@ -646,14 +653,17 @@ footer {
   }
   .aquilawire .wrapper-hero {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
   }
   .aquilawire .wrapper-hero .box-1 {
     padding: 0 2rem 0 0;
     flex-grow: 1;
   }
-  .aquilawire .wrapper-hero .photo-aquilawire {
-    width: 20vw;
+  .aquilawire .wrapper-hero .box-2 {
+    flex-direction: row;
+  }
+  .aquilawire .wrapper-hero .box-2 img {
+    max-width: 500px;
   }
   .contact .wrapper-contact .form-area {
     flex-direction: row;
