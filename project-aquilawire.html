@@ -44,8 +44,48 @@
                         <p>Now this printer takes it all in stride. Cruising at 200mm/s² speeds with 10k acceleration - it's a beast. Prints PLA, ABS, PETG, TPU. Albiet with lots of testing to find the right printer settings for each material it's been a very enjoyable project with an awesome printer to use at the end.</p>
                     </div>
                     <div class="box-2">
-                        <img src="/img/photography/aquilawire-1.jpeg" alt="">
-                        <img src="/img/photography/aquilawire-2.jpeg" alt="">
+                        <div class="wrapper-photos">
+                            <!-- Begin slide -->
+                            <a href="#image1"> <!-- Thumbnail image -->
+                                <img src="/img/photography/aquilawire-1.jpeg" class="thumb"/>
+                            </a>
+                            <div id="image1" class="lightbox"> <!-- Slide fullscreen lightbox -->
+                                <!-- No left arrow for first image in series -->
+                                <div class="slide">
+                                    <a href="#_"> <!-- Full screen image -->
+                                        <img src="/img/photography/aquilawire-1.jpeg" />
+                                    </a>
+                                    <p></p>
+                                </div>    
+                                <a href="#_"> <!-- Close button -->
+                                    <i class="exit fa-solid fa-xmark"></i>
+                                </a>
+                                <a href="#image2"> <!-- Next button (linking to next image in series) -->
+                                    <i class="next fa-solid fa-arrow-right"></i>
+                                </a>
+                            </div>
+                            <!-- End slide -->
+                            <!-- Begin slide -->
+                            <a href="#image2"> <!-- Thumbnail image -->
+                                <img src="/img/photography/aquilawire-2.jpeg" class="thumb"/>
+                            </a>
+                            <div id="image2" class="lightbox"> <!-- Slide fullscreen lightbox -->
+                                <a href="#image1"> <!-- Previous button (linking to previous image in series) -->
+                                    <i class="previous fa-solid fa-arrow-left"></i>
+                                </a>
+                                <div class="slide">
+                                    <a href="#_"> <!-- Full screen image -->
+                                        <img src="/img/photography/aquilawire-2.jpeg" />
+                                    </a>
+                                    <p></p>
+                                </div>
+                                <a href="#_"> <!-- Close button -->
+                                    <i class="exit fa-solid fa-xmark"></i>
+                                </a>
+                                <!-- No right arrow for last image in series -->
+                            </div>
+                            <!-- End slide -->
+                          </div><!--/wrapper-photos-->
                     </div>
                 </div>
                 <div class="wrapper-main">
