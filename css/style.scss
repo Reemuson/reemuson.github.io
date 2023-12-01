@@ -7,6 +7,7 @@ $colour-3: #63707E;
 $colour-4: #222222;
 $colour-5: #CE2231;
 $colour-6: #1C5D99;
+$colour-printables: #FA6831;
 
 $h1: 2.5rem;
 $h2: 1.5rem;
@@ -382,7 +383,7 @@ main {
     }
 }
 
-.aquilawire {
+.project {
     padding-top: 3rem;
 
     a {
@@ -407,18 +408,15 @@ main {
     .box-3 {
         padding-top: 3rem;
     }
-    .box-2 {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
 
-        img {
-            margin: 10px;
-            width: 80vw;
-            border: .5rem solid $colour-4;
-            border-radius: .5rem;
-        }
+    .wrapper-photos .thumb {
+        max-height: 300px;
+    }
+
+    .button-printables {
+        color: $colour-1;
+        background-color: $colour-printables;
+        margin: 2rem auto;
     }
 }
 
@@ -541,10 +539,20 @@ main {
         margin: .5rem;
     }
 
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
     .thumb {
         display: inline;
         max-width: calc(100vw - 80px);
         transition: transform .5s;
+        animation: fadeIn .5s .25s backwards;
     }
 
     .lightbox {
@@ -765,7 +773,7 @@ footer {
         }
     }
 
-    .aquilawire {
+    .project {
         .wrapper-hero {
             display: flex;
             flex-direction: column;
@@ -773,13 +781,6 @@ footer {
             .box-1 {
                 padding: 0 2rem 0 0;
                 flex-grow: 1;
-            }
-            .box-2 {
-                flex-direction: row;
-
-                img {
-                    max-width: 500px;
-                }
             }
         }
     }
