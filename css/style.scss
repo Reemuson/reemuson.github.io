@@ -7,6 +7,7 @@ $colour-3: #63707E;
 $colour-4: #222222;
 $colour-5: #CE2231;
 $colour-6: #1C5D99;
+$colour-printables: #FA6831;
 
 $h1: 2.5rem;
 $h2: 1.5rem;
@@ -113,7 +114,8 @@ nav {
 
 main {
     padding: $nav 15px 2.5rem 15px;
-    max-width: 1200px;
+    width: calc(100vw - 40px);
+    max-width: 1200px;  
     margin: auto;
 }
 
@@ -176,7 +178,6 @@ main {
     .box-2 {
         display: grid;
         justify-items: center;
-        padding-top: 3rem;
 
         .project-of-month {
             margin: 1rem 0 0 0;
@@ -206,7 +207,6 @@ main {
     .wrapper-benefits {
         h1 {
             padding-top: 0;
-            padding-bottom: 1rem;
             font-size: $h3;
         }
 
@@ -222,18 +222,8 @@ main {
                 }
 
                 i {
-                    padding: 1rem 0;
+                    padding-top: 2rem;
                     font-size: $h2;
-
-                    .benefit-1 {
-                        color: $colour-2;
-                    }
-                    .benefit-2 {
-                        color: $colour-3;
-                    }
-                    .benefit-3 {
-                        color: $colour-6;
-                    }
                 }
             }
         }
@@ -272,6 +262,7 @@ main {
         ul {
             display: flex;
             flex-direction: column;
+            justify-content: center;
 
             li {
                 text-align: center;
@@ -392,7 +383,7 @@ main {
     }
 }
 
-.aquilawire {
+.project {
     padding-top: 3rem;
 
     a {
@@ -418,11 +409,14 @@ main {
         padding-top: 3rem;
     }
 
-    .photo-aquilawire {
-        margin: 1rem 0 0 0;
-        width: 80vw;
-        border: .5rem solid $colour-4;
-        border-radius: .5rem;
+    .wrapper-photos .thumb {
+        max-height: 300px;
+    }
+
+    .button-printables {
+        color: $colour-1;
+        background-color: $colour-printables;
+        margin: 2rem auto;
     }
 }
 
@@ -545,10 +539,20 @@ main {
         margin: .5rem;
     }
 
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
     .thumb {
         display: inline;
         max-width: calc(100vw - 80px);
         transition: transform .5s;
+        animation: fadeIn .5s .25s backwards;
     }
 
     .lightbox {
@@ -682,22 +686,26 @@ footer {
                 padding: 0 2rem 0 0;
             }
             .box-2 .project-of-month {
-                width: 25vw;
+                width: 20vw;
             }
         }
 
         .wrapper-benefits {
             margin-top: 4em;
 
+            h1 {
+                font-size: $h2;
+            }
+    
             ul {
                 flex-direction: row;
-                flex-wrap: nowrap;
-                align-items: baseline;
+                flex-wrap: wrap;
+                justify-content: space-evenly;
 
                 li {
-                    flex: 1 1 0;
+                    flex: 0 0 30%;
                     p {
-                        display: inline-block
+                        display: inline-block;
                     }
                     i {
                         font-size: $h1;
@@ -714,10 +722,10 @@ footer {
             ul {
                 flex-direction: row;
                 flex-wrap: nowrap;
-                align-items: baseline;
+                justify-content: center;
 
                 li {
-                    flex: 1 1 0;
+                    flex: 1 0 0;
                     p {
                         display: inline-block
                     }
@@ -765,17 +773,14 @@ footer {
         }
     }
 
-    .aquilawire {
+    .project {
         .wrapper-hero {
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
 
             .box-1 {
                 padding: 0 2rem 0 0;
                 flex-grow: 1;
-            }
-            .photo-aquilawire {
-                width: 20vw;
             }
         }
     }

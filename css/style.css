@@ -85,6 +85,7 @@ nav #hamburger:checked ~ .nav-links {
 
 main {
   padding: 2.5rem 15px 2.5rem 15px;
+  width: calc(100vw - 40px);
   max-width: 1200px;
   margin: auto;
 }
@@ -142,7 +143,6 @@ main {
 .about .box-2 {
   display: grid;
   justify-items: center;
-  padding-top: 3rem;
 }
 .about .box-2 .project-of-month {
   margin: 1rem 0 0 0;
@@ -166,7 +166,6 @@ main {
 }
 .about .wrapper-benefits h1 {
   padding-top: 0;
-  padding-bottom: 1rem;
   font-size: 1.25rem;
 }
 .about .wrapper-benefits ul {
@@ -180,17 +179,8 @@ main {
   display: none;
 }
 .about .wrapper-benefits ul li i {
-  padding: 1rem 0;
+  padding-top: 2rem;
   font-size: 1.5rem;
-}
-.about .wrapper-benefits ul li i .benefit-1 {
-  color: #F5F5F5;
-}
-.about .wrapper-benefits ul li i .benefit-2 {
-  color: #63707E;
-}
-.about .wrapper-benefits ul li i .benefit-3 {
-  color: #1C5D99;
 }
 
 .services h1 {
@@ -219,6 +209,7 @@ main {
 .services .wrapper-benefits ul {
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 .services .wrapper-benefits ul li {
   text-align: center;
@@ -320,32 +311,34 @@ main {
   max-height: 300px;
 }
 
-.aquilawire {
+.project {
   padding-top: 3rem;
 }
-.aquilawire a {
+.project a {
   color: #CE2231;
 }
-.aquilawire h1 {
+.project h1 {
   font-size: 2.5rem;
 }
-.aquilawire h2 {
+.project h2 {
   font-size: 1rem;
   padding-top: 1rem;
   padding-bottom: 3rem;
 }
-.aquilawire p {
+.project p {
   font-size: 1rem;
   padding-bottom: 1rem;
 }
-.aquilawire .box-3 {
+.project .box-3 {
   padding-top: 3rem;
 }
-.aquilawire .photo-aquilawire {
-  margin: 1rem 0 0 0;
-  width: 80vw;
-  border: 0.5rem solid #222222;
-  border-radius: 0.5rem;
+.project .wrapper-photos .thumb {
+  max-height: 300px;
+}
+.project .button-printables {
+  color: #FAFAFA;
+  background-color: #FA6831;
+  margin: 2rem auto;
 }
 
 .contact {
@@ -462,10 +455,19 @@ main {
   border: 0.5rem solid #222222;
   margin: 0.5rem;
 }
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .wrapper-photos .thumb {
   display: inline;
   max-width: calc(100vw - 80px);
   transition: transform 0.5s;
+  animation: fadeIn 0.5s 0.25s backwards;
 }
 .wrapper-photos .lightbox {
   display: none; /**sets the default display to hide the lightbox until it's the :target**/
@@ -585,18 +587,21 @@ footer {
     padding: 0 2rem 0 0;
   }
   .about .wrapper-hero .box-2 .project-of-month {
-    width: 25vw;
+    width: 20vw;
   }
   .about .wrapper-benefits {
     margin-top: 4em;
   }
+  .about .wrapper-benefits h1 {
+    font-size: 1.5rem;
+  }
   .about .wrapper-benefits ul {
     flex-direction: row;
-    flex-wrap: nowrap;
-    align-items: baseline;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
   }
   .about .wrapper-benefits ul li {
-    flex: 1 1 0;
+    flex: 0 0 30%;
   }
   .about .wrapper-benefits ul li p {
     display: inline-block;
@@ -610,10 +615,10 @@ footer {
   .services .wrapper-benefits ul {
     flex-direction: row;
     flex-wrap: nowrap;
-    align-items: baseline;
+    justify-content: center;
   }
   .services .wrapper-benefits ul li {
-    flex: 1 1 0;
+    flex: 1 0 0;
   }
   .services .wrapper-benefits ul li p {
     display: inline-block;
@@ -651,16 +656,13 @@ footer {
   .projects .wrapper-card .card:hover {
     transform: scale(1.1);
   }
-  .aquilawire .wrapper-hero {
+  .project .wrapper-hero {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
   }
-  .aquilawire .wrapper-hero .box-1 {
+  .project .wrapper-hero .box-1 {
     padding: 0 2rem 0 0;
     flex-grow: 1;
-  }
-  .aquilawire .wrapper-hero .photo-aquilawire {
-    width: 20vw;
   }
   .contact .wrapper-contact .form-area {
     flex-direction: row;
