@@ -34,26 +34,40 @@
             <section class="page project" id="project">
                 <div class="wrapper-hero">
                     <div class="box-1">
-                        <h1>Aquilawire</h1>
-                        <p>"Aquilawire" is a heavily modified Voxelab Aquila X2 converted to CoreXZ akin to the <a href="https://www.vorondesign.com/voron_switchwire">Voron Switchwire</a>.</p>
-                        <p>It was bought for cheap on a black-friday sale and served me will with slight modification for many months. Until I discovered and fell into the world of Voron...</p>
+                        <h1>Aquilawire VS.807</h1>
+                        
+                        <h2>Introduction</h2>
+                        <p>Aquilawire is a heavily modified Voxelab Aquila X2 converted to CoreXZ akin to the <a href="https://www.vorondesign.com/voron_switchwire">Voron Switchwire</a>.</p>
+                        <p>It was bought for cheap on a black-friday sale and served me will with slight modification for many months. Until I discovered and fell into the world of Voron…</p>
                         <p>The switchwire provides linear rails, CoreXZ motion, kicking the Z screws to the curb, and saying goodbye to the hassle of dealing with z-wobble. It was like a laundry list of upgrades to boost speed, precision, and overall print quality.</p>
-                        <p>I stumbled upon this gem of a project by <a href="https://github.com/boubounokefalos/Ender_SW">boubounokefalos</a>. They took the Aquila X2/Ender 3 frame and basically turned it into a Switchwire cousin. I printed the necessary parts & tweaked a few in ABS. I had to get everything just right. That marked the beginning of a whole new chapter.</p>
-                        <p>But, of course, the modding journey doesn't stop there. Automatic z-offset became the next big thing on my list. Needed a nozzle end-stop for that, and I wasn't about to wait around for parts to ship. I fired up the lathe and turned out the needed parts.</p>
-                        <p>I then came across the Klicky probe by <a href="https://github.com/jlas1/Klicky-Probe">jlas1</a> - a game-changer. This little guy became the key to hassle-free bed-levelling and nozzle swaps. Whipped up some configuration files in Klipper for auto-offset calibration. Now, I can switch nozzles easily, no feeler gauge required.</p>
-                        <p>Now this printer takes it all in stride. Cruising at 200mm/s² speeds with 10k acceleration - it's a beast. Prints PLA, ABS, PETG, TPU. Albiet with lots of testing to find the right printer settings for each material it's been a very enjoyable project with an awesome printer to use at the end.</p>
+                        <p>I stumbled upon this gem of a project by <a href="https://github.com/boubounokefalos/Ender_SW">boubounokefalos</a>. They took the Aquila X2/Ender 3 frame and turned it into the Switchwire’s cousin. I self-sourced all of the parts needed to build this machine and printed the necessary parts & tweaked a few in ABS.</p>
+                        <p>But, of course, the modding journey doesn’t stop there. Automatic z-offset became the next big thing on my list. Needed a nozzle end-stop for that, and I wasn’t about to wait around for parts to ship. I fired up the lathe and turned out the needed bushing and pin.</p>
+                        <p>I then came across the Klicky probe by <a href="https://github.com/jlas1/Klicky-Probe">jlas1</a> - a game-changer. I opted for the KlickyPCB derivation as initial use of the KlickyNG seemed to be unreliable, I’ll chalk that up to poor initial tolerances on my printer. However, this became the key to hassle-free bed-levelling and nozzle swaps. Whipped up some configuration files in Klipper for auto-offset calibration. Now, I can switch nozzles easily, no feeler gauge required.</p>
+                        <p>Now this printer takes it all in stride. Cruising at 250mm/s² external walls with 10k acceleration - it’s a beast. Prints PLA, ABS, PETG, TPU. Albiet with lots of testing to find the right printer settings for each material it’s been a very enjoyable project with an awesome printer to use at the end.</p>
+                    
+                        <h2>Specifications</h2>
+                        <ul>
+                            <li>Stealthburner w/ CW2</li>
+                            <li>Dragon HF w/ CHT</li>
+                            <li>BTT SKR Mini e3 V3.0</li>
+                            <li>Raspberry Pi 4 8GB</li>
+                            <li>CYD Screen</li>
+                            <li>KlickyPCB Probe w/ diet servo mount</li>
+                        </ul>
+
+                        <h2>Images</h2>
                     </div>
                     <div class="box-2">
                         <div class="wrapper-photos">
                             <!-- Begin slide -->
                             <a href="#image1"> <!-- Thumbnail image -->
-                                <img src="/img/photography/aquilawire-1.jpeg" class="thumb"/>
+                                <img src="/img/aquilawire/printer.jpeg" class="thumb"/>
                             </a>
                             <div id="image1" class="lightbox"> <!-- Slide fullscreen lightbox -->
                                 <!-- No left arrow for first image in series -->
                                 <div class="slide">
                                     <a href="#_"> <!-- Full screen image -->
-                                        <img src="/img/photography/aquilawire-1.jpeg" />
+                                        <img src="/img/aquilawire/printer.jpeg" />
                                     </a>
                                     <p></p>
                                 </div>    
@@ -67,7 +81,7 @@
                             <!-- End slide -->
                             <!-- Begin slide -->
                             <a href="#image2"> <!-- Thumbnail image -->
-                                <img src="/img/photography/aquilawire-2.jpeg" class="thumb"/>
+                                <img src="/img/aquilawire/screen.jpeg" class="thumb"/>
                             </a>
                             <div id="image2" class="lightbox"> <!-- Slide fullscreen lightbox -->
                                 <a href="#image1"> <!-- Previous button (linking to previous image in series) -->
@@ -75,7 +89,51 @@
                                 </a>
                                 <div class="slide">
                                     <a href="#_"> <!-- Full screen image -->
-                                        <img src="/img/photography/aquilawire-2.jpeg" />
+                                        <img src="/img/aquilawire/screen.jpeg" />
+                                    </a>
+                                    <p></p>
+                                </div>    
+                                <a href="#_"> <!-- Close button -->
+                                    <i class="exit fa-solid fa-xmark"></i>
+                                </a>
+                                <a href="#image3"> <!-- Next button (linking to next image in series) -->
+                                    <i class="next fa-solid fa-arrow-right"></i>
+                                </a>
+                            </div>
+                            <!-- End slide -->
+                            <!-- Begin slide -->
+                            <a href="#image3"> <!-- Thumbnail image -->
+                                <img src="/img/aquilawire/inside.jpeg" class="thumb"/>
+                            </a>
+                            <div id="image3" class="lightbox"> <!-- Slide fullscreen lightbox -->
+                                <a href="#image2"> <!-- Previous button (linking to previous image in series) -->
+                                    <i class="previous fa-solid fa-arrow-left"></i>
+                                </a>
+                                <div class="slide">
+                                    <a href="#_"> <!-- Full screen image -->
+                                        <img src="/img/aquilawire/inside.jpeg" />
+                                    </a>
+                                    <p></p>
+                                </div>    
+                                <a href="#_"> <!-- Close button -->
+                                    <i class="exit fa-solid fa-xmark"></i>
+                                </a>
+                                <a href="#image4"> <!-- Next button (linking to next image in series) -->
+                                    <i class="next fa-solid fa-arrow-right"></i>
+                                </a>
+                            </div>
+                            <!-- End slide -->
+                            <!-- Begin slide -->
+                            <a href="#image4"> <!-- Thumbnail image -->
+                                <img src="/img/aquilawire/printhead.jpeg" class="thumb"/>
+                            </a>
+                            <div id="image4" class="lightbox"> <!-- Slide fullscreen lightbox -->
+                                <a href="#image3"> <!-- Previous button (linking to previous image in series) -->
+                                    <i class="previous fa-solid fa-arrow-left"></i>
+                                </a>
+                                <div class="slide">
+                                    <a href="#_"> <!-- Full screen image -->
+                                        <img src="/img/aquilawire/printhead.jpeg" />
                                     </a>
                                     <p></p>
                                 </div>
@@ -90,7 +148,6 @@
                 </div>
                 <div class="wrapper-main">
                     <div class="box-1">
-
                     </div>
                 </div>
             </section>
