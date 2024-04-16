@@ -8,6 +8,7 @@ $colour-4: #222222;
 $colour-5: #CE2231;
 $colour-6: #1C5D99;
 $colour-printables: #FA6831;
+$colour-voron: #FF2300;
 
 $h1: 2.5rem;
 $h2: 1.5rem;
@@ -17,7 +18,9 @@ $p: 1rem;
 
 $nav: 2.5rem;
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -35,7 +38,6 @@ body {
     background-color: $colour-2;
 }
 
-// Responsive navbar
 nav {
     background: $colour-5;
     top: 2.5vh;
@@ -66,15 +68,15 @@ nav {
     .nav-links {
         background-color: $colour-5;
         top: -100%;
-        width: 90vw;
+        width: calc(100vw - 40px);
         left: 0vw;
         z-index: 11;
         position: fixed;
-        margin: 0 5vw;
+        margin: 20px 20px;
         text-align: center;
         list-style: none;
         transition: all .5s ease-in-out;
-        border-radius: 0 0 .5rem .5rem;
+        border-radius: .5rem;
 
         li {
             a {
@@ -90,6 +92,75 @@ nav {
                 border-radius: .5rem;
                 width: 90%;
                 padding: 1rem;
+                transition: background-color 0.3s;
+
+                &:hover {
+                    background-color: darken($colour-6, 10%);
+                }
+            }
+        }
+    }
+
+    .dropdown {
+        position: relative;
+        display: inline-block;
+        margin-top: 2rem;
+        width: 90%;
+
+        .dropdown-button {
+            font-family: 'Manrope', sans-serif;
+            background-color: $colour-6;
+            color: $colour-1;
+            display: block;
+            cursor: pointer;
+            font-weight: 700;
+            font-size: $h2;
+            text-decoration: none;
+            text-align: center;
+            border-radius: .5rem;
+            padding: 1rem;
+            border: none;
+            width: 100%;
+            transition: background-color 0.3s;
+
+            &:hover {
+                background-color: darken($colour-6, 10%);
+            }
+        }
+
+        &:hover .dropdown-menu {
+            display: block;
+        }
+    }
+
+    .dropdown-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        background-color: $colour-5;
+        list-style: none;
+        padding: 0;
+        border-radius: 0.5rem;
+        padding-left: 0; // Reset padding
+        width: 100%;
+
+        li {
+            margin: 0;
+
+            a {
+                display: block;
+                padding: 1rem;
+                text-decoration: none;
+                color: $colour-1;
+                font-weight: 500;
+                text-align: center;
+                border-radius: 0.5rem;
+
+                transition: background-color 0.3s;
+
+                &:hover {
+                    background-color: darken($colour-6, 10%);
+                }
             }
         }
     }
@@ -101,13 +172,16 @@ nav {
         z-index: 11;
         cursor: pointer;
     }
+
     label#hamburger-icon {
         display: block;
     }
+
     #hamburger {
         display: none;
     }
-    #hamburger:checked ~ .nav-links {
+
+    #hamburger:checked~.nav-links {
         top: calc(2.5vh + $nav - 0.5rem);
     }
 }
@@ -115,7 +189,7 @@ nav {
 main {
     padding: $nav 15px 2.5rem 15px;
     width: calc(100vw - 40px);
-    max-width: 1200px;  
+    max-width: 1200px;
     margin: auto;
 }
 
@@ -128,13 +202,16 @@ main {
     ul {
         list-style: none;
     }
+
     a {
         text-decoration: none;
     }
+
     mark {
         background: none;
         color: $colour-6;
     }
+
     .button {
         display: block;
         cursor: pointer;
@@ -147,7 +224,8 @@ main {
         max-width: 15rem;
         padding: 1rem;
 
-        &:hover, &:focus {
+        &:hover,
+        &:focus {
             filter: brightness(1.2);
             transition: .5s;
         }
@@ -192,22 +270,26 @@ main {
         }
     }
 
-    .button-contact {
+    .button-projects {
         color: $colour-1;
         background-color: $colour-5;
-        margin: 2rem auto;
+        margin: 0 auto;
+        padding: 0.5rem;
     }
 
-    .button-projects {
+    .button-learn {
         color: $colour-1;
         background-color: $colour-6;
         margin: 0 auto;
+        padding: 0.5rem;
     }
 
     .wrapper-benefits {
+        padding-bottom: 3rem;
+        
         h1 {
             padding-top: 0;
-            font-size: $h3;
+            font-size: $h1;
         }
 
         ul {
@@ -230,67 +312,8 @@ main {
     }
 }
 
-.services {
-    h1 {
-        padding-top: 3rem;
-        padding-bottom: 3rem;
-        font-size: $h1;
-    }
-    p {
-        padding-bottom: 1rem;
-    }
-
-    .button-prints {
-        color: $colour-1;
-        background-color: $colour-5;
-        margin: 2rem auto;
-    }
-
-    .button-drawing {
-        color: $colour-1;
-        background-color: $colour-6;
-        margin: 2rem auto;
-    }
-
-    .wrapper-benefits {
-        h1 {
-            padding-top: 0;
-            padding-bottom: 1rem;
-            font-size: $h3;
-        }
-
-        ul {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-
-            li {
-                text-align: center;
-
-                p {
-                    display: none;
-                }
-
-                i {
-                    padding: 1rem 0;
-                    font-size: $h2;
-
-                    .benefit-1 {
-                        color: $colour-2;
-                    }
-                    .benefit-2 {
-                        color: $colour-3;
-                    }
-                    .benefit-3 {
-                        color: $colour-6;
-                    }
-                }
-            }
-        }
-    }
-}
-
-.projects {
+.projects,
+.insights {
     color: $colour-4;
 
     h1 {
@@ -327,6 +350,7 @@ main {
                 background-color: $colour-5;
                 min-width: 15rem;
             }
+
             .button-2 {
                 color: $colour-1;
                 background-color: $colour-6;
@@ -338,6 +362,11 @@ main {
                 font-size: 2em;
                 color: $colour-1;
             }
+            h3{
+                font-size: $p;
+                color: $colour-1;
+            }
+
             p {
                 font-size: 1em;
                 margin: 1em 0;
@@ -359,11 +388,65 @@ main {
     }
 }
 
-.prints {
+.printing,
+.drafting,
+.electronics,
+.programming {
     h1 {
         padding-top: 3rem;
         padding-bottom: 3rem;
         font-size: $h1;
+    }
+
+    h1 {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+        font-size: $h1;
+    }
+
+    p {
+        padding-bottom: 1rem;
+    }
+
+    .wrapper-benefits {
+        h1 {
+            padding-top: 0;
+            padding-bottom: 1rem;
+            font-size: $h3;
+        }
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            list-style: none;
+
+            li {
+                text-align: center;
+                flex: 1;
+
+                p {
+                    display: none;
+                }
+
+                i {
+                    padding: 1rem 0;
+                    font-size: $h2;
+
+                    .benefit-1 {
+                        color: $colour-2;
+                    }
+
+                    .benefit-2 {
+                        color: $colour-3;
+                    }
+
+                    .benefit-3 {
+                        color: $colour-6;
+                    }
+                }
+            }
+        }
     }
 
     .wrapper-photos .thumb {
@@ -371,19 +454,8 @@ main {
     }
 }
 
-.drawings {
-    h1 {
-        padding-top: 3rem;
-        padding-bottom: 3rem;
-        font-size: $h1;
-    }
-
-    .wrapper-photos .thumb {
-        max-height: 300px;
-    }
-}
-
-.project {
+.project,
+.insight {
     padding-top: 3rem;
 
     a {
@@ -412,119 +484,154 @@ main {
     .wrapper-photos .thumb {
         max-height: 350px;
     }
+    
+    .wrapper-buttons {
+        display: flex;
+        justify-content: center;
+
+        .button {
+            margin: 0 5%;
+        }
+    }
 
     .button-printables {
         color: $colour-1;
         background-color: $colour-printables;
         margin: 2rem auto;
+        padding: 0.5rem;
+    }
+
+    .button-voron {
+        color: $colour-1;
+        background-color: $colour-voron;
+        margin: 2rem auto;
+        padding: 0.5rem;
     }
 }
 
 .contact {
     color: $colour-4;
     padding-top: 3rem;
+}
 
-    .wrapper-contact {
-        .form-area {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
+#wrapper-contact {
+    .form-area {
+        width: 100%;
+        display: flex;
+        margin: auto;
+        flex-direction: column;
 
-            .contact-text {
-                flex-basis: 40%;
-                align-self: center;
+        .contact-text {
+            flex-basis: 100%;
+            align-self: center;
 
-                h1 {
-                    font-size: $h1;
-                    color: $colour-4;
+            h1 {
+                font-size: $h1;
+                color: $colour-4;
+            }
+
+            h2 {
+                font-size: $p;
+                padding-top: 1em;
+            }
+
+            p {
+                padding-top: 1rem;
+                font-size: $p;
+            }
+        }
+
+        .form-text {
+            flex-basis: auto;
+
+            .field {
+                width: 100%;
+                position: relative;
+                margin: 2em auto 1em;
+                background-color: $colour-2;
+            }
+
+            .fieldtext .label {
+                position: absolute;
+                transform: scale(0.8) translateY(0rem);
+            }
+
+            .label {
+                font-size: $h4;
+                color: $colour-5;
+                z-index: 1;
+                display: block;
+                position: absolute;
+                transform: translateY(-1.9rem);
+                transform-origin: 0%;
+                transition: transform .4s;
+            }
+
+            .field:focus-within .label,
+            .input:not(:placeholder-shown)+.label {
+                transform: scale(0.8) translateY(-4em);
+            }
+
+            .input {
+                outline: none;
+                border: none;
+                border-bottom: 2px solid $colour-5;
+                overflow: hidden;
+                margin: 0;
+                width: 100%;
+                padding: .25em;
+                background: none;
+                font-family: 'Manrope', sans-serif;
+                color: $colour-4;
+                font-size: $p;
+                font-weight: 500;
+
+                &:valid {
+                    border-bottom: 2px solid yellowgreen;
                 }
-                h2 {
-                    font-size: $p;
-                    padding-top: 1em;
+
+                &:invalid {
+                    border-bottom: 2px solid red;
                 }
-                p {
-                    padding-top: 1rem;
-                    font-size: $p;
+
+                &:focus,
+                &:valid,
+                &:invalid {
+                    -webkit-box-shadow: none;
+                    box-shadow: none;
                 }
             }
-            .form-text {
-                flex-basis: 50%;
-                .field {
-                    width: 100%;
-                    position: relative;
-                    margin: 2em auto 1em;
-                    background-color: $colour-2;
-                }
-                .fieldtext .label {
-                    position: absolute;
-                    transform: scale(0.8) translateY(0rem);
-                }
-                .label {
-                    font-size: $h4;
-                    color: $colour-5;
-                    z-index: 1;
-                    display: block;
-                    position: absolute;
-                    transform: translateY(-1.9rem);
-                    transform-origin: 0%;
-                    transition: transform .4s;
-                }
-                .field:focus-within .label, .input:not(:placeholder-shown) + .label {
-                    transform: scale(0.8) translateY(-4em);
-                }
-                .input {
+
+            textarea {
+                border: none;
+                border-bottom: 2px solid $colour-5;
+                overflow: hidden;
+                resize: none;
+                margin: 2em auto 1em;
+                padding: .25rem;
+                width: 100%;
+                height: 10em;
+                background-color: $colour-2;
+                font-family: 'Manrope', sans-serif;
+                color: $colour-4;
+                font-size: $p;
+                font-weight: 500;
+
+                &:focus {
+                    -webkit-box-shadow: none;
+                    box-shadow: none;
                     outline: none;
-                    border: none;
-                    border-bottom: 2px solid $colour-5;
-                    overflow: hidden;
-                    margin: 0;
-                    width: 100%;
-                    padding: .25em;
-                    background: none;
-                    font-family: 'Manrope', sans-serif;
-                    color: $colour-4;
-                    font-size: $p;
-                    font-weight: 500;
+                }
+            }
 
-                    &:valid {
-                        border-bottom: 2px solid yellowgreen;
-                    }
-                    &:invalid {
-                        border-bottom: 2px solid red;
-                    }
-                    &:focus, &:valid, &:invalid {
-                        -webkit-box-shadow: none;
-                        box-shadow: none;
-                    }
-                }
-                textarea {
-                    border: none;
-                    border-bottom: 2px solid $colour-5;
-                    overflow: hidden;
-                    resize: none;
-                    margin: 2em auto 1em;
-                    padding: .25rem;
-                    width: 100%;
-                    height: 10em;
-                    background-color: $colour-2;
-                    font-family: 'Manrope', sans-serif;
-                    color: $colour-4;
-                    font-size: $p;
-                    font-weight: 500;
-
-                    &:focus {
-                        -webkit-box-shadow: none;
-                        box-shadow: none;
-                        outline: none;
-                    }
-                }
-                .form-button-contact {
-                    background-color: $colour-5;
-                    color: $colour-1;
-                    border: none;
-                    margin-bottom: 2rem;
-                    min-width: fill;
-                }
+            .form-button-contact {
+                background-color: $colour-5;
+                color: $colour-1;
+                border: none;
+                margin: auto;
+                margin-bottom: 2rem;
+                padding: 0.5rem;
+                min-width: auto;
             }
         }
     }
@@ -543,6 +650,7 @@ main {
         from {
             opacity: 0;
         }
+
         to {
             opacity: 1;
         }
@@ -556,8 +664,10 @@ main {
     }
 
     .lightbox {
-        display: none; /**sets the default display to hide the lightbox until it's the :target**/
-        position: fixed; /**the rest of this styling makes the lightbox full screen when selected**/
+        display: none;
+        /**sets the default display to hide the lightbox until it's the :target**/
+        position: fixed;
+        /**the rest of this styling makes the lightbox full screen when selected**/
         z-index: 999;
         width: 100%;
         height: 100%;
@@ -566,31 +676,40 @@ main {
         left: 0;
         background: rgba(34, 34, 34, .8);
 
-        .slide { /**sets the styling of the image in the lightbox**/
+        .slide {
+
+            /**sets the styling of the image in the lightbox**/
             p {
                 color: $colour-2;
                 font-size: $p;
             }
+
             a {
                 color: $colour-5;
                 font-size: $p;
                 text-decoration: underline;
             }
+
             img {
                 max-width: 80vw;
                 max-height: 80vh;
                 margin: 0;
             }
+
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
         }
-        &:target { /**this is where the magic happens. makes the lightbox display when it's the target of a clickable link**/
+
+        &:target {
+            /**this is where the magic happens. makes the lightbox display when it's the target of a clickable link**/
             outline: none;
             display: block;
         }
-        .previous { /**styling the left arrow**/
+
+        .previous {
+            /**styling the left arrow**/
             font-size: $h2;
             position: fixed;
             left: 2.5%;
@@ -598,7 +717,9 @@ main {
             width: $h1;
             color: $colour-1;
         }
-        .exit { /**styling the exit button**/
+
+        .exit {
+            /**styling the exit button**/
             font-size: $h2;
             position: fixed;
             top: 5%;
@@ -606,7 +727,9 @@ main {
             width: $h1;
             color: $colour-1;
         }
-        .next { /**styling the right arrow**/
+
+        .next {
+            /**styling the right arrow**/
             font-size: $h2;
             position: fixed;
             right: 2.5%;
@@ -640,7 +763,7 @@ footer {
 
         .nav-links {
             position: static;
-            margin-right: 0%;
+            margin: 0;
             width: auto;
             height: 4vh;
             background: none;
@@ -656,6 +779,54 @@ footer {
                     line-height: 4vh;
                     width: auto;
                     background: none;
+                    transition: transform .5s;
+
+                    &:hover {
+                        background: none;
+                        transform: scale(1.1);
+                    }
+                }
+            }
+        }
+        
+        .dropdown {
+            margin-top: 0;
+            text-align: center;
+            width: auto;
+        
+            .dropdown-button {
+                background: none;
+                margin-bottom: 10px;
+                padding: 0 1rem;
+                height: 4vh;
+                line-height: 4vh;
+                width: auto;
+                background: none;
+                transition: transform .5s;
+        
+                &:hover {
+                    background: none;
+                    transform: scale(1.1);
+                }
+            }
+        
+            .dropdown-menu {
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                transform: translateX(-50%);
+                background: $colour-5;
+                list-style: none;
+                padding: 1rem;
+                
+                // Set width to be equal to the width of the dropdown button
+                width: fit-content;
+                min-width: 100%; // Ensure dropdown menu takes full width if content is wider than button
+                
+                li {
+                    a {
+                        padding-bottom: 1rem;
+                    }
                 }
             }
         }
@@ -663,7 +834,8 @@ footer {
         #hamburger-icon {
             display: none;
         }
-        label#hamburger-icon{
+
+        label#hamburger-icon {
             display: none;
         }
     }
@@ -685,6 +857,7 @@ footer {
             .box-1 {
                 padding: 0 2rem 0 0;
             }
+
             .box-2 .project-of-month {
                 width: 20vw;
             }
@@ -696,48 +869,32 @@ footer {
             h1 {
                 font-size: $h2;
             }
-    
+
             ul {
                 flex-direction: row;
-                flex-wrap: wrap;
                 justify-content: space-evenly;
 
                 li {
                     flex: 0 0 30%;
+
                     p {
                         display: inline-block;
                     }
+
                     i {
                         font-size: $h1;
+                    }
+
+                    a {
+                        margin-top: 1rem;
                     }
                 }
             }
         }
     }
 
-    .services {
-        .wrapper-benefits {
-            margin-top: 4em;
-
-            ul {
-                flex-direction: row;
-                flex-wrap: nowrap;
-                justify-content: center;
-
-                li {
-                    flex: 1 0 0;
-                    p {
-                        display: inline-block
-                    }
-                    i {
-                        font-size: $h1;
-                    }
-                }
-            }
-        }
-    }
-
-    .projects {
+    .projects,
+    .insights {
         .wrapper-card {
             flex-direction: row;
             flex-wrap: wrap;
@@ -753,6 +910,7 @@ footer {
                 from {
                     opacity: 0;
                 }
+
                 to {
                     opacity: 1;
                 }
@@ -761,46 +919,71 @@ footer {
             .card:nth-child(1) {
                 animation: fadeIn .5s .25s backwards;
             }
+
             .card:nth-child(2) {
                 animation: fadeIn .5s .5s backwards;
             }
+
             .card:nth-child(3) {
                 animation: fadeIn .5s .75s backwards;
             }
+
             .card:hover {
                 transform: scale(1.1);
             }
         }
     }
 
-    .project {
+    .project,
+    .insight {
         .wrapper-hero {
             display: flex;
             flex-direction: column;
+            padding-bottom: 3rem;
 
             .box-1 {
                 padding: 0 2rem 0 0;
                 flex-grow: 1;
+
+                h3 {
+                    padding-bottom: 1.5rem;
+                }
             }
         }
     }
 
-    .contact {
-        .wrapper-contact {
-            .form-area {
+    .printing,
+    .drafting,
+    .electronics,
+    .programming {
+        .wrapper-benefits {
+            ul {
                 flex-direction: row;
-                justify-content: space-between;
 
-                .contact-text {
-                    align-self: normal;
-
-                    h1 {
-                        padding: 0;
+                li {
+                    p {
+                        display: block;
                     }
                 }
-                .form-text {
-                    width: 50vw;
+            }
+        }
+    }
+
+    #wrapper-contact {
+        .form-area {
+            flex-direction: row;
+            justify-content: space-between;
+
+            .contact-text {
+                align-self: normal;
+
+                h1 {
+                    padding: 0;
                 }
+            }
+
+            .form-text {
+                width: 50vw;
             }
         }
     }

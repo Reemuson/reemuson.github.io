@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Ryan Dynamics</title>
+    <title>Ryan Dynamics — Industrial Design, Electronics & 3D Printing</title>
     <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.png?">
 
     <link rel="stylesheet" href="/css/style.css">
     <script src="https://kit.fontawesome.com/1f41a79a4e.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
     <nav>
         <!-- <img src="/img/logo.svg" alt="" class="logo" height="36" width="auto"> -->
-        <h1><a href="index.html">Ryan Dynamics</a></h1>
+        <h1><a href="/index.html">Ryan Dynamics</a></h1>
 
         <!-- Begin hamburger -->
         <input type="checkbox" id="hamburger">
@@ -24,9 +26,19 @@
         <!-- End hamburger -->
 
         <ul class="nav-links">
-            <li><a href="services.html">Services</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li>
+                <div class="dropdown">
+                    <button class="dropdown-button">Services</button>
+                    <ul class="dropdown-menu">
+                        <li><a href="/drafting.html">Design</a></li>
+                        <li><a href="/3d-printing.html">3D Printing</a></li>
+                        <li><a href="/electronics.html">Electronics</a></li>
+                        <li><a href="/programming.html">Programming</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="/projects-and-insights.html">Projects</a></li>
+            <li><a href="/contact.html">Contact</a></li>
         </ul>
     </nav>
     <main>
@@ -37,41 +49,76 @@
                         <h1>We are Ryan Dynamics</h1>
                         <h2>Your imagination, our expertise.</h2>
                         <div class="wrapper-hero-paragraph">
-                            <p>Ryan Dynamics have experience in industrial design, electronics, programming & additive manufacturing.</p>
-                            
-                            <p>Our balanced mix of quality, experience and enthusiasm will never bring a shortage of innovative ideas for your project.
-                            If you have a project or an idea that you're building. Get in touch with us and see how we can help you.</p>
+                            <p>Ryan Dynamics have experience in industrial design, electronics, programming & additive
+                                manufacturing.</p>
+
+                            <p>Our balanced mix of quality, experience and enthusiasm will never bring a shortage of
+                                innovative ideas for your project.
+                                If you have a project or an idea that you're building.</p>
+                            <p>Get in touch with us and see how
+                                we can help you.</p>
                         </div>
                         <div class="box-3">
-                            <a href="projects.html" class="button button-projects">See our work!</a>
+                            <a href="/projects-and-insights.html" class="button button-projects">See our work!</a>
                         </div>
                     </div>
                     <div class="box-2">
-                        <img src="/img/drybox/drybox-1.png" alt="photograph of the month" class="project-of-month">
-                        <a href="project-drybox.html" class="link link-project-of-month">Project of the month</a>
+                        <img src="/img/project/cydcase/IMG_0502.JPEG" alt="photograph of the month" class="project-of-month">
+                        <a href="/project/project-cydcase.html" class="link link-project-of-month">Project of the
+                            month</a>
                     </div>
                 </div>
                 <div class="wrapper-benefits">
                     <h1>Technical Services</h1>
                     <div class="center">
                         <ul>
-                            <li><i class="fas fa-drafting-compass" class="benefit"></i><h2>Drafting</h2></li>
-                            <li><i class="fas fa-code" class="benefit"></i><h2>Programming</h2></li>
-                            <li><i class="fas fa-paint-brush" class="benefit"></i><h2>Product Design</h2></li>
-                            <li><i class="fas fa-bolt" class="benefit"></i><h2>Electronics</h2></li>
-                            <li><i class="fas fa-cubes" class="benefit"></i><h2>3D Printing</h2></li>
-                            <li><i class="fas fa-headset" class="benefit"></i><h2>Support</h2></li>
+                            <li><i class="fas fa-drafting-compass" class="benefit"></i>
+                                <h2>Drafting & Design</h2><a href="/drafting.html" class="button button-learn">Learn more</a>
+                            </li>
+                            <li><i class="fas fa-cubes" class="benefit"></i>
+                                <h2>3D Printing</h2><a href="/3d-printing.html" class="button button-learn">Learn
+                                    more</a>
+                            </li>
+                            <li><i class="fas fa-bolt" class="benefit"></i>
+                                <h2>Electronics</h2><a href="/electronics.html" class="button button-learn">Learn
+                                    more</a>
+                            </li>
+                            <li><i class="fas fa-code" class="benefit"></i>
+                                <h2>Programming</h2><a href="/programming.html" class="button button-learn">Learn
+                                    more</a>
+                            </li>
                         </ul>
                     </div>
-                    <div class="wrapper-button-contact">
-                        <a href="contact.html" class="button button-contact">Get in touch!</a>
+                </div>
+                <div id="wrapper-contact">
+                    <h1>Contact Us</h1>
+                    <div class="form-area">
+                        <div class="form-text">
+                            <form action="https://formspree.io/f/xknzzvvz" method="POST">
+                                <div class="field">
+                                    <input type="text" name="name" class="input" placeholder="" required
+                                        pattern=".*\S.*">
+                                    <label for="text" class="label">Name</label>
+                                </div>
+                                <div class="field">
+                                    <input type="email" name="_replyto" class="input" placeholder="" required>
+                                    <label for="email" class="label">Email</label>
+                                </div>
+                                <div class="fieldtext">
+                                    <label for="message" class="label">Message</label>
+                                    <textarea name="message" cols="50" rows="10"></textarea>
+                                </div>
+                                <button class="button form-button-contact" type="submit">Get in touch!</button>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </section>
         </div>
     </main>
     <footer>
-        <p>Copyright © 2023 Ryan Dynamics</p>
+        <p>Copyright © 2024 Ryan Dynamics</p>
     </footer>
 </body>
+
 </html>

@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Ryan Dynamics</title>
+    <title>Contact us! — Newcastle, Australia — Ryan Dynamics</title>
     <link rel="shortcut icon" type="image/x-icon" href="/src/favicon.png?">
 
     <link rel="stylesheet" href="/css/style.css">
     <script src="https://kit.fontawesome.com/1f41a79a4e.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
     <nav>
-        <!-- <img src="src/logo.svg" alt="" class="logo" height="36" width="auto"> -->
-        <h1><a href="index.html">Ryan Dynamics</a></h1>
+        <!-- <img src="/img/logo.svg" alt="" class="logo" height="36" width="auto"> -->
+        <h1><a href="/index.html">Ryan Dynamics</a></h1>
 
         <!-- Begin hamburger -->
         <input type="checkbox" id="hamburger">
@@ -24,29 +26,39 @@
         <!-- End hamburger -->
 
         <ul class="nav-links">
-            <li><a href="services.html">Services</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li>
+                <div class="dropdown">
+                    <button class="dropdown-button">Services</button>
+                    <ul class="dropdown-menu">
+                        <li><a href="/drafting.html">Design</a></li>
+                        <li><a href="/3d-printing.html">3D Printing</a></li>
+                        <li><a href="/electronics.html">Electronics</a></li>
+                        <li><a href="/programming.html">Programming</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="/projects-and-insights.html">Projects</a></li>
+            <li><a href="/contact.html">Contact</a></li>
         </ul>
     </nav>
     <main>
         <div class="wrapper-page">
             <section class="page contact" id="contact">
-                <div class="wrapper-contact">
+                <div id="wrapper-contact">
                     <div class="form-area">
                         <div class="contact-text">
                             <h1>Let's Chat!</h1>
                             <h2>Are you in need of a unique solution to your problem?</h2>
-                            <p>We have a wide range of talents. Especially with industrial design, 3D printing and electronic design.</p>
-                            <p>We are confident that we can help you bring your ideas to reality and are always up for a good challenge. So, don't hesitate and let's connect!</p>
+                            <p>We have a wide range of talents. Especially with industrial design, 3D printing and
+                                electronic design.</p>
+                            <p>We are confident that we can help you bring your ideas to reality and are always up for a
+                                good challenge. So, don't hesitate and let's connect!</p>
                         </div>
                         <div class="form-text">
-                            <form 
-                                action="https://formspree.io/f/xknzzvvz"
-                                method="POST"
-                            >
+                            <form action="https://formspree.io/f/xknzzvvz" method="POST">
                                 <div class="field">
-                                    <input type="text" name="name" class="input" placeholder="" required pattern=".*\S.*">
+                                    <input type="text" name="name" class="input" placeholder="" required
+                                        pattern=".*\S.*">
                                     <label for="text" class="label">Name</label>
                                 </div>
                                 <div class="field">
@@ -66,7 +78,8 @@
         </div>
     </main>
     <footer>
-        <p>Copyright © 2023 Ryan Dynamics</p>
+        <p>Copyright © 2024 Ryan Dynamics</p>
     </footer>
 </body>
+
 </html>
