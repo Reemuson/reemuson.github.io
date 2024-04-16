@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap");
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -42,15 +44,15 @@ nav h1 a {
 nav .nav-links {
   background-color: #CE2231;
   top: -100%;
-  width: 90vw;
+  width: calc(100vw - 40px);
   left: 0vw;
   z-index: 11;
   position: fixed;
-  margin: 0 5vw;
+  margin: 20px 20px;
   text-align: center;
   list-style: none;
   transition: all 0.5s ease-in-out;
-  border-radius: 0 0 0.5rem 0.5rem;
+  border-radius: 0.5rem;
 }
 nav .nav-links li a {
   background-color: #1C5D99;
@@ -65,6 +67,65 @@ nav .nav-links li a {
   border-radius: 0.5rem;
   width: 90%;
   padding: 1rem;
+  transition: background-color 0.3s;
+}
+nav .nav-links li a:hover {
+  background-color: #14436e;
+}
+nav .dropdown {
+  position: relative;
+  display: inline-block;
+  margin-top: 2rem;
+  width: 90%;
+}
+nav .dropdown .dropdown-button {
+  font-family: "Manrope", sans-serif;
+  background-color: #1C5D99;
+  color: #FAFAFA;
+  display: block;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1.5rem;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  border: none;
+  width: 100%;
+  transition: background-color 0.3s;
+}
+nav .dropdown .dropdown-button:hover {
+  background-color: #14436e;
+}
+nav .dropdown:hover .dropdown-menu {
+  display: block;
+}
+nav .dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  background-color: #CE2231;
+  list-style: none;
+  padding: 0;
+  border-radius: 0.5rem;
+  padding-left: 0;
+  width: 100%;
+}
+nav .dropdown-menu li {
+  margin: 0;
+}
+nav .dropdown-menu li a {
+  display: block;
+  padding: 1rem;
+  text-decoration: none;
+  color: #FAFAFA;
+  font-weight: 500;
+  text-align: center;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s;
+}
+nav .dropdown-menu li a:hover {
+  background-color: #14436e;
 }
 nav #hamburger-icon {
   font-size: 4vh;
@@ -154,19 +215,24 @@ main {
   padding: 0.5rem 0 1rem 0;
   color: #CE2231;
 }
-.about .button-contact {
+.about .button-projects {
   color: #FAFAFA;
   background-color: #CE2231;
-  margin: 2rem auto;
+  margin: 0 auto;
+  padding: 0.5rem;
 }
-.about .button-projects {
+.about .button-learn {
   color: #FAFAFA;
   background-color: #1C5D99;
   margin: 0 auto;
+  padding: 0.5rem;
+}
+.about .wrapper-benefits {
+  padding-bottom: 3rem;
 }
 .about .wrapper-benefits h1 {
   padding-top: 0;
-  font-size: 1.25rem;
+  font-size: 2.5rem;
 }
 .about .wrapper-benefits ul {
   display: flex;
@@ -183,68 +249,24 @@ main {
   font-size: 1.5rem;
 }
 
-.services h1 {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-  font-size: 2.5rem;
-}
-.services p {
-  padding-bottom: 1rem;
-}
-.services .button-prints {
-  color: #FAFAFA;
-  background-color: #CE2231;
-  margin: 2rem auto;
-}
-.services .button-drawing {
-  color: #FAFAFA;
-  background-color: #1C5D99;
-  margin: 2rem auto;
-}
-.services .wrapper-benefits h1 {
-  padding-top: 0;
-  padding-bottom: 1rem;
-  font-size: 1.25rem;
-}
-.services .wrapper-benefits ul {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.services .wrapper-benefits ul li {
-  text-align: center;
-}
-.services .wrapper-benefits ul li p {
-  display: none;
-}
-.services .wrapper-benefits ul li i {
-  padding: 1rem 0;
-  font-size: 1.5rem;
-}
-.services .wrapper-benefits ul li i .benefit-1 {
-  color: #F5F5F5;
-}
-.services .wrapper-benefits ul li i .benefit-2 {
-  color: #63707E;
-}
-.services .wrapper-benefits ul li i .benefit-3 {
-  color: #1C5D99;
-}
-
-.projects {
+.projects,
+.insights {
   color: #222222;
 }
-.projects h1 {
+.projects h1,
+.insights h1 {
   font-size: 2.5rem;
   padding-top: 3rem;
 }
-.projects .wrapper-card {
+.projects .wrapper-card,
+.insights .wrapper-card {
   display: flex;
   align-items: center;
   align-content: center;
   flex-direction: column;
 }
-.projects .wrapper-card .card {
+.projects .wrapper-card .card,
+.insights .wrapper-card .card {
   background: #63707E;
   display: flex;
   flex-direction: column;
@@ -258,25 +280,35 @@ main {
   height: 25em;
   margin: 2em;
 }
-.projects .wrapper-card .card h1 {
+.projects .wrapper-card .card h1,
+.insights .wrapper-card .card h1 {
   padding-top: 0rem;
 }
-.projects .wrapper-card .card .button-1 {
+.projects .wrapper-card .card .button-1,
+.insights .wrapper-card .card .button-1 {
   color: #FAFAFA;
   background-color: #CE2231;
   min-width: 15rem;
 }
-.projects .wrapper-card .card .button-2 {
+.projects .wrapper-card .card .button-2,
+.insights .wrapper-card .card .button-2 {
   color: #FAFAFA;
   background-color: #1C5D99;
   min-width: 15rem;
   margin-top: 1rem;
 }
-.projects .wrapper-card .card h1 {
+.projects .wrapper-card .card h1,
+.insights .wrapper-card .card h1 {
   font-size: 2em;
   color: #FAFAFA;
 }
-.projects .wrapper-card .card p {
+.projects .wrapper-card .card h3,
+.insights .wrapper-card .card h3 {
+  font-size: 1rem;
+  color: #FAFAFA;
+}
+.projects .wrapper-card .card p,
+.insights .wrapper-card .card p {
   font-size: 1em;
   margin: 1em 0;
   width: 15em;
@@ -293,93 +325,186 @@ main {
   padding-top: 6rem;
 }
 
-.prints h1 {
+.printing h1,
+.drafting h1,
+.electronics h1,
+.programming h1 {
   padding-top: 3rem;
   padding-bottom: 3rem;
   font-size: 2.5rem;
 }
-.prints .wrapper-photos .thumb {
-  max-height: 300px;
-}
-
-.drawings h1 {
+.printing h1,
+.drafting h1,
+.electronics h1,
+.programming h1 {
   padding-top: 3rem;
   padding-bottom: 3rem;
   font-size: 2.5rem;
 }
-.drawings .wrapper-photos .thumb {
+.printing p,
+.drafting p,
+.electronics p,
+.programming p {
+  padding-bottom: 1rem;
+}
+.printing .wrapper-benefits h1,
+.drafting .wrapper-benefits h1,
+.electronics .wrapper-benefits h1,
+.programming .wrapper-benefits h1 {
+  padding-top: 0;
+  padding-bottom: 1rem;
+  font-size: 1.25rem;
+}
+.printing .wrapper-benefits ul,
+.drafting .wrapper-benefits ul,
+.electronics .wrapper-benefits ul,
+.programming .wrapper-benefits ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  list-style: none;
+}
+.printing .wrapper-benefits ul li,
+.drafting .wrapper-benefits ul li,
+.electronics .wrapper-benefits ul li,
+.programming .wrapper-benefits ul li {
+  text-align: center;
+  flex: 1;
+}
+.printing .wrapper-benefits ul li p,
+.drafting .wrapper-benefits ul li p,
+.electronics .wrapper-benefits ul li p,
+.programming .wrapper-benefits ul li p {
+  display: none;
+}
+.printing .wrapper-benefits ul li i,
+.drafting .wrapper-benefits ul li i,
+.electronics .wrapper-benefits ul li i,
+.programming .wrapper-benefits ul li i {
+  padding: 1rem 0;
+  font-size: 1.5rem;
+}
+.printing .wrapper-benefits ul li i .benefit-1,
+.drafting .wrapper-benefits ul li i .benefit-1,
+.electronics .wrapper-benefits ul li i .benefit-1,
+.programming .wrapper-benefits ul li i .benefit-1 {
+  color: #F5F5F5;
+}
+.printing .wrapper-benefits ul li i .benefit-2,
+.drafting .wrapper-benefits ul li i .benefit-2,
+.electronics .wrapper-benefits ul li i .benefit-2,
+.programming .wrapper-benefits ul li i .benefit-2 {
+  color: #63707E;
+}
+.printing .wrapper-benefits ul li i .benefit-3,
+.drafting .wrapper-benefits ul li i .benefit-3,
+.electronics .wrapper-benefits ul li i .benefit-3,
+.programming .wrapper-benefits ul li i .benefit-3 {
+  color: #1C5D99;
+}
+.printing .wrapper-photos .thumb,
+.drafting .wrapper-photos .thumb,
+.electronics .wrapper-photos .thumb,
+.programming .wrapper-photos .thumb {
   max-height: 300px;
 }
 
-.project {
+.project,
+.insight {
   padding-top: 3rem;
 }
-.project a {
+.project a,
+.insight a {
   color: #CE2231;
 }
-.project h1 {
+.project h1,
+.insight h1 {
   font-size: 2.5rem;
 }
-.project h2 {
+.project h2,
+.insight h2 {
   font-size: 1.5rem;
   padding-top: 3rem;
   padding-bottom: 1rem;
 }
-.project p {
+.project p,
+.insight p {
   font-size: 1rem;
   padding-bottom: 1rem;
 }
-.project .box-3 {
+.project .box-3,
+.insight .box-3 {
   padding-top: 3rem;
 }
-.project .wrapper-photos .thumb {
+.project .wrapper-photos .thumb,
+.insight .wrapper-photos .thumb {
   max-height: 350px;
 }
-.project .button-printables {
+.project .wrapper-buttons,
+.insight .wrapper-buttons {
+  display: flex;
+  justify-content: center;
+}
+.project .wrapper-buttons .button,
+.insight .wrapper-buttons .button {
+  margin: 0 5%;
+}
+.project .button-printables,
+.insight .button-printables {
   color: #FAFAFA;
   background-color: #FA6831;
   margin: 2rem auto;
+  padding: 0.5rem;
+}
+.project .button-voron,
+.insight .button-voron {
+  color: #FAFAFA;
+  background-color: #FF2300;
+  margin: 2rem auto;
+  padding: 0.5rem;
 }
 
 .contact {
   color: #222222;
   padding-top: 3rem;
 }
-.contact .wrapper-contact .form-area {
+
+#wrapper-contact .form-area {
   width: 100%;
   display: flex;
+  margin: auto;
   flex-direction: column;
 }
-.contact .wrapper-contact .form-area .contact-text {
-  flex-basis: 40%;
+#wrapper-contact .form-area .contact-text {
+  flex-basis: 100%;
   align-self: center;
 }
-.contact .wrapper-contact .form-area .contact-text h1 {
+#wrapper-contact .form-area .contact-text h1 {
   font-size: 2.5rem;
   color: #222222;
 }
-.contact .wrapper-contact .form-area .contact-text h2 {
+#wrapper-contact .form-area .contact-text h2 {
   font-size: 1rem;
   padding-top: 1em;
 }
-.contact .wrapper-contact .form-area .contact-text p {
+#wrapper-contact .form-area .contact-text p {
   padding-top: 1rem;
   font-size: 1rem;
 }
-.contact .wrapper-contact .form-area .form-text {
-  flex-basis: 50%;
+#wrapper-contact .form-area .form-text {
+  flex-basis: auto;
 }
-.contact .wrapper-contact .form-area .form-text .field {
+#wrapper-contact .form-area .form-text .field {
   width: 100%;
   position: relative;
   margin: 2em auto 1em;
   background-color: #F5F5F5;
 }
-.contact .wrapper-contact .form-area .form-text .fieldtext .label {
+#wrapper-contact .form-area .form-text .fieldtext .label {
   position: absolute;
   transform: scale(0.8) translateY(0rem);
 }
-.contact .wrapper-contact .form-area .form-text .label {
+#wrapper-contact .form-area .form-text .label {
   font-size: 1.125rem;
   color: #CE2231;
   z-index: 1;
@@ -389,13 +514,14 @@ main {
   transform-origin: 0%;
   transition: transform 0.4s;
 }
-.contact .wrapper-contact .form-area .form-text .input:not(:-moz-placeholder-shown) + .label {
+#wrapper-contact .form-area .form-text .input:not(:-moz-placeholder-shown) + .label {
   transform: scale(0.8) translateY(-4em);
 }
-.contact .wrapper-contact .form-area .form-text .field:focus-within .label, .contact .wrapper-contact .form-area .form-text .input:not(:placeholder-shown) + .label {
+#wrapper-contact .form-area .form-text .field:focus-within .label,
+#wrapper-contact .form-area .form-text .input:not(:placeholder-shown) + .label {
   transform: scale(0.8) translateY(-4em);
 }
-.contact .wrapper-contact .form-area .form-text .input {
+#wrapper-contact .form-area .form-text .input {
   outline: none;
   border: none;
   border-bottom: 2px solid #CE2231;
@@ -409,16 +535,16 @@ main {
   font-size: 1rem;
   font-weight: 500;
 }
-.contact .wrapper-contact .form-area .form-text .input:valid {
+#wrapper-contact .form-area .form-text .input:valid {
   border-bottom: 2px solid yellowgreen;
 }
-.contact .wrapper-contact .form-area .form-text .input:invalid {
+#wrapper-contact .form-area .form-text .input:invalid {
   border-bottom: 2px solid red;
 }
-.contact .wrapper-contact .form-area .form-text .input:focus, .contact .wrapper-contact .form-area .form-text .input:valid, .contact .wrapper-contact .form-area .form-text .input:invalid {
+#wrapper-contact .form-area .form-text .input:focus, #wrapper-contact .form-area .form-text .input:valid, #wrapper-contact .form-area .form-text .input:invalid {
   box-shadow: none;
 }
-.contact .wrapper-contact .form-area .form-text textarea {
+#wrapper-contact .form-area .form-text textarea {
   border: none;
   border-bottom: 2px solid #CE2231;
   overflow: hidden;
@@ -433,18 +559,18 @@ main {
   font-size: 1rem;
   font-weight: 500;
 }
-.contact .wrapper-contact .form-area .form-text textarea:focus {
+#wrapper-contact .form-area .form-text textarea:focus {
   box-shadow: none;
   outline: none;
 }
-.contact .wrapper-contact .form-area .form-text .form-button-contact {
+#wrapper-contact .form-area .form-text .form-button-contact {
   background-color: #CE2231;
   color: #FAFAFA;
   border: none;
+  margin: auto;
   margin-bottom: 2rem;
-  min-width: -webkit-fill-available;
-  min-width: -moz-available;
-  min-width: fill;
+  padding: 0.5rem;
+  min-width: auto;
 }
 
 .wrapper-photos {
@@ -470,8 +596,10 @@ main {
   animation: fadeIn 0.5s 0.25s backwards;
 }
 .wrapper-photos .lightbox {
-  display: none; /**sets the default display to hide the lightbox until it's the :target**/
-  position: fixed; /**the rest of this styling makes the lightbox full screen when selected**/
+  display: none;
+  /**sets the default display to hide the lightbox until it's the :target**/
+  position: fixed;
+  /**the rest of this styling makes the lightbox full screen when selected**/
   z-index: 999;
   width: 100%;
   height: 100%;
@@ -480,7 +608,8 @@ main {
   left: 0;
   background: rgba(34, 34, 34, 0.8);
 }
-.wrapper-photos .lightbox .slide { /**sets the styling of the image in the lightbox**/
+.wrapper-photos .lightbox .slide {
+  /**sets the styling of the image in the lightbox**/
   position: absolute;
   top: 50%;
   left: 50%;
@@ -500,11 +629,13 @@ main {
   max-height: 80vh;
   margin: 0;
 }
-.wrapper-photos .lightbox:target { /**this is where the magic happens. makes the lightbox display when it's the target of a clickable link**/
+.wrapper-photos .lightbox:target {
+  /**this is where the magic happens. makes the lightbox display when it's the target of a clickable link**/
   outline: none;
   display: block;
 }
-.wrapper-photos .lightbox .previous { /**styling the left arrow**/
+.wrapper-photos .lightbox .previous {
+  /**styling the left arrow**/
   font-size: 1.5rem;
   position: fixed;
   left: 2.5%;
@@ -512,7 +643,8 @@ main {
   width: 2.5rem;
   color: #FAFAFA;
 }
-.wrapper-photos .lightbox .exit { /**styling the exit button**/
+.wrapper-photos .lightbox .exit {
+  /**styling the exit button**/
   font-size: 1.5rem;
   position: fixed;
   top: 5%;
@@ -520,7 +652,8 @@ main {
   width: 2.5rem;
   color: #FAFAFA;
 }
-.wrapper-photos .lightbox .next { /**styling the right arrow**/
+.wrapper-photos .lightbox .next {
+  /**styling the right arrow**/
   font-size: 1.5rem;
   position: fixed;
   right: 2.5%;
@@ -551,7 +684,7 @@ footer {
   }
   nav .nav-links {
     position: static;
-    margin-right: 0%;
+    margin: 0;
     width: auto;
     height: 4vh;
     background: none;
@@ -567,6 +700,45 @@ footer {
     line-height: 4vh;
     width: auto;
     background: none;
+    transition: transform 0.5s;
+  }
+  nav .nav-links li a:hover {
+    background: none;
+    transform: scale(1.1);
+  }
+  nav .dropdown {
+    margin-top: 0;
+    text-align: center;
+    width: auto;
+  }
+  nav .dropdown .dropdown-button {
+    background: none;
+    margin-bottom: 10px;
+    padding: 0 1rem;
+    height: 4vh;
+    line-height: 4vh;
+    width: auto;
+    background: none;
+    transition: transform 0.5s;
+  }
+  nav .dropdown .dropdown-button:hover {
+    background: none;
+    transform: scale(1.1);
+  }
+  nav .dropdown .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #CE2231;
+    list-style: none;
+    padding: 1rem;
+    width: -moz-fit-content;
+    width: fit-content;
+    min-width: 100%;
+  }
+  nav .dropdown .dropdown-menu li a {
+    padding-bottom: 1rem;
   }
   nav #hamburger-icon {
     display: none;
@@ -597,7 +769,6 @@ footer {
   }
   .about .wrapper-benefits ul {
     flex-direction: row;
-    flex-wrap: wrap;
     justify-content: space-evenly;
   }
   .about .wrapper-benefits ul li {
@@ -609,30 +780,18 @@ footer {
   .about .wrapper-benefits ul li i {
     font-size: 2.5rem;
   }
-  .services .wrapper-benefits {
-    margin-top: 4em;
+  .about .wrapper-benefits ul li a {
+    margin-top: 1rem;
   }
-  .services .wrapper-benefits ul {
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: center;
-  }
-  .services .wrapper-benefits ul li {
-    flex: 1 0 0;
-  }
-  .services .wrapper-benefits ul li p {
-    display: inline-block;
-  }
-  .services .wrapper-benefits ul li i {
-    font-size: 2.5rem;
-  }
-  .projects .wrapper-card {
+  .projects .wrapper-card,
+  .insights .wrapper-card {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
   }
-  .projects .wrapper-card .card {
+  .projects .wrapper-card .card,
+  .insights .wrapper-card .card {
     margin: 2em;
     transition: transform 0.5s;
   }
@@ -644,37 +803,60 @@ footer {
       opacity: 1;
     }
   }
-  .projects .wrapper-card .card:nth-child(1) {
+  .projects .wrapper-card .card:nth-child(1),
+  .insights .wrapper-card .card:nth-child(1) {
     animation: fadeIn 0.5s 0.25s backwards;
   }
-  .projects .wrapper-card .card:nth-child(2) {
+  .projects .wrapper-card .card:nth-child(2),
+  .insights .wrapper-card .card:nth-child(2) {
     animation: fadeIn 0.5s 0.5s backwards;
   }
-  .projects .wrapper-card .card:nth-child(3) {
+  .projects .wrapper-card .card:nth-child(3),
+  .insights .wrapper-card .card:nth-child(3) {
     animation: fadeIn 0.5s 0.75s backwards;
   }
-  .projects .wrapper-card .card:hover {
+  .projects .wrapper-card .card:hover,
+  .insights .wrapper-card .card:hover {
     transform: scale(1.1);
   }
-  .project .wrapper-hero {
+  .project .wrapper-hero,
+  .insight .wrapper-hero {
     display: flex;
     flex-direction: column;
+    padding-bottom: 3rem;
   }
-  .project .wrapper-hero .box-1 {
+  .project .wrapper-hero .box-1,
+  .insight .wrapper-hero .box-1 {
     padding: 0 2rem 0 0;
     flex-grow: 1;
   }
-  .contact .wrapper-contact .form-area {
+  .project .wrapper-hero .box-1 h3,
+  .insight .wrapper-hero .box-1 h3 {
+    padding-bottom: 1.5rem;
+  }
+  .printing .wrapper-benefits ul,
+  .drafting .wrapper-benefits ul,
+  .electronics .wrapper-benefits ul,
+  .programming .wrapper-benefits ul {
+    flex-direction: row;
+  }
+  .printing .wrapper-benefits ul li p,
+  .drafting .wrapper-benefits ul li p,
+  .electronics .wrapper-benefits ul li p,
+  .programming .wrapper-benefits ul li p {
+    display: block;
+  }
+  #wrapper-contact .form-area {
     flex-direction: row;
     justify-content: space-between;
   }
-  .contact .wrapper-contact .form-area .contact-text {
+  #wrapper-contact .form-area .contact-text {
     align-self: normal;
   }
-  .contact .wrapper-contact .form-area .contact-text h1 {
+  #wrapper-contact .form-area .contact-text h1 {
     padding: 0;
   }
-  .contact .wrapper-contact .form-area .form-text {
+  #wrapper-contact .form-area .form-text {
     width: 50vw;
   }
 }/*# sourceMappingURL=style.css.map */

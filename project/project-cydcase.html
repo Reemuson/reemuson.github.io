@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Ryan Dynamics</title>
-    <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.png?">
+    <title>Project - VORON CYD Screen Case — Ryan Dynamics</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/img/project/favicon.png?">
 
     <link rel="stylesheet" href="/css/style.css">
     <script src="https://kit.fontawesome.com/1f41a79a4e.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
     <nav>
         <!-- <img src="/img/logo.svg" alt="" class="logo" height="36" width="auto"> -->
-        <h1><a href="index.html">Ryan Dynamics</a></h1>
+        <h1><a href="/index.html">Ryan Dynamics</a></h1>
 
         <!-- Begin hamburger -->
         <input type="checkbox" id="hamburger">
@@ -24,9 +26,19 @@
         <!-- End hamburger -->
 
         <ul class="nav-links">
-            <li><a href="services.html">Services</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li>
+                <div class="dropdown">
+                    <button class="dropdown-button">Services</button>
+                    <ul class="dropdown-menu">
+                        <li><a href="/drafting.html">Design</a></li>
+                        <li><a href="/3d-printing.html">3D Printing</a></li>
+                        <li><a href="/electronics.html">Electronics</a></li>
+                        <li><a href="/programming.html">Programming</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="/projects-and-insights.html">Projects</a></li>
+            <li><a href="/contact.html">Contact</a></li>
         </ul>
     </nav>
     <main>
@@ -34,14 +46,28 @@
             <section class="page project" id="project">
                 <div class="wrapper-hero">
                     <div class="box-1">
+                        <h3>2024-3-27 • Ryan</h3>
                         <h1>Switchwire CYD Screen Case</h1>
 
                         <h2>Introduction</h2>
-                        <p>I've always wanted to add a screen to my VORON Switchwire conversion (Aquilawire), but the prospect of the multitude of cables and parts for KlipperScreen or using the Mini 12864 screen with it's limited functionality left much to be desired.</p>
-                        <p>Then I found <a href="https://github.com/suchmememanyskill/CYD-Klipper">CYD-Klipper</a> which uses the amazing <a href="https://github.com/witnessmenow/ESP32-Cheap-Yellow-Display   ">Cheap Yellow Display</a> from <a href="https://github.com/witnessmenow">Brian Lough</a>. It's an incredibly simple setup which uses local wireless communication to interface with Klipper and Moonraker to give you all of the functionality with a straightforward installation.</p>
-                        <p>Since there was no existing designs for a simple mount for the Switchwire, I created this.</p>
+                        <p>I've always wanted to add a screen to my VORON Switchwire conversion (Aquilawire), but the
+                            prospect of the multitude of cables and parts for KlipperScreen or using the Mini 12864
+                            screen with it's limited functionality left much to be desired.</p>
+                        <p>Then I found <a href="https://github.com/suchmememanyskill/CYD-Klipper">CYD-Klipper</a> which
+                            uses the amazing <a
+                                href="https://github.com/witnessmenow/ESP32-Cheap-Yellow-Display   ">Cheap Yellow
+                                Display</a> from <a href="https://github.com/witnessmenow">Brian Lough</a>. It's an
+                            incredibly simple setup which uses local wireless communication to interface with Klipper
+                            and Moonraker to give you all of the functionality with a straightforward installation.</p>
+                        <p>Since there was no existing designs for a simple mount for the Switchwire, I created this.
+                        </p>
 
-                        <a href="https://www.printables.com/model/814999-voron-switchwire-cyd-screen-case" class="button button-printables">Printables</a>
+                        <div class="wrapper-buttons">
+                            <a href="https://www.printables.com/model/814999-voron-switchwire-cyd-screen-case"
+                                class="button button-printables">Printables</a>
+                            <a href="https://mods.vorondesign.com/details/yLcKywqT5rDwnl3ThcxZLA"
+                                class="button button-voron">Voron Mods</a>
+                        </div>
 
                         <h2>Images</h2>
                     </div>
@@ -49,16 +75,16 @@
                         <div class="wrapper-photos">
                             <!-- Begin slide -->
                             <a href="#image1"> <!-- Thumbnail image -->
-                                <img src="/img/cydcase/IMG_0503.JPEG" class="thumb"/>
+                                <img src="/img/project/cydcase/IMG_0503.JPEG" class="thumb" />
                             </a>
                             <div id="image1" class="lightbox"> <!-- Slide fullscreen lightbox -->
                                 <!-- No left arrow for first image in series -->
                                 <div class="slide">
                                     <a href="#_"> <!-- Full screen image -->
-                                        <img src="/img/cydcase/IMG_0503.JPEG" />
+                                        <img src="/img/project/cydcase/IMG_0503.JPEG" />
                                     </a>
                                     <p></p>
-                                </div>    
+                                </div>
                                 <a href="#_"> <!-- Close button -->
                                     <i class="exit fa-solid fa-xmark"></i>
                                 </a>
@@ -69,7 +95,7 @@
                             <!-- End slide -->
                             <!-- Begin slide -->
                             <a href="#image2"> <!-- Thumbnail image -->
-                                <img src="/img/cydcase/IMG_0502.JPEG" class="thumb"/>
+                                <img src="/img/project/cydcase/IMG_0502.JPEG" class="thumb" />
                             </a>
                             <div id="image2" class="lightbox"> <!-- Slide fullscreen lightbox -->
                                 <a href="#image1"> <!-- Previous button (linking to previous image in series) -->
@@ -77,10 +103,10 @@
                                 </a>
                                 <div class="slide">
                                     <a href="#_"> <!-- Full screen image -->
-                                        <img src="/img/cydcase/IMG_0502.JPEG" />
+                                        <img src="/img/project/cydcase/IMG_0502.JPEG" />
                                     </a>
                                     <p></p>
-                                </div>    
+                                </div>
                                 <a href="#_"> <!-- Close button -->
                                     <i class="exit fa-solid fa-xmark"></i>
                                 </a>
@@ -91,7 +117,7 @@
                             <!-- End slide -->
                             <!-- Begin slide -->
                             <a href="#image3"> <!-- Thumbnail image -->
-                                <img src="/img/cydcase/Switchwire_CYD_Screen_Case_Parts_Exploded.gif" class="thumb"/>
+                                <img src="/img/project/cydcase/Switchwire_CYD_Screen_Case_Parts_Exploded.gif" class="thumb" />
                             </a>
                             <div id="image3" class="lightbox"> <!-- Slide fullscreen lightbox -->
                                 <a href="#image2"> <!-- Previous button (linking to previous image in series) -->
@@ -99,10 +125,10 @@
                                 </a>
                                 <div class="slide">
                                     <a href="#_"> <!-- Full screen image -->
-                                        <img src="/img/cydcase/Switchwire_CYD_Screen_Case_Parts_Exploded.gif" />
+                                        <img src="/img/project/cydcase/Switchwire_CYD_Screen_Case_Parts_Exploded.gif" />
                                     </a>
                                     <p></p>
-                                </div>    
+                                </div>
                                 <a href="#_"> <!-- Close button -->
                                     <i class="exit fa-solid fa-xmark"></i>
                                 </a>
@@ -113,7 +139,7 @@
                             <!-- End slide -->
                             <!-- Begin slide -->
                             <a href="#image4"> <!-- Thumbnail image -->
-                                <img src="/img/drawing/draft-3.jpg" class="thumb"/>
+                                <img src="/img/drafts/draft-3.jpg" class="thumb" />
                             </a>
                             <div id="image4" class="lightbox"> <!-- Slide fullscreen lightbox -->
                                 <a href="#image3"> <!-- Previous button (linking to previous image in series) -->
@@ -121,7 +147,7 @@
                                 </a>
                                 <div class="slide">
                                     <a href="#_"> <!-- Full screen image -->
-                                        <img src="/img/drawing/draft-3.jpg" />
+                                        <img src="/img/drafts/draft-3.jpg" />
                                     </a>
                                     <p></p>
                                 </div>
@@ -131,18 +157,15 @@
                                 <!-- No right arrow for last image in series -->
                             </div>
                             <!-- End slide -->
-                          </div><!--/wrapper-photos-->
-                    </div>
-                </div>
-                <div class="wrapper-main">
-                    <div class="box-1">
+                        </div><!--/wrapper-photos-->
                     </div>
                 </div>
             </section>
         </div>
     </main>
     <footer>
-        <p>Copyright © 2023  Ryan Dynamics</p>
+        <p>Copyright © 2024 Ryan Dynamics</p>
     </footer>
 </body>
+
 </html>
