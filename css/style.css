@@ -256,6 +256,7 @@ main ul {
 .about .box-2 {
   display: grid;
   justify-items: center;
+  padding-bottom: 3rem;
 }
 .about .box-2 .project-of-month {
   margin: 1rem 0 0 0;
@@ -302,6 +303,63 @@ main ul {
   padding-top: 2rem;
   padding-bottom: 1rem;
   font-size: 5rem;
+}
+.about .wrapper-clients {
+  padding-bottom: 3rem;
+}
+.about .wrapper-clients h1 {
+  font-size: 2.5rem;
+}
+.about .wrapper-clients .center {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120%; /* Make it wider than the parent */
+  overflow: hidden; /* Ensure content stays within bounds */
+}
+.about .wrapper-clients .wrapper-scroll {
+  margin-inline: auto;
+  padding-top: 2rem;
+  position: relative;
+  height: 200px;
+  width: 90%;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgb(0, 0, 0) 20%, rgb(0, 0, 0) 80%, rgba(0, 0, 0, 0));
+          mask-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgb(0, 0, 0) 20%, rgb(0, 0, 0) 80%, rgba(0, 0, 0, 0));
+}
+@keyframes scroll {
+  to {
+    left: -250px;
+  }
+}
+.about .wrapper-clients .client {
+  width: 250px;
+  height: 100px;
+  position: absolute;
+  left: max(500px, 100%);
+  animation-name: scroll;
+  animation-duration: 30s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  display: grid;
+  place-items: center; /* Center image within the client container */
+}
+.about .wrapper-clients .client img {
+  max-width: 250px; /* Ensure image does not exceed the container width */
+  max-height: 100px; /* Ensure image does not exceed the container height */
+  height: auto; /* Allow height to adjust based on width */
+  width: auto; /* Allow width to adjust based on height */
+  -o-object-fit: contain;
+     object-fit: contain; /* Preserve aspect ratio while fitting within container */
+}
+.about .wrapper-clients .client-1 {
+  animation-delay: -20s;
+}
+.about .wrapper-clients .client-2 {
+  animation-delay: -10s;
+}
+.about .wrapper-clients .client-3 {
+  animation-delay: 0s;
 }
 
 .projects,
@@ -602,6 +660,8 @@ main ul {
 }
 #wrapper-contact .form-area .form-text .form-button-contact {
   background-color: #CE2231;
+  font-family: "Manrope", sans-serif;
+  font-weight: 700;
   color: #FAFAFA;
   border: none;
   margin: auto;
@@ -808,25 +868,25 @@ footer {
     width: 30vw;
     max-width: 500px;
   }
-  .about .wrapper-benefits {
+  .about .wrapper-benefits, .about .wrapper-clients {
     margin-top: 4em;
   }
-  .about .wrapper-benefits h1 {
+  .about .wrapper-benefits h1, .about .wrapper-clients h1 {
     font-size: 1.5rem;
   }
-  .about .wrapper-benefits ul {
+  .about .wrapper-benefits ul, .about .wrapper-clients ul {
     flex-wrap: no-wrap;
   }
-  .about .wrapper-benefits ul li {
+  .about .wrapper-benefits ul li, .about .wrapper-clients ul li {
     flex: 1 1 30%;
   }
-  .about .wrapper-benefits ul li p {
+  .about .wrapper-benefits ul li p, .about .wrapper-clients ul li p {
     display: inline-block;
   }
-  .about .wrapper-benefits ul li i {
+  .about .wrapper-benefits ul li i, .about .wrapper-clients ul li i {
     font-size: 2.5rem;
   }
-  .about .wrapper-benefits ul li a {
+  .about .wrapper-benefits ul li a, .about .wrapper-clients ul li a {
     margin-top: 1rem;
   }
   .projects .wrapper-card,
