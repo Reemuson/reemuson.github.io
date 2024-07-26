@@ -395,6 +395,7 @@ main {
             width: 90%;
             overflow: hidden;
             mask-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0));
+            pointer-events: none;
         }
 
         @keyframes scroll {
@@ -412,6 +413,8 @@ main {
             animation-duration: 30s;
             animation-timing-function: linear;
             animation-iteration-count: infinite;
+            animation-play-state: running; /* Ensure animation runs by default */
+            pointer-events: auto;
 
             display: grid;
             place-items: center; /* Center image within the client container */
@@ -423,6 +426,15 @@ main {
                 width: auto; /* Allow width to adjust based on height */
                 object-fit: contain; /* Preserve aspect ratio while fitting within container */
             }
+        }
+
+        /* Use a hover class to pause all client animations */
+        .client:hover {
+            animation-play-state: paused;
+        }
+
+        .wrapper-scroll:hover .client {
+            animation-play-state: paused;
         }
 
         .client-1 {
